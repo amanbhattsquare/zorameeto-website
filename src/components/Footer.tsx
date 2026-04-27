@@ -15,7 +15,7 @@ export default function Footer() {
         </div>
         <div className="space-y-4">
           <h5 className="font-body text-sm tracking-wide uppercase font-bold text-[#af2b3e]">
-            Legacy
+            Legal
           </h5>
           <ul className="space-y-3">
             <li>
@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
         <div className="space-y-4">
           <h5 className="font-body text-sm tracking-wide uppercase font-bold text-[#af2b3e]">
-            Journal
+            Resources
           </h5>
           <ul className="space-y-3">
             <li>
@@ -49,7 +49,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <input
               className="bg-surface-container-lowest border-none rounded-md px-4 py-3 text-sm focus:ring-1 focus:ring-secondary"
-              placeholder="Email Address"
+              placeholder="Enter your email"
               type="email"
             />
             <button className="bg-[#af2b3e] text-white py-3 rounded-full text-xs font-bold uppercase tracking-widest">
@@ -60,7 +60,7 @@ export default function Footer() {
       </div>
       <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-outline-variant/10">
         <p className="font-body text-sm tracking-wide uppercase text-[#1b1c17] opacity-60 text-center md:text-left">
-          © 2024 ZoraMeeto Editorial. All rights reserved.
+          © 2026 ZoraMeeto Editorial. All rights reserved.
         </p>
       </div>
     </footer>

@@ -19,25 +19,20 @@ export default function Home() {
                   Live: 14,203 matches today
                 </span>
               </div>
-              <div className="space-y-2">
-                <p className="font-romantic text-secondary text-4xl lg:text-5xl ml-1">
-                  An invitation to intimacy
-                </p>
-                <h1 className="text-7xl lg:text-9xl font-headline italic tracking-tighter text-on-surface leading-[0.85] -ml-2">
-                  Love, <br /> <span className="text-primary">Curated.</span>
+              <div className="space-y-4">
+                <h1 className="text-6xl lg:text-7xl font-headline tracking-tight text-on-surface leading-tight">
+                  Meaningful connections <br /> for <span className="text-primary italic">discerning singles.</span>
                 </h1>
+                <p className="text-lg text-on-surface-variant max-w-xl leading-relaxed font-body">
+                  ZoraMeeto is an exclusive, curated community for those who are serious about finding a long-term partner. Say goodbye to endless swiping and hello to high-intent dating.
+                </p>
               </div>
-              <p className="text-lg text-on-surface-variant max-w-md leading-relaxed font-body">
-                ZoraMeeto is more than an app; it&apos;s a digital gallery of
-                high-intent connections. Experience the luxury of dating designed
-                for the discerning romantic.
-              </p>
               <div className="flex flex-col sm:flex-row gap-6 pt-4">
                 <button className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-4 rounded-full font-bold text-lg editorial-shadow active:scale-95 transition-transform">
-                  Start Your Journey
+                  Find Your Match
                 </button>
                 <button className="flex items-center gap-2 px-8 py-4 text-on-surface font-bold hover:bg-surface-container-high rounded-full transition-colors group">
-                  Explore the Gallery
+                  Learn More
                   <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
                     arrow_forward
                   </span>
@@ -189,7 +184,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto text-center">
             <p className="font-romantic text-secondary text-4xl mb-4">Meet Our Members</p>
             <h2 className="text-5xl lg:text-7xl font-headline italic tracking-tighter text-on-surface leading-tight mb-16">
-              A Curated Community
+              A Featured Profiles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Profile Card 1 */}
@@ -231,7 +226,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto text-center">
             <p className="font-romantic text-secondary text-4xl mb-4">The Process</p>
             <h2 className="text-5xl lg:text-7xl font-headline italic tracking-tighter text-on-surface leading-tight mb-16">
-              Your Journey to Connection
+              A Simple Process to Find Love
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
               {/* Step 1 */}
@@ -261,7 +256,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto text-center">
             <p className="font-romantic text-secondary text-4xl mb-4">Success Stories</p>
             <h2 className="text-5xl lg:text-7xl font-headline italic tracking-tighter text-on-surface leading-tight mb-16">
-              Love, Found
+              Real Success Stories
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
               {/* Testimonial 1 */}
@@ -334,7 +329,7 @@ export default function Home() {
                   &quot;We didn&apos;t just meet, we discovered each other.&quot;
                 </p>
                 <p className="mt-4 text-sm font-bold uppercase tracking-widest text-secondary">
-                  ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Elena &amp; Marc
+                   Elena &amp; Marc
                 </p>
               </div>
             </div>
