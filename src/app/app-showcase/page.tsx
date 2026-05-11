@@ -2,204 +2,199 @@ import Link from "next/link";
 
 export default function AppShowcase() {
   return (
-    <>
-
-      <main className="pt-25 pb-25 overflow-hidden">
-        <section className="max-w-7xl mx-auto px-8 text-center mb-24">
-          <span className="text-secondary font-headline italic text-xl mb-4 block">The Digital Atelier</span>
-          <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface mb-6 max-w-4xl mx-auto leading-tight">
-            The interface of <span className="text-primary italic">intentional intimacy.</span>
+    <main className="min-h-screen bg-white overflow-hidden">
+      {/* Header Section */}
+      <section className="pt-24 pb-16 px-6 bg-gradient-mesh">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <span className="font-romantic text-primary text-5xl">The Digital Atelier</span>
+          <h1 className="text-6xl md:text-8xl font-headline tracking-tighter text-text-main leading-tight">
+            The Interface of <br />
+            <span className="text-gradient italic">Intentional Intimacy.</span>
           </h1>
-          <p className="font-body text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-text-muted max-w-2xl mx-auto leading-relaxed font-light">
             Experience a dating environment curated like a private gallery. Where every interaction is a brushstroke on the canvas of a meaningful connection.
           </p>
-        </section>
+        </div>
+      </section>
 
-        <section className="px-4 md:px-8 max-w-screen-2xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+      {/* App Screens Showcase */}
+      <section className="py-20 px-6">
+        <div className="max-w-screen-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-start">
             
-            <div className="space-y-6">
-              <div className="relative rounded-[3rem] border-[8px] border-on-surface aspect-[9/19] bg-surface-container overflow-hidden editorial-shadow">
-                <div className="absolute top-0 w-full flex justify-between px-8 py-4 z-20">
-                  <span className="text-on-surface font-bold text-xs">9:41</span>
-                  <div className="flex gap-1.5">
-                    <span className="material-symbols-outlined text-[14px]">signal_cellular_4_bar</span>
-                    <span className="material-symbols-outlined text-[14px]">wifi</span>
-                    <span className="material-symbols-outlined text-[14px]">battery_full</span>
+            {/* Screen 1: Discover */}
+            <div className="space-y-10 group">
+              <div className="relative rounded-[3.5rem] border-[12px] border-text-main aspect-[9/19] bg-surface-soft overflow-hidden premium-shadow group-hover:scale-[1.02] transition-all duration-700">
+                <div className="absolute top-0 w-full flex justify-between px-10 py-6 z-20">
+                  <span className="text-text-main font-bold text-[10px]">9:41</span>
+                  <div className="flex gap-2">
+                    <span className="w-4 h-4 rounded-full border border-text-main/20 flex items-center justify-center text-[8px] font-bold">5G</span>
                   </div>
                 </div>
-                <div className="h-full pt-12 px-4 pb-4 overflow-y-auto bg-surface">
-                  <div className="flex justify-between items-center mb-6 px-2">
-                    <h2 className="font-headline text-2xl font-bold italic text-primary">Discover</h2>
-                    <span className="material-symbols-outlined text-secondary">tune</span>
+                <div className="h-full pt-20 px-6 pb-6 overflow-y-auto custom-scrollbar">
+                  <div className="flex justify-between items-center mb-8">
+                    <h2 className="font-headline text-3xl italic text-primary">Discover</h2>
+                    <span className="material-symbols-outlined text-text-main text-2xl">tune</span>
                   </div>
-                  <div className="relative rounded-xl overflow-hidden aspect-[3/4] mb-4 editorial-shadow bg-surface-container-low">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img className="w-full h-full object-cover" alt="Sophisticated woman in silk dress" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXXKiMql1bazy4QtbbMvaLTPz7pc178qpeqJxwFuie8Hk1M1tLIee_UOwwgnLuv6cXek36t7dFBW5hoo_QKsN537RRoTNtZ8-o4hNXBi0_cXsmdXHx0o_rg_iHj5aNjzLb2F1kXGZiZ-REIzeQS_38zSeTcVlwOxeft7YAV9EssqvxHI22nmM8gGhcaV-nIOFZAmSp5VfVgrEf3DUPWXhjBV69uQHNiU1l7SlA3fsE8aWBjyJIC0JLWkfJLoLE81pInpTk7vuFNQ" />
-                    <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="bg-secondary-container text-on-secondary-container text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full font-bold">New Curator</span>
-                      </div>
-                      <h3 className="text-white font-headline text-2xl -ml-2">Elena, 28</h3>
-                      <p className="text-white/80 text-xs font-body italic">Art Historian &amp; Morning Person</p>
+                  <div className="relative rounded-[2rem] overflow-hidden aspect-[3/4] mb-6 premium-shadow">
+                    <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Elena" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=800" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-8">
+                      <span className="bg-primary/20 backdrop-blur-md border border-white/20 text-white text-[8px] font-bold uppercase tracking-widest px-3 py-1 rounded-full w-fit mb-3">New Member</span>
+                      <h3 className="text-white font-headline text-3xl">Elena, 28</h3>
+                      <p className="text-white/70 text-xs italic mt-1 font-light">Art Historian • Paris</p>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="rounded-xl overflow-hidden aspect-square bg-surface-container-low">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img className="w-full h-full object-cover" alt="Distinguished young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxbI1Slr9h_Lfh_LLkGKlokjcZBefyYfO80fzJ41n68mmo69ufhHmScYu7b-CfJX8lldNRbEUktseloYX9Op2SST0pOSkIlOd0-3tvRb3O0bWHGoO1VsojHYpDTJ0MMyxNagrLB2dA89Cw_-_46YommyFl1grDpiFYSFPNWB6czwmi606MNPQBTWW7OtLiERcyip7F2mBjJe6gS90ZYBJ8mdOY88VCuBntmJOy9N-40h-Dgd6O1P6d5m64-KnMQrfliXORprjlXA" />
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="aspect-square rounded-2xl bg-surface overflow-hidden">
+                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" className="w-full h-full object-cover" alt="User" />
                     </div>
-                    <div className="rounded-xl overflow-hidden aspect-square bg-surface-container-low">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img className="w-full h-full object-cover" alt="Woman with warm smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwgi2SOY0-PsO3JtJbzxLlhKETVbTZM3FtEeR4yUIMgC8IL3bFLT_XIvehAlJESHNkSEHoGXv0w0cqPEK968H7fxnMlEpMQnBOp_pDjVGcotPmZF5bBw7hRmrhqZZ-E2-glVG1HqxgPqqydUKwECkvrjELL16_D6GHBuJyuALlEX-7jMvJZcwysSQYpCY_VfwHN2W_bEGsgCD5sySRI4xGyfiYGVkNxUBoTDUDzFY2-Un8_35psU1eNoGCkTQXi6aWiRjp5xjFPw" />
+                    <div className="aspect-square rounded-2xl bg-surface overflow-hidden">
+                      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150" className="w-full h-full object-cover" alt="User" />
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="text-center px-4">
-                <h4 className="font-headline font-bold text-xl mb-1">Discover Feed</h4>
-                <p className="text-on-surface-variant text-sm">Visual-first exploration with editorial depth.</p>
+              <div className="text-center px-4 space-y-2">
+                <h4 className="font-headline font-bold text-2xl text-text-main">Discover Feed</h4>
+                <p className="text-text-muted text-sm font-light">Visual-first exploration with editorial depth.</p>
               </div>
             </div>
 
-            <div className="space-y-6 lg:mt-12">
-              <div className="relative rounded-[3rem] border-[8px] border-on-surface aspect-[9/19] bg-surface-container overflow-hidden editorial-shadow">
-                <div className="h-full bg-primary flex flex-col items-center justify-center p-8 text-center relative">
-                  <div className="absolute inset-0 opacity-20 pointer-events-none">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img className="w-full h-full object-cover" alt="Abstract soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApEON26HgXuKLRYVQWeIyUrORBPjuZ662B1iRnPXmD1qJcCb1m1L9hWDc9KAYB8EqY0dg5vTRgP3bS9gfugYedAzKTidWi84vrANqgOq2C8W1DqHIQpHHY-s2m3xevrBgTIW_XbnNXU9G_H62YOqdwDzyKSl3Cx0g60NEampGkxNa8bty6FpKElEwg8HNSaZk2E5OuNM_lzjy3OqM7Hs3i_d_o0MSpDH1_vAW_9kcISSPQd2XlY7t37b5hZGem5PrjJt5KejP5Uw" />
+            {/* Screen 2: Resonance */}
+            <div className="space-y-10 group lg:mt-24">
+              <div className="relative rounded-[3.5rem] border-[12px] border-text-main aspect-[9/19] bg-text-main overflow-hidden premium-shadow group-hover:scale-[1.02] transition-all duration-700">
+                <div className="h-full flex flex-col items-center justify-center p-10 text-center relative">
+                  <div className="absolute inset-0 opacity-20">
+                    <img src="https://images.unsplash.com/photo-1511733880459-845ad96996b9?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover" alt="Abstract" />
                   </div>
-                  <span className="text-on-primary-fixed italic font-headline text-2xl mb-8">It&apos;s a Serendipity.</span>
-                  <div className="flex -space-x-4 mb-8">
-                    <div className="w-24 h-24 rounded-full border-4 border-primary overflow-hidden editorial-shadow z-10">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img className="w-full h-full object-cover" alt="Portrait of a woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPE5ZVRjIfrph1fdaip5VbRx_Jf7OD1aNSrgXBLbPjGIgKVcU1qsLt1YwQPmkjhiuI2HfyJYpBeQtVny1rg10wYq38SFaKkj4Zn5aSQNx9Eb6kzPBQokNP_v2q5BbOjJiFClyVHw5-K3-ap697kDtNuN-lqOhsfjfXvzOVxxJFBTnXvmRM2i1Zj5nKPzM_OGx90YlDJln1D-oSYDI8UBk9FG219FYWvzTIM9hJqbi1wNwAIZCIZTJdLUnK1I0HbChutj3zVGTKhA" />
+                  <span className="font-romantic text-primary text-4xl mb-10 z-10">It's a Serendipity.</span>
+                  <div className="flex -space-x-6 mb-12 z-10">
+                    <div className="w-24 h-24 rounded-full border-4 border-primary bg-surface-soft overflow-hidden premium-shadow">
+                      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=150" className="w-full h-full object-cover" alt="User" />
                     </div>
-                    <div className="w-24 h-24 rounded-full border-4 border-primary overflow-hidden editorial-shadow">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img className="w-full h-full object-cover" alt="Portrait of a man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrTfF25anTWIa12wWU4CckgHJ7pdS1vMUGXyyewzZpMOgNkAZX14KN1lFwGB3SvguBo2_m5CEPpQa7byteUl7CU4rfDmfe0ypAckRIVjQnKGF6Tltn_Afryi9bfZJCfv0MdYAaOrDToJ2yuMMrs3VEF0g1vPweq3-6xTIj3CA0-yaGylI_vf52W9rB0wTpFtu3GEL8fIAhsv6Fmu2aWv_Jq1AWZgI0DTadgvlJXabZYLUxL0z8_bATuCsy0c2O4pVmPCudDJIW8Q" />
+                    <div className="w-24 h-24 rounded-full border-4 border-primary bg-surface-soft overflow-hidden premium-shadow">
+                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" className="w-full h-full object-cover" alt="User" />
                     </div>
                   </div>
-                  <h3 className="text-white font-headline text-3xl font-bold mb-4">Elena &amp; Marcus</h3>
-                  <p className="text-primary-container text-sm font-body mb-10 leading-relaxed">Both of you mentioned a love for <span className="italic font-bold text-white">Vivaldi&apos;s Winter</span> in your curators&apos; notes.</p>
-                  <div className="w-full space-y-4">
-                    <button className="w-full bg-white text-primary rounded-full py-4 font-bold tracking-wide uppercase text-xs">Send an Invitation</button>
-                    <button className="w-full border border-white/30 text-white rounded-full py-4 font-bold tracking-wide uppercase text-xs">View Dossier</button>
+                  <h3 className="text-white text-3xl font-headline mb-4 z-10">Elena & Marcus</h3>
+                  <p className="text-white/60 text-sm font-light mb-12 z-10 leading-relaxed">
+                    Both of you mentioned a love for <span className="text-primary italic">Vivaldi's Winter</span> in your notes.
+                  </p>
+                  <div className="w-full space-y-4 z-10">
+                    <button className="w-full bg-primary text-white rounded-2xl py-4 font-bold uppercase tracking-widest text-[10px]">Send Invitation</button>
+                    <button className="w-full bg-white/10 border border-white/20 text-white rounded-2xl py-4 font-bold uppercase tracking-widest text-[10px]">View Dossier</button>
                   </div>
                 </div>
               </div>
-              <div className="text-center px-4">
-                <h4 className="font-headline font-bold text-xl mb-1">The &apos;Invitation&apos;</h4>
-                <p className="text-on-surface-variant text-sm">Matching reimagined as an elegant social ritual.</p>
+              <div className="text-center px-4 space-y-2">
+                <h4 className="font-headline font-bold text-2xl text-text-main">The Invitation</h4>
+                <p className="text-text-muted text-sm font-light">Matching reimagined as an elegant social ritual.</p>
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="relative rounded-[3rem] border-[8px] border-on-surface aspect-[9/19] bg-surface-container overflow-hidden editorial-shadow">
-                <div className="h-full flex flex-col bg-surface">
-                  <div className="pt-12 px-6 pb-4 flex items-center gap-4 bg-surface-container-low">
-                    <span className="material-symbols-outlined text-on-surface-variant">arrow_back_ios</span>
-                    <div className="w-10 h-10 rounded-full overflow-hidden">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img className="w-full h-full object-cover" alt="Elena profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4h5lOVo0WKMSYRNI3RSxp45GFqap0QQpugLSCOk8i7VBZve2Xb5i_7Mc_XvvIX-qO6V5aewpWhyIdxbdQX9mVDbnSadOEPcIWp5Cqzrj8ojIUwtTJpn1wx6rXEw2fxQfFz_PnkM77LA3x09HDD-w4_zP4SnDj3kAJex5NxG2HwINa5_xjtLfC5TH-8IH5EkYaxuGlgqzPp1hbefPJA5h7w-1bwaphlyC58DyG5Oc1VeYbJwzjXem8yPa8WtJPlLAmd5PupTaGxg" />
+            {/* Screen 3: Dialogue */}
+            <div className="space-y-10 group">
+              <div className="relative rounded-[3.5rem] border-[12px] border-text-main aspect-[9/19] bg-surface-soft overflow-hidden premium-shadow group-hover:scale-[1.02] transition-all duration-700">
+                <div className="h-full flex flex-col">
+                  <div className="pt-20 px-8 pb-6 bg-white border-b border-border flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-surface-soft">
+                      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=150" className="w-full h-full object-cover" alt="Elena" />
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-headline font-bold text-on-surface">Elena</h4>
-                      <p className="text-[10px] text-secondary font-bold uppercase tracking-tighter">Writing now...</p>
+                    <div>
+                      <h4 className="font-headline text-xl text-text-main">Elena</h4>
+                      <p className="text-[8px] font-bold text-primary uppercase tracking-widest">Resonating...</p>
                     </div>
                   </div>
-                  <div className="flex-1 overflow-y-auto p-6 space-y-8">
-                    <div className="text-center">
-                      <span className="text-[10px] text-on-surface-variant/40 font-bold uppercase tracking-widest">Tuesday, 8:14 PM</span>
-                    </div>
-                    <div className="flex flex-col items-start max-w-[85%]">
-                      <div className="bg-surface-container-high p-4 rounded-2xl rounded-tl-none">
-                        <p className="text-sm text-on-surface leading-relaxed">I&apos;ve always found that the second movement of Winter feels more like a cozy fire than a cold frost. What do you think?</p>
+                  <div className="flex-1 p-8 space-y-10 overflow-y-auto">
+                    <div className="max-w-[85%] space-y-2">
+                      <div className="p-5 rounded-[1.5rem] rounded-tl-none bg-white border border-border text-sm text-text-muted leading-relaxed">
+                        I've always found that the second movement of Winter feels more like a cozy fire than a cold frost.
                       </div>
                     </div>
-                    <div className="flex flex-col items-end self-end max-w-[85%]">
-                      <div className="bg-primary text-on-primary p-4 rounded-2xl rounded-tr-none">
-                        <p className="text-sm leading-relaxed">Spot on. ItÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s the rain against the window while you&apos;re safe inside. Precisely why it&apos;s my favorite.</p>
-                      </div>
-                    </div>
-                    <div className="flex flex-col items-start max-w-[85%]">
-                      <div className="bg-surface-container-high p-4 rounded-2xl rounded-tl-none">
-                        <p className="text-sm text-on-surface leading-relaxed">Exactly. Are you attending the gallery opening this Friday? It feels like the right setting for this conversation.</p>
+                    <div className="max-w-[85%] space-y-2 ml-auto">
+                      <div className="p-5 rounded-[1.5rem] rounded-tr-none bg-text-main text-white text-sm leading-relaxed shadow-lg">
+                        Spot on. It's the rain against the window while you're safe inside. Precisely why it's my favorite.
                       </div>
                     </div>
                   </div>
-                  <div className="p-6 pb-10">
+                  <div className="p-8 pb-12">
                     <div className="relative">
-                      <input className="w-full bg-surface-container-low border-none rounded-full py-4 pl-6 pr-12 text-sm focus:ring-1 focus:ring-secondary/30" placeholder="Share a thought..." type="text" />
-                      <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-primary">send</span>
+                      <input className="w-full bg-white border border-border rounded-full py-4 pl-6 pr-14 text-sm focus:outline-none focus:ring-4 focus:ring-primary/5 focus:border-primary" placeholder="Share a thought..." type="text" />
+                      <button className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+                        <span className="material-symbols-outlined text-xl">send</span>
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="text-center px-4">
-                <h4 className="font-headline font-bold text-xl mb-1">Curated Dialogue</h4>
-                <p className="text-on-surface-variant text-sm">Conversation spaces designed for slow, meaningful connection.</p>
+              <div className="text-center px-4 space-y-2">
+                <h4 className="font-headline font-bold text-2xl text-text-main">Curated Dialogue</h4>
+                <p className="text-text-muted text-sm font-light">Conversation spaces designed for meaningful connection.</p>
               </div>
             </div>
 
-            <div className="space-y-6 lg:mt-12">
-              <div className="relative rounded-[3rem] border-[8px] border-on-surface aspect-[9/19] bg-surface-container overflow-hidden editorial-shadow">
-                <div className="h-full overflow-y-auto bg-surface">
+            {/* Screen 4: Dossier */}
+            <div className="space-y-10 group lg:mt-24">
+              <div className="relative rounded-[3.5rem] border-[12px] border-text-main aspect-[9/19] bg-white overflow-hidden premium-shadow group-hover:scale-[1.02] transition-all duration-700">
+                <div className="h-full overflow-y-auto custom-scrollbar">
                   <div className="relative aspect-[4/5]">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img className="w-full h-full object-cover" alt="Elena full profile shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATGyS39LYbM-Dw7L4mCDNJ_zX-UYJIGGE6K5kRfZIhNgk2mxwdQXNlYQWrSNaFjS5yHk3__SLfNmpRlVpHxfZcbCz9PVhybLByihn9PYWmtw32KDI5eBnYFxcpQPv2zWtr2gmTNAAfp3ws86Jv4DucLvAxOem7K4zFB7pshfNfwac-EL_oKbdHStt90pra51rsaROXCMnj_tq5Ojuk9FSxdX2S8gM3wchA7aptyqdU9swYn1Mphvu5nW9livFsI9RwTET2wUx8fw" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
-                    <div className="absolute bottom-4 left-6">
-                      <h2 className="font-headline text-4xl font-bold text-on-surface -mb-2">Elena <span className="text-secondary italic">28</span></h2>
-                      <p className="text-on-surface-variant text-sm mt-3 flex items-center gap-2">
-                        <span className="material-symbols-outlined text-sm">location_on</span> Paris, France
-                      </p>
+                    <img className="w-full h-full object-cover" alt="Elena" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=800" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+                    <div className="absolute bottom-6 left-8">
+                      <h2 className="font-headline text-4xl text-text-main">Elena, <span className="italic">28</span></h2>
                     </div>
                   </div>
-                  <div className="p-6 space-y-8">
-                    <div className="space-y-3">
-                      <h5 className="text-[10px] font-bold text-secondary uppercase tracking-widest">The Dossier</h5>
-                      <p className="text-on-surface text-sm leading-relaxed italic">
-                        &quot;I believe beauty is found in the quiet detailsÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Âthe grain of old paper, the smell of rain on stone, and the pause between notes.&quot;
+                  <div className="p-8 space-y-10">
+                    <div className="space-y-4">
+                      <h5 className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">The Dossier</h5>
+                      <p className="text-text-muted text-base leading-relaxed italic font-light">
+                        "I believe beauty is found in the quiet details—the grain of old paper, the smell of rain on stone."
                       </p>
                     </div>
-                    <div className="space-y-3">
-                      <h5 className="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Values &amp; Vibe</h5>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold">Curiosity</span>
-                        <span className="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] font-bold">Stillness</span>
-                        <span className="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] font-bold">Deep Talk</span>
-                      </div>
-                    </div>
-                    <div className="space-y-3">
-                      <h5 className="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">My Sanctuary</h5>
-                      <div className="rounded-xl overflow-hidden h-32 editorial-shadow">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img className="w-full h-full object-cover" alt="Quiet old library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD34lUnjN9_Xdm1H8tMfY0pWpEHaDuVVkJbEXS2U_TbbfUnGJU9wx8cDsYnmmR4zw6NGt0h9l25jGeGELksdH3argmr28rsz2ECK4V_FwmBYvMH9g_XK2Lz-ejZzpVrHOmdK1scxoU6ID01_LV_xWbsrprilXrdRbu6Hpf71XwQ6wCkBdHQ86QALPXtD3V9aS2qXcUvmtbMcp2lHM4DGP6g8C2dQSPcNlVu4FY6raBvgXtVxnujTlTXWXZI4mUiW36d-LWoSnp15A" />
+                    <div className="space-y-4">
+                      <h5 className="text-[10px] font-bold text-text-main uppercase tracking-[0.2em]">Sanctuary</h5>
+                      <div className="aspect-video rounded-[1.5rem] overflow-hidden premium-shadow">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover" alt="Library" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="text-center px-4">
-                <h4 className="font-headline font-bold text-xl mb-1">Dossier View</h4>
-                <p className="text-on-surface-variant text-sm">Detailed member narratives beyond the superficial.</p>
+              <div className="text-center px-4 space-y-2">
+                <h4 className="font-headline font-bold text-2xl text-text-main">Dossier View</h4>
+                <p className="text-text-muted text-sm font-light">Detailed member narratives beyond the superficial.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-text-main rounded-[4rem] p-12 lg:p-16 text-center relative overflow-hidden group">
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-primary opacity-5 scale-150 group-hover:scale-100 transition-transform duration-1000"></div>
+            <div className="relative z-10 space-y-10">
+              <h2 className="text-5xl lg:text-7xl font-headline text-white tracking-tight">
+                Ready for a <br />
+                <span className="text-primary italic">Richer Experience?</span>
+              </h2>
+              <p className="text-xl text-white/60 leading-relaxed font-light max-w-xl mx-auto">
+                Download the invitation-only application and start your journey toward a meaningful connection.
+              </p>
+              <div className="flex flex-wrap justify-center gap-6 pt-6">
+                <button className="bg-white text-text-main px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all duration-500">
+                  Request Access
+                </button>
+                <button className="bg-transparent border border-white/20 text-white px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-white/10 transition-all">
+                  Join Inner Circle
+                </button>
               </div>
             </div>
           </div>
-        </section>
-
-        <section className="max-w-4xl mx-auto px-8 mt-32 text-center">
-          <div className="bg-surface-container-low rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
-            <div className="relative z-10">
-              <h2 className="font-headline text-3xl md:text-5xl font-bold mb-8">Ready for a <span className="italic text-primary">richer</span> experience?</h2>
-              <button className="bg-on-surface text-surface px-12 py-4 rounded-full font-bold tracking-wide uppercase text-sm active:scale-95 transition-transform">Download the Invitation</button>
-            </div>
-            <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
-          </div>
-        </section>
-      </main>
-    </>
+        </div>
+      </section>
+    </main>
   );
 }

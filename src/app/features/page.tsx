@@ -2,128 +2,134 @@ import Link from "next/link";
 
 export default function Features() {
   return (
-    <>
-      <main className="pt-25 pb-25">
-        <header className="max-w-7xl mx-auto px-8 mb-20 text-center">
-          <span className="text-secondary font-headline italic tracking-wide text-lg mb-4 block">The Art of Connection</span>
-          <h1 className="text-5xl md:text-7xl font-headline font-bold text-on-surface tracking-tight mb-6">
-            Curated Features for the <br />
-            <span className="text-primary italic">Modern Romantic</span>
+    <main className="min-h-screen bg-white">
+      {/* Header Section */}
+      <section className="pt-24 pb-16 px-6 bg-gradient-mesh">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <span className="font-romantic text-primary text-5xl">The Art of Connection</span>
+          <h1 className="text-6xl md:text-8xl font-headline tracking-tighter text-text-main leading-tight">
+            Curated for the <br />
+            <span className="text-gradient italic">Modern Romantic.</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-on-surface-variant text-lg leading-relaxed">
-            Beyond the swipe. We&apos;ve designed a suite of editorial-grade features to ensure your journey toward love is as intentional and elegant as a gala invitation.
+          <p className="text-xl text-text-muted max-w-2xl mx-auto leading-relaxed font-light">
+            Beyond the swipe. We've designed a suite of editorial-grade features to ensure your journey toward love is as intentional and elegant as a gala invitation.
           </p>
-        </header>
+        </div>
+      </section>
 
-        <section className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="md:col-span-2 group bg-surface-container-low rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(27,28,23,0.06)] border-b-2 border-transparent hover:border-secondary/20 relative overflow-hidden">
-              <div className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="w-full md:w-1/2 space-y-4">
-                  <span className="material-symbols-outlined text-primary text-4xl">neurology</span>
-                  <h3 className="text-3xl font-headline font-bold">AI Matching</h3>
-                  <p className="text-on-surface-variant leading-relaxed">
+      {/* Features Grid */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            {/* Feature 1: AI Matching (Double Width) */}
+            <div className="lg:col-span-2 group bg-surface rounded-[3rem] p-12 hover-lift premium-shadow border border-border overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                    <span className="material-symbols-outlined text-white text-3xl">neurology</span>
+                  </div>
+                  <h3 className="text-4xl font-headline tracking-tight text-text-main">Intelligent Resonance</h3>
+                  <p className="text-text-muted leading-relaxed text-lg font-light">
                     Our sophisticated neural engine analyzes thousands of behavioral nuances—from conversational rhythm to shared aesthetic values—connecting you with those who truly resonate with your soul.
                   </p>
-                  <a className="inline-flex items-center text-secondary font-bold text-sm uppercase tracking-widest group-hover:underline" href="#">Explore Logic <span className="material-symbols-outlined ml-2 text-xs">arrow_forward</span></a>
+                  <button className="text-primary font-bold uppercase tracking-widest text-xs flex items-center gap-2 group-hover:gap-4 transition-all">
+                    Explore Logic <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                  </button>
                 </div>
-                <div className="w-full md:w-1/2">
-                  <div className="h-64 rounded-xl overflow-hidden shadow-inner">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img className="w-full h-full object-cover" alt="abstract visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH_Kud4UMpJaBpkPDUJCuyGIpb6Nk2pAcWL40zdK1hzH1gwbhIposFp86LDTQtmbjjf65aRg5AhoR-oulXNJ9M6HO-N-m4Xx7J42YH_59FTnZxr1hYavAS6bg2egjVm4g7Swz3dGG12stWaFGKmbBcxEqqL16ltXrGwaefAhgU4XqPqGbgxcimDDEup0bIQTxIcdAeJowz2hiZXN0eXDXA-49G6qXggGhGRIlcoh-pLD9OE6h5IfLfjWCekdrhfizv2y8lnR0mHA" />
+                <div className="relative">
+                  <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+                    <img className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" alt="Logic" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="group bg-surface-container-lowest rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(27,28,23,0.06)] border-b-2 border-transparent hover:border-secondary/20">
-              <div className="space-y-6">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>verified_user</span>
-                </div>
-                <h3 className="text-2xl font-headline font-bold">Human-Vetted</h3>
-                <p className="text-on-surface-variant leading-relaxed">
-                  No bots, no illusions. Every member is personally reviewed by our editorial team to ensure the community remains authentic and prestigious.
-                </p>
+            {/* Feature 2: Vetted */}
+            <div className="bg-white rounded-[3rem] p-12 hover-lift premium-shadow border border-border space-y-8">
+              <div className="w-16 h-16 rounded-2xl bg-surface-soft flex items-center justify-center">
+                <span className="material-symbols-outlined text-text-main text-3xl">verified_user</span>
               </div>
+              <h3 className="text-3xl font-headline tracking-tight text-text-main">Prestige Community</h3>
+              <p className="text-text-muted leading-relaxed font-light">
+                No bots, no illusions. Every member is personally reviewed by our editorial team to ensure the community remains authentic and high-intent.
+              </p>
             </div>
 
-            <div className="group bg-surface-container-lowest rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(27,28,23,0.06)] border-b-2 border-transparent hover:border-secondary/20">
-              <div className="space-y-6">
-                <div className="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-secondary">psychology</span>
-                </div>
-                <h3 className="text-2xl font-headline font-bold">Psychological Compatibility</h3>
-                <p className="text-on-surface-variant leading-relaxed">
-                  Deep-dive personality assessments based on modern behavioral science to identify long-term relational synergy.
-                </p>
+            {/* Feature 3: Psychological */}
+            <div className="bg-white rounded-[3rem] p-12 hover-lift premium-shadow border border-border space-y-8">
+              <div className="w-16 h-16 rounded-2xl bg-surface-soft flex items-center justify-center">
+                <span className="material-symbols-outlined text-text-main text-3xl">psychology</span>
               </div>
+              <h3 className="text-3xl font-headline tracking-tight text-text-main">Behavioral Synergy</h3>
+              <p className="text-text-muted leading-relaxed font-light">
+                Deep-dive personality assessments based on modern behavioral science to identify long-term relational compatibility and synergy.
+              </p>
             </div>
 
-            <div className="md:col-span-2 group bg-surface-container-low rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(27,28,23,0.06)] border-b-2 border-transparent hover:border-secondary/20 flex flex-col md:flex-row-reverse gap-8 items-center">
-              <div className="w-full md:w-1/2 space-y-4">
-                <span className="material-symbols-outlined text-primary text-4xl">auto_stories</span>
-                <h3 className="text-3xl font-headline font-bold">ZoraMoments</h3>
-                <p className="text-on-surface-variant leading-relaxed">
-                  Tell your story through cinematic social narratives. Share the books you’re reading, the galleries you’ve visited, and the moments that define your lifestyle.
-                </p>
-                <div className="flex gap-2 pt-2">
-                  <span className="bg-secondary-container/30 text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Lifestyle</span>
-                  <span className="bg-secondary-container/30 text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Culture</span>
+            {/* Feature 4: Moments (Double Width) */}
+            <div className="lg:col-span-2 group bg-surface rounded-[3rem] p-12 hover-lift premium-shadow border border-border overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div className="relative order-2 md:order-1">
+                  <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl rotate-3 group-hover:rotate-0 transition-all duration-700">
+                    <img className="w-full h-full object-cover" alt="Moments" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" />
+                  </div>
                 </div>
-              </div>
-              <div className="w-full md:w-1/2 relative">
-                <div className="h-64 rounded-xl overflow-hidden -rotate-2 transform transition-transform group-hover:rotate-0">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img className="w-full h-full object-cover" alt="lifestyle photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASAD4wH0THHTtp4_ZiFXIfHQ9i54OSR6UaMyq_Wue83PifWPYcFLBayWK9QNxpVol0A0UWeybPmJNC-2DszPaNdlnE4HhweR0pdYVMDWgXYtBqQgTPUpvJlbc2a_JJktB62bckdFfRt7BfmOijOsZvmCIV8z-DENRVB6_rNV5lU9xLAUw8gpYkFpgROFtOr6H_N2fkkWib0W2S6Q8gOqQA_7qnVGBiWnnK0aCLjyNweaupnupH5UFvZRFnm7K5QwQmaPLwL0EmLg" />
-                </div>
-                <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-xl border-4 border-surface-container-low overflow-hidden rotate-3 transform transition-transform group-hover:rotate-0 shadow-lg">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img className="w-full h-full object-cover" alt="candid close-up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPxpsYCYkgXT8CHhdS9xIawCoYcSOR4jwyhgLC_YPZVMNZbDZy6LUppkCxRA-IrUiEQHL-z7OS0gNo8M5dvd0syuLn6o2uWQEFGxi5d_F4fZKj2NPXwKPOJjM4k5ErrtXMLFUhYZgeJqPnuSZIMSkGYr7AkQrLH1nxRlmaEie2zUyEqz_xjg7Ehy6ZPcn13nlneppC6IFjJ09Hu8oaXqvRoqgtaDuKc-TdqMPS8LARYkDXzrMlw6DhE8tMIo1SVsQ0FZ7vFjuYkw" />
+                <div className="space-y-6 order-1 md:order-2">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                    <span className="material-symbols-outlined text-white text-3xl">auto_stories</span>
+                  </div>
+                  <h3 className="text-4xl font-headline tracking-tight text-text-main">ZoraMoments</h3>
+                  <p className="text-text-muted leading-relaxed text-lg font-light">
+                    Tell your story through cinematic social narratives. Share the books you’re reading, the galleries you’ve visited, and the moments that define your lifestyle.
+                  </p>
+                  <div className="flex gap-3">
+                    <span className="px-4 py-1 rounded-full bg-white border border-border text-[10px] font-bold uppercase tracking-widest text-text-muted">Lifestyle</span>
+                    <span className="px-4 py-1 rounded-full bg-white border border-border text-[10px] font-bold uppercase tracking-widest text-text-muted">Culture</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="group bg-surface-container-lowest rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(27,28,23,0.06)] border-b-2 border-transparent hover:border-secondary/20">
-              <div className="space-y-6">
-                <div className="w-14 h-14 rounded-full bg-on-surface/5 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-on-surface">encrypted</span>
+            {/* Feature 5: Privacy */}
+            <div className="bg-white rounded-[3rem] p-12 hover-lift premium-shadow border border-border space-y-8">
+              <div className="w-16 h-16 rounded-2xl bg-surface-soft flex items-center justify-center">
+                <span className="material-symbols-outlined text-text-main text-3xl">encrypted</span>
+              </div>
+              <h3 className="text-3xl font-headline tracking-tight text-text-main">Absolute Privacy</h3>
+              <p className="text-text-muted leading-relaxed font-light">
+                Military-grade encryption for all communications. Your digital footprint remains invisible to the public eye, guaranteed.
+              </p>
+            </div>
+
+            {/* Concierge Section (Full Width) */}
+            <div className="lg:col-span-3 bg-text-main rounded-[4rem] p-12 lg:p-16 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-primary opacity-10 blur-[120px] -translate-y-1/2"></div>
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="space-y-10">
+                  <div className="inline-block px-5 py-2 rounded-full border border-white/20 text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">
+                    The Ultimate Tier
+                  </div>
+                  <h3 className="text-5xl lg:text-7xl font-headline text-white leading-tight">
+                    Premium <br />
+                    <span className="text-primary italic">Concierge.</span>
+                  </h3>
+                  <p className="text-white/60 text-xl leading-relaxed font-light max-w-xl">
+                    Unlock a personal romance consultant. From bespoke date curation to elite restaurant reservations, our concierge handles every detail.
+                  </p>
+                  <button className="bg-white text-text-main px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all duration-500">
+                    Apply for Invitation
+                  </button>
                 </div>
-                <h3 className="text-2xl font-headline font-bold">Privacy First</h3>
-                <p className="text-on-surface-variant leading-relaxed">
-                  Military-grade encryption for all communications. Your data is your own; we ensure your digital footprint remains invisible to the public eye.
-                </p>
+                <div className="flex justify-center lg:justify-end">
+                  <span className="material-symbols-outlined text-white/5 text-[300px] lg:text-[400px] select-none">concierge</span>
+                </div>
               </div>
             </div>
 
-            <div className="md:col-span-2 group bg-primary rounded-2xl p-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(175,43,62,0.2)] text-on-primary flex flex-col md:flex-row items-center gap-10">
-              <div className="w-full md:w-2/3 space-y-6">
-                <div className="inline-block px-4 py-1 rounded-full border border-on-primary/30 text-xs font-bold uppercase tracking-widest">The Ultimate Tier</div>
-                <h3 className="text-4xl font-headline font-bold">Premium Concierge</h3>
-                <p className="text-primary-container text-lg leading-relaxed">
-                  Unlock a personal romance consultant. From restaurant reservations to bespoke date curation, our concierge handles the logistics so you can focus on the connection.
-                </p>
-                <button className="bg-surface-container-lowest text-primary px-8 py-3 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-secondary-container hover:text-on-secondary-container transition-colors">
-                  Apply for Concierge
-                </button>
-              </div>
-              <div className="w-full md:w-1/3 flex justify-center">
-                <span className="material-symbols-outlined text-[120px] opacity-20">concierge</span>
-              </div>
-            </div>
-
-            <div className="group bg-surface-container-low rounded-2xl p-8 flex items-center justify-center text-center">
-              <div>
-                <span className="material-symbols-outlined text-secondary mb-4 block">format_quote</span>
-                <p className="font-headline text-2xl text-on-surface italic px-4 leading-relaxed">
-                  &quot;Love is the only gold.&quot;
-                </p>
-                <p className="text-xs uppercase tracking-[0.2em] mt-4 opacity-50 font-label">Alfred Lord Tennyson</p>
-              </div>
-            </div>
           </div>
-        </section>
-      </main>
-    </>
+        </div>
+      </section>
+    </main>
   );
 }
