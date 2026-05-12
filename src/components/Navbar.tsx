@@ -13,6 +13,11 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+      
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolledVal = (winScroll / height) * 100;
+      document.getElementById("nav-progress")?.style.setProperty("width", scrolledVal + "%");
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -25,9 +30,9 @@ export default function Navbar() {
   const getLinkClass = (path: string) => {
     const isActive = pathname === path;
     if (isActive) {
-      return "relative text-primary font-bold text-sm uppercase tracking-wider after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full";
+      return "text-primary font-bold text-[10px] uppercase tracking-[0.2em] border-b-2 border-primary pb-1";
     }
-    return "text-text-main/70 hover:text-primary transition-all duration-300 font-medium text-sm uppercase tracking-wider";
+    return "text-text-main/60 hover:text-text-main transition-all duration-300 font-bold text-[10px] uppercase tracking-[0.2em]";
   };
 
   const navLinks = [
@@ -41,23 +46,21 @@ export default function Navbar() {
 
   return (
     <>
+      <div id="nav-progress" className="fixed top-0 left-0 h-0.5 bg-primary z-[60] transition-all duration-300" style={{ width: '0%' }}></div>
       <nav 
         className={`fixed top-0 w-full z-50 transition-all duration-500 ${
           scrolled 
-            ? "bg-white/80 backdrop-blur-xl py-3 shadow-[0_8px_30px_rgb(0,0,0,0.04)]" 
-            : "bg-transparent py-5"
+            ? "bg-white/80 backdrop-blur-xl py-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)]" 
+            : "bg-transparent py-4"
         }`}
       >
         <div className="flex justify-between items-center w-full px-6 md:px-12 max-w-screen-2xl mx-auto">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative w-10 h-10 overflow-hidden rounded-xl bg-gradient-primary p-0.5 group-hover:rotate-6 transition-transform duration-300">
-              <div className="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
-                <span className="material-symbols-outlined text-primary font-bold">favorite</span>
-              </div>
-            </div>
-            <span className="text-2xl font-bold tracking-tighter text-text-main font-headline italic">
-              Zora<span className="text-primary">Meeto</span>
-            </span>
+          <Link href="/" className="flex items-center group">
+            <img 
+              src="/Logo.png" 
+              alt="ZoraMeeto" 
+              className="h-12 md:h-14 w-auto object-contain transition-transform duration-500 hover:scale-105" 
+            />
           </Link>
           
           <div className="hidden lg:flex gap-10 items-center">
@@ -69,15 +72,6 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-6">
-            <Link 
-              href="/login" 
-              className="hidden sm:block text-sm font-bold uppercase tracking-wider text-text-main hover:text-primary transition-colors"
-            >
-              Log In
-            </Link>
-            <button className="bg-gradient-primary text-white px-8 py-3 rounded-full font-bold text-sm uppercase tracking-widest shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 active:scale-95 transition-all duration-300">
-              Join Now
-            </button>
             <button
               className="lg:hidden p-2 text-text-main"
               onClick={() => setIsMenuOpen(true)}
@@ -96,10 +90,8 @@ export default function Navbar() {
         }`}
       >
         <div className="flex justify-between items-center p-6">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold tracking-tighter text-text-main font-headline italic">
-              Zora<span className="text-primary">Meeto</span>
-            </span>
+          <Link href="/" className="inline-block">
+            <img src="/Logo.png" alt="Logo" className="h-10 w-auto object-contain" />
           </Link>
           <button
             className="p-2 text-text-main"

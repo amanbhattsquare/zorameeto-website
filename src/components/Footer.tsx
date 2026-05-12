@@ -32,22 +32,21 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-white pt-20 pb-12 px-6 md:px-12 border-t border-border overflow-hidden">
-      {/* Decorative background element */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
-      
+    <footer className="relative bg-background pt-24 pb-12 px-6 md:px-12 border-t border-border overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
           
           {/* Brand Section */}
           <div className="space-y-8">
-            <Link href="/" className="flex items-center gap-2 group">
-              <span className="text-3xl font-bold tracking-tighter text-text-main font-headline italic">
-                Zora<span className="text-primary group-hover:text-primary-hover transition-colors">Meeto</span>
-              </span>
+            <Link href="/" className="inline-block group">
+              <img 
+                src="/Logo.png" 
+                alt="ZoraMeeto" 
+                className="h-10 md:h-12 w-auto object-contain transition-transform duration-500 hover:scale-105" 
+              />
             </Link>
-            <p className="text-text-muted text-base leading-relaxed max-w-xs font-light">
-              Defining the next era of meaningful connections through intentional matching and premium dating experiences for discerning individuals.
+            <p className="text-text-muted text-base leading-relaxed max-w-xs font-medium">
+              The modern standard for elite connections. High-performance design meets human resonance.
             </p>
             <div className="flex gap-4 pt-2">
               {socialIcons.map((social) => (
@@ -55,7 +54,7 @@ export default function Footer() {
                   key={social.name}
                   href={social.href} 
                   aria-label={social.name}
-                  className="w-11 h-11 rounded-2xl bg-surface-soft border border-border flex items-center justify-center text-text-muted hover:bg-primary hover:text-white hover:border-primary transition-all duration-500 shadow-sm"
+                  className="w-11 h-11 rounded-xl bg-surface-soft border border-border flex items-center justify-center text-text-muted hover:bg-primary hover:text-white hover:border-primary transition-all duration-500"
                 >
                   {social.icon}
                 </Link>
@@ -65,26 +64,26 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div className="space-y-10">
-            <h5 className="text-xs font-bold uppercase tracking-[0.3em] text-text-main">
+            <h5 className="text-[10px] font-bold uppercase tracking-[0.3em] text-text-main">
               Experience
             </h5>
             <ul className="space-y-5">
               {['About Zora', 'Elite Features', 'Success Stories', 'The Process'].map((item) => (
                 <li key={item}>
-                  <Link className="text-sm text-text-muted hover:text-primary transition-colors font-medium" href="#">{item}</Link>
+                  <Link className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-muted hover:text-primary transition-colors" href="#">{item}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="space-y-10">
-            <h5 className="text-xs font-bold uppercase tracking-[0.3em] text-text-main">
+            <h5 className="text-[10px] font-bold uppercase tracking-[0.3em] text-text-main">
               Support
             </h5>
             <ul className="space-y-5">
               {['Safety Center', 'Help Desk', 'Community', 'Contact Us'].map((item) => (
                 <li key={item}>
-                  <Link className="text-sm text-text-muted hover:text-primary transition-colors font-medium" href="#">{item}</Link>
+                  <Link className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-muted hover:text-primary transition-colors" href="#">{item}</Link>
                 </li>
               ))}
             </ul>
@@ -92,22 +91,20 @@ export default function Footer() {
 
           {/* Newsletter Section */}
           <div className="space-y-8">
-            <h5 className="text-xs font-bold uppercase tracking-[0.3em] text-text-main">
+            <h5 className="text-[10px] font-bold uppercase tracking-[0.3em] text-text-main">
               Newsletter
             </h5>
-            <p className="text-sm text-text-muted font-light leading-relaxed">
-              Join our exclusive inner circle for dating insights and member-only events.
+            <p className="text-sm text-text-muted font-medium leading-relaxed">
+              Join the network for dating insights and member-only events.
             </p>
             <div className="flex flex-col gap-3">
-              <div className="relative group">
-                <input
-                  className="w-full bg-surface-soft border border-border rounded-2xl px-5 py-4 text-sm focus:outline-none focus:ring-4 focus:ring-primary/5 focus:border-primary transition-all placeholder:text-text-muted/40"
-                  placeholder="Enter your email"
-                  type="email"
-                />
-              </div>
-              <button className="bg-text-main text-white py-4 rounded-2xl text-xs font-bold uppercase tracking-[0.2em] shadow-xl shadow-black/5 hover:bg-primary transition-all duration-500 active:scale-95">
-                Request Updates
+              <input
+                className="w-full bg-surface-soft border border-border rounded-xl px-5 py-4 text-sm focus:outline-none focus:border-primary transition-all placeholder:text-text-muted/40"
+                placeholder="Enter your email"
+                type="email"
+              />
+              <button className="bg-primary text-white py-4 rounded-xl text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-primary-hover transition-all duration-500">
+                Join Network
               </button>
             </div>
           </div>
@@ -116,7 +113,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] text-text-muted font-bold uppercase tracking-[0.2em]">
-            © 2026 ZoraMeeto. Love, Curated.
+            © 2026 ZoraMeeto. All Rights Reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
             {['Privacy Policy', 'Terms of Service', 'Cookies'].map((item) => (

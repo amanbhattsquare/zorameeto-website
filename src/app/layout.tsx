@@ -1,31 +1,22 @@
-import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import type { Metadata } from "next";
-import { Noto_Serif, Manrope, Great_Vibes } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
-
-const notoSerif = Noto_Serif({
-  variable: "--font-noto-serif",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-  weight: ["400", "700"],
-});
 
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
-
-const greatVibes = Great_Vibes({
-  variable: "--font-great-vibes",
-  subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "500", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "ZoraMeeto | Love, Curated.",
-  description: "ZoraMeeto is a digital gallery of high-intent connections.",
+  title: {
+    default: "ZoraMeeto | The Elite Dating Collective",
+    template: "%s | ZoraMeeto"
+  },
+  description: "ZoraMeeto is the world's most sophisticated dating network for high-achievers. Precision matching meets deep human resonance.",
+  keywords: ["elite dating", "professional dating", "exclusive network", "high-intent matches"],
 };
 
 export default function RootLayout({
@@ -42,7 +33,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${notoSerif.variable} ${manrope.variable} ${greatVibes.variable} bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container antialiased`}
+        className={`${manrope.variable} bg-background text-text-main font-sans selection:bg-primary/10 antialiased`}
       >
         <Navbar />
         {children}

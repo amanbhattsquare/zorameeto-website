@@ -1,36 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  /* Premium Dating App Palette */
-  --color-primary: #FF2D55;
-  --color-primary-hover: #E61E44;
-  --color-primary-soft: #FFF0F3;
-  --color-secondary: #FF9500;
-  --color-accent: #AF52DE;
-  --color-background: #FFFFFF;
-  --color-surface: #F9FAFB;
-  --color-surface-soft: #F3F4F6;
-  --color-text-main: #111827;
-  --color-text-muted: #6B7280;
-  --color-border: #E5E7EB;
+  /* Modern Tech Light Professional Palette */
+  --color-primary: #FF2D55; /* Vibrant Rose */
+  --color-primary-hover: #E31B54;
+  --color-secondary: #007AFF; /* Apple Blue */
+  --color-background: #FFFFFF; /* Pure White */
+  --color-surface: #F2F2F7;
+  --color-surface-soft: #F9F9FB;
+  --color-text-main: #1C1C1E; /* Deep Charcoal */
+  --color-text-muted: #636366;
+  --color-border: #E5E5EA;
 
-  /* Legacy variable mapping for compatibility if needed, but updated values */
-  --color-on-surface: #111827;
-  --color-on-surface-variant: #4B5563;
-  --color-primary-container: #FFE4E8;
-  --color-on-primary: #FFFFFF;
-  --color-outline-variant: #F3F4F6;
-  --color-surface-container-lowest: #FFFFFF;
-  --color-surface-container-low: #F9FAFB;
-  --color-surface-container: #F3F4F6;
-  --color-surface-container-high: #E5E7EB;
-
-  --font-headline: var(--font-noto-serif);
+  --font-headline: var(--font-manrope);
   --font-body: var(--font-manrope);
   --font-label: var(--font-manrope);
-  --font-romantic: var(--font-great-vibes);
-  --font-noto-serif: var(--font-noto-serif);
-  --font-manrope: var(--font-manrope);
 }
 
 @layer base {
@@ -46,18 +30,19 @@
     background-color: var(--color-background);
     color: var(--color-text-main);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 }
 
 @layer utilities {
   .premium-shadow {
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.08);
   }
   
   .glass-card {
     background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .text-gradient {
@@ -73,9 +58,16 @@
   .bg-gradient-mesh {
     background-color: #ffffff;
     background-image: 
-      radial-gradient(at 0% 0%, hsla(350,100%,95%,1) 0, transparent 50%), 
-      radial-gradient(at 50% 0%, hsla(280,100%,95%,1) 0, transparent 50%), 
-      radial-gradient(at 100% 0%, hsla(20,100%,95%,1) 0, transparent 50%);
+      radial-gradient(at 0% 0%, hsla(340,100%,96%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(220,100%,96%,1) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(280,100%,96%,1) 0, transparent 50%);
+    background-size: 200% 200%;
+    animation: mesh-move 20s ease infinite alternate;
+  }
+
+  @keyframes mesh-move {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
   }
 
   .hover-lift {
@@ -102,6 +94,16 @@
     }
   }
 
+  @keyframes fade-out {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; pointer-events: none; }
+  }
+
+  .animate-fade-out {
+    animation: fade-out 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
   @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
@@ -116,18 +118,140 @@
     animation: float 4s ease-in-out infinite;
   }
 
-  /* Custom Scrollbar */
-  .custom-scrollbar::-webkit-scrollbar {
-    width: 4px;
+  @keyframes float-slow {
+    0% { transform: scale(1.05) translateY(0px); }
+    50% { transform: scale(1.08) translateY(-10px); }
+    100% { transform: scale(1.05) translateY(0px); }
   }
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
+
+  .animate-float-slow {
+    animation: float-slow 20s ease-in-out infinite;
   }
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.1);
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+    display: flex;
+    width: max-content;
+  }
+
+
+  /* Luxury Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
     border-radius: 10px;
   }
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.2);
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+  }
+
+  .luxury-divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+  }
+
+  .hover-shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hover-shine::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transform: rotate(45deg);
+    transition: 0.7s;
+    opacity: 0;
+  }
+
+  .hover-shine:hover::after {
+    left: 100%;
+    opacity: 1;
+  }
+
+  .magnetic-wrap {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .magnetic-wrap:hover {
+    transform: scale(1.05);
+  }
+
+  .luxury-button {
+    position: relative;
+    background: var(--color-text-main);
+    color: white;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    overflow: hidden;
+  }
+
+  .luxury-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: 0.5s;
+  }
+
+  .luxury-button:hover::before {
+    left: 100%;
+  }
+
+  .luxury-button:hover {
+    letter-spacing: 0.4em;
+    background: var(--color-primary);
+    box-shadow: 0 20px 40px rgba(227, 27, 84, 0.2);
+  }
+
+  .spotlight-card {
+    position: relative;
+    border: 1px solid var(--color-border);
+    transition: all 0.5s ease;
+  }
+
+  .spotlight-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(227, 27, 84, 0.03),
+      transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .spotlight-card:hover::before {
+    opacity: 1;
   }
 }
