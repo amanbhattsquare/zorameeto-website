@@ -31,12 +31,6 @@ const screenshots = [
   },
 ];
 
-const metrics = [
-  { value: "5", label: "Real app screens" },
-  { value: "716x1600", label: "Production captures" },
-  { value: "24/7", label: "Mobile-first access" },
-];
-
 const features = [
   {
     title: "Designed Around Intent",
@@ -85,83 +79,24 @@ function PhoneFrame({
 export default function AppShowcase() {
   return (
     <main className="min-h-screen bg-background selection:bg-primary/10">
-      <section className="relative overflow-hidden border-b border-border bg-gradient-mesh px-6 pb-16 pt-32 lg:pb-24">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:gap-16">
-          <div className="space-y-8 text-center lg:text-left">
-            <div className="inline-flex items-center gap-3 rounded-full border border-primary/15 bg-white/80 px-4 py-2 shadow-sm backdrop-blur">
-              <span className="h-2 w-2 rounded-full bg-primary" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
-                Real Product Screens
-              </span>
-            </div>
+      <section className="relative overflow-hidden bg-gradient-mesh px-6 pb-12 pt-32 text-center">
+        <div className="absolute left-1/2 top-0 z-0 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-primary/5 blur-[100px]" />
 
-            <div className="space-y-5">
-              <h1 className="text-4xl font-extrabold leading-[1.05] text-text-main md:text-6xl lg:text-7xl">
-                See ZoraMeeto
-                <span className="block font-light italic text-primary">in action.</span>
-              </h1>
-              <p className="mx-auto max-w-2xl text-base font-medium leading-8 text-text-muted md:text-lg lg:mx-0">
-                A polished mobile experience for selective dating: profile depth,
-                private discovery, and premium interactions built around real member
-                intent.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center gap-4 sm:flex-row lg:items-start">
-              <Link
-                href="/pricing"
-                className="inline-flex min-h-14 items-center justify-center rounded-2xl bg-text-main px-8 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-xl shadow-black/10 transition-all duration-300 hover:-translate-y-1 hover:bg-primary"
-              >
-                Request Access
-              </Link>
-              <Link
-                href="/features"
-                className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-border bg-white px-8 text-sm font-bold uppercase tracking-[0.16em] text-text-main shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-text-main"
-              >
-                Explore Features
-                <span className="material-symbols-outlined text-lg">arrow_forward</span>
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-3 gap-3 pt-4">
-              {metrics.map((metric) => (
-                <div
-                  key={metric.label}
-                  className="rounded-lg border border-border bg-white/85 p-4 text-left shadow-sm backdrop-blur"
-                >
-                  <p className="text-xl font-extrabold text-text-main md:text-2xl">
-                    {metric.value}
-                  </p>
-                  <p className="mt-1 text-[10px] font-bold uppercase leading-4 tracking-[0.14em] text-text-muted">
-                    {metric.label}
-                  </p>
-                </div>
-              ))}
-            </div>
+        <div className="relative z-10 mx-auto max-w-4xl space-y-6 animate-fade-up">
+          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-primary/10 bg-primary/5 px-3 py-1.5">
+            <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-primary">
+              The Application
+            </span>
           </div>
-
-          <div className="relative mx-auto h-[520px] w-full max-w-[620px] sm:h-[610px] lg:h-[680px]">
-            <PhoneFrame
-              screenshot={screenshots[1]}
-              priority
-              className="absolute left-1/2 top-8 z-20 w-[230px] -translate-x-1/2 rotate-0 sm:w-[270px] lg:w-[300px]"
-            />
-            <PhoneFrame
-              screenshot={screenshots[0]}
-              priority
-              className="absolute left-2 top-20 z-10 hidden w-[210px] -rotate-6 opacity-95 sm:block lg:left-0 lg:w-[255px]"
-            />
-            <PhoneFrame
-              screenshot={screenshots[2]}
-              priority
-              className="absolute right-2 top-28 z-10 hidden w-[210px] rotate-6 opacity-95 sm:block lg:right-0 lg:w-[255px]"
-            />
-            <div className="absolute bottom-4 left-1/2 z-30 flex h-14 w-14 -translate-x-1/2 items-center justify-center rounded-full border border-border bg-white/90 shadow-xl backdrop-blur">
-              <span className="material-symbols-outlined text-2xl text-primary">
-                phone_iphone
-              </span>
-            </div>
-          </div>
+          <h1 className="text-4xl font-extrabold leading-tight tracking-tighter text-text-main md:text-6xl">
+            The <br />
+            <span className="font-light italic text-primary">Atelier.</span>
+          </h1>
+          <p className="mx-auto max-w-xl text-base font-medium leading-relaxed text-text-muted md:text-lg">
+            The ZoraMeeto mobile platform is a high-performance digital
+            environment crafted for the modern individual who values depth over
+            distraction.
+          </p>
         </div>
       </section>
 
