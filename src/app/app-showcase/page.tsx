@@ -1,92 +1,273 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Atelier | ZoraMeeto Mobile Experience",
-  description: "Explore the high-performance digital environment crafted for the modern individual who values depth over distraction.",
+  title: "App Showcase | ZoraMeeto Mobile Experience",
+  description:
+    "Explore the real ZoraMeeto mobile experience with curated discovery, private profiles, matching flows, and a premium member journey.",
 };
 
-export default function AppShowcase() {
-  const features = [
-    {
-      title: "Precision Interface",
-      desc: "An award-winning mobile environment designed for deep intentionality, not distraction.",
-      icon: "smartphone"
-    },
-    {
-      title: "Real-time Resonance",
-      desc: "Our algorithm calculates synergy in real-time as you explore the collective.",
-      icon: "bolt"
-    },
-    {
-      title: "Secure Narrative",
-      desc: "Share your life through high-fidelity visual stories within a private network.",
-      icon: "camera_front"
-    }
-  ];
+const screenshots = [
+  {
+    src: "/zorameeto-ss-1.jpeg",
+    alt: "ZoraMeeto mobile app screen showing the member experience",
+  },
+  {
+    src: "/zorameeto-ss-2.jpeg",
+    alt: "ZoraMeeto mobile app screen showing profile discovery",
+  },
+  {
+    src: "/zorameeto-ss-3.jpeg",
+    alt: "ZoraMeeto mobile app screen showing a dating profile",
+  },
+  {
+    src: "/zorameeto-ss-4.jpeg",
+    alt: "ZoraMeeto mobile app screen showing app interaction details",
+  },
+  {
+    src: "/zorameeto-ss-5.jpeg",
+    alt: "ZoraMeeto mobile app screen showing the premium app interface",
+  },
+];
 
+const metrics = [
+  { value: "5", label: "Real app screens" },
+  { value: "716x1600", label: "Production captures" },
+  { value: "24/7", label: "Mobile-first access" },
+];
+
+const features = [
+  {
+    title: "Designed Around Intent",
+    desc: "Screens are structured for qualified discovery, profile depth, and deliberate action so members can move with clarity.",
+    icon: "target",
+  },
+  {
+    title: "Private By Default",
+    desc: "The interface favors discretion, member control, and focused interactions without noisy social-feed behavior.",
+    icon: "lock",
+  },
+  {
+    title: "Premium Mobile Polish",
+    desc: "Large visuals, readable spacing, and clear calls to action create a high-trust experience from first open.",
+    icon: "verified",
+  },
+];
+
+function PhoneFrame({
+  screenshot,
+  className = "",
+  priority = false,
+}: {
+  screenshot: (typeof screenshots)[number];
+  className?: string;
+  priority?: boolean;
+}) {
   return (
-    <main className="min-h-screen bg-background">
-      {/* Sophisticated Center-Aligned Compact Hero */}
-      <section className="relative pt-32 pb-12 px-6 overflow-hidden bg-gradient-mesh text-center">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-primary/5 blur-[100px] rounded-full z-0"></div>
-        
-        <div className="max-w-4xl mx-auto space-y-6 relative z-10 animate-fade-up">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/5 border border-primary/10 mx-auto">
-            <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-primary">The Application</span>
+    <div
+      className={`relative aspect-[716/1600] overflow-hidden rounded-[2rem] border-[7px] border-text-main bg-text-main shadow-[0_28px_70px_rgba(28,28,30,0.16)] ${className}`}
+    >
+      <div className="absolute left-1/2 top-0 z-10 h-5 w-24 -translate-x-1/2 rounded-b-2xl bg-text-main" />
+      <Image
+        src={screenshot.src}
+        alt={screenshot.alt}
+        width={716}
+        height={1600}
+        priority={priority}
+        sizes="(min-width: 1024px) 280px, (min-width: 640px) 240px, 68vw"
+        className="h-full w-full object-cover"
+      />
+    </div>
+  );
+}
+
+export default function AppShowcase() {
+  return (
+    <main className="min-h-screen bg-background selection:bg-primary/10">
+      <section className="relative overflow-hidden border-b border-border bg-gradient-mesh px-6 pb-16 pt-32 lg:pb-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:gap-16">
+          <div className="space-y-8 text-center lg:text-left">
+            <div className="inline-flex items-center gap-3 rounded-full border border-primary/15 bg-white/80 px-4 py-2 shadow-sm backdrop-blur">
+              <span className="h-2 w-2 rounded-full bg-primary" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
+                Real Product Screens
+              </span>
+            </div>
+
+            <div className="space-y-5">
+              <h1 className="text-4xl font-extrabold leading-[1.05] text-text-main md:text-6xl lg:text-7xl">
+                See ZoraMeeto
+                <span className="block font-light italic text-primary">in action.</span>
+              </h1>
+              <p className="mx-auto max-w-2xl text-base font-medium leading-8 text-text-muted md:text-lg lg:mx-0">
+                A polished mobile experience for selective dating: profile depth,
+                private discovery, and premium interactions built around real member
+                intent.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center gap-4 sm:flex-row lg:items-start">
+              <Link
+                href="/pricing"
+                className="inline-flex min-h-14 items-center justify-center rounded-2xl bg-text-main px-8 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-xl shadow-black/10 transition-all duration-300 hover:-translate-y-1 hover:bg-primary"
+              >
+                Request Access
+              </Link>
+              <Link
+                href="/features"
+                className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-border bg-white px-8 text-sm font-bold uppercase tracking-[0.16em] text-text-main shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-text-main"
+              >
+                Explore Features
+                <span className="material-symbols-outlined text-lg">arrow_forward</span>
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-3 gap-3 pt-4">
+              {metrics.map((metric) => (
+                <div
+                  key={metric.label}
+                  className="rounded-lg border border-border bg-white/85 p-4 text-left shadow-sm backdrop-blur"
+                >
+                  <p className="text-xl font-extrabold text-text-main md:text-2xl">
+                    {metric.value}
+                  </p>
+                  <p className="mt-1 text-[10px] font-bold uppercase leading-4 tracking-[0.14em] text-text-muted">
+                    {metric.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">
-            The <br />
-            <span className="text-primary italic font-light">Atelier.</span>
-          </h1>
-          <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-xl mx-auto">
-            The ZoraMeeto mobile platform is a high-performance digital environment crafted for the modern individual who values depth over distraction.
-          </p>
+
+          <div className="relative mx-auto h-[520px] w-full max-w-[620px] sm:h-[610px] lg:h-[680px]">
+            <PhoneFrame
+              screenshot={screenshots[1]}
+              priority
+              className="absolute left-1/2 top-8 z-20 w-[230px] -translate-x-1/2 rotate-0 sm:w-[270px] lg:w-[300px]"
+            />
+            <PhoneFrame
+              screenshot={screenshots[0]}
+              priority
+              className="absolute left-2 top-20 z-10 hidden w-[210px] -rotate-6 opacity-95 sm:block lg:left-0 lg:w-[255px]"
+            />
+            <PhoneFrame
+              screenshot={screenshots[2]}
+              priority
+              className="absolute right-2 top-28 z-10 hidden w-[210px] rotate-6 opacity-95 sm:block lg:right-0 lg:w-[255px]"
+            />
+            <div className="absolute bottom-4 left-1/2 z-30 flex h-14 w-14 -translate-x-1/2 items-center justify-center rounded-full border border-border bg-white/90 shadow-xl backdrop-blur">
+              <span className="material-symbols-outlined text-2xl text-primary">
+                phone_iphone
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Mobile Preview Grid - Compact Mode */}
-      <section className="py-16 px-6 bg-surface-soft/30">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="order-2 lg:order-1 relative flex justify-center">
-            <div className="absolute inset-0 bg-primary/5 blur-[80px] rounded-full"></div>
-            <div className="relative w-full max-w-[280px] aspect-[9/19] rounded-[3rem] border-[8px] border-text-main/5 bg-white shadow-xl overflow-hidden shadow-black/5">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-5 bg-surface rounded-b-2xl"></div>
-              <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800" alt="App Interface" className="w-full h-full object-cover" />
-            </div>
+      <section className="border-b border-border bg-white px-6 py-16">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-5 md:grid-cols-3">
+          {features.map((feature) => (
+            <article
+              key={feature.title}
+              className="rounded-lg border border-border bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/[0.04]"
+            >
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <span className="material-symbols-outlined text-2xl">
+                  {feature.icon}
+                </span>
+              </div>
+              <h2 className="text-xl font-extrabold leading-7 text-text-main">
+                {feature.title}
+              </h2>
+              <p className="mt-3 text-sm font-medium leading-7 text-text-muted">
+                {feature.desc}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-surface-soft/50 px-6 py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+            {screenshots.map((screenshot, index) => (
+              <article
+                key={screenshot.src}
+                className="group rounded-lg border border-border bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/[0.06]"
+              >
+                <PhoneFrame
+                  screenshot={screenshot}
+                  priority={index < 2}
+                  className="mx-auto w-full max-w-[245px] border-[6px] shadow-[0_18px_45px_rgba(28,28,30,0.14)]"
+                />
+              </article>
+            ))}
           </div>
-          <div className="order-1 lg:order-2 space-y-8">
-            {features.map((f, i) => (
-              <div key={i} className="spotlight-card rounded-[2.5rem] p-8 space-y-6 group hover-lift bg-white border border-border shadow-sm">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                  <span className="material-symbols-outlined text-2xl">{f.icon}</span>
-                </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-bold text-text-main tracking-tight leading-tight">{f.title}</h3>
-                  <p className="text-text-muted font-medium leading-relaxed text-sm">{f.desc}</p>
-                </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-20 lg:py-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="space-y-6">
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
+              Launch Ready
+            </span>
+            <h2 className="text-3xl font-extrabold leading-tight text-text-main md:text-5xl">
+              A sharper showcase for a premium dating product.
+            </h2>
+            <p className="text-base font-medium leading-8 text-text-muted">
+              The page is now built around real visual proof, clear positioning,
+              responsive phone frames, and conversion-ready calls to action.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {[
+              "Real screenshots replace stock imagery",
+              "Responsive layouts for mobile and desktop",
+              "Cleaner product copy for a premium audience",
+              "Clear pathways to pricing and feature pages",
+            ].map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-4 rounded-lg border border-border bg-surface-soft/60 p-5"
+              >
+                <span className="material-symbols-outlined mt-0.5 text-xl text-primary">
+                  check_circle
+                </span>
+                <p className="text-sm font-bold leading-6 text-text-main">{item}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Download Section - Compact Mode */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-4xl mx-auto spotlight-card rounded-[3rem] p-16 text-center space-y-12 border border-border bg-white shadow-xl shadow-black/[0.01]">
-          <h2 className="text-4xl lg:text-6xl font-bold tracking-tighter text-text-main leading-tight">
-            Available for <br />
-            <span className="text-primary italic font-light">Invitation Only.</span>
+      <section className="bg-text-main px-6 py-20 text-white lg:py-24">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 text-center">
+          <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
+            Invitation Only
+          </span>
+          <h2 className="text-4xl font-extrabold leading-tight md:text-6xl">
+            Bring the right members into the right experience.
           </h2>
-          <div className="flex flex-wrap justify-center gap-6">
-            <button className="bg-text-main text-white px-10 py-5 rounded-2xl font-bold text-xs uppercase tracking-widest hover:scale-105 transition-all flex items-center gap-3 shadow-lg">
-              <span className="material-symbols-outlined text-xl">apple</span>
-              App Store
-            </button>
-            <button className="bg-surface border border-border text-text-main px-10 py-5 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-border transition-all flex items-center gap-3">
-              <span className="material-symbols-outlined text-xl">play_arrow</span>
-              Play Store
-            </button>
+          <p className="max-w-2xl text-base font-medium leading-8 text-white/70">
+            ZoraMeeto now has an app showcase that presents the product with
+            real screens, stronger trust signals, and a premium mobile story.
+          </p>
+          <div className="flex flex-col gap-4 sm:flex-row">
+            <Link
+              href="/pricing"
+              className="inline-flex min-h-14 items-center justify-center rounded-2xl bg-white px-8 text-sm font-bold uppercase tracking-[0.16em] text-text-main transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
+            >
+              Apply for Access
+            </Link>
+            <Link
+              href="/how-it-works"
+              className="inline-flex min-h-14 items-center justify-center rounded-2xl border border-white/20 px-8 text-sm font-bold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/10"
+            >
+              View Process
+            </Link>
           </div>
         </div>
       </section>
