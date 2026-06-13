@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   },
   description: "ZoraMeeto is the world's most sophisticated dating network for high-achievers. Precision matching meets deep human resonance.",
   keywords: ["elite dating", "professional dating", "exclusive network", "high-intent matches"],
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
