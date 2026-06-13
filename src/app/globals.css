@@ -254,4 +254,23 @@
   .spotlight-card:hover::before {
     opacity: 1;
   }
+
+  .bg-mesh-ultra {
+    background-color: #ffffff;
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(340,100%,96%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(220,100%,96%,1) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(280,100%,96%,1) 0, transparent 50%);
+    background-size: 200% 200%;
+    animation: mesh-move 20s ease infinite alternate;
+  }
+
+  .bg-mesh-ultra-2 {
+    background-color: #1C1C1E;
+    background-image: 
+      radial-gradient(at 0% 100%, hsla(340, 100%, 50%, 0.15) 0, transparent 50%), 
+      radial-gradient(at 80% 50%, hsla(220, 100%, 50%, 0.1) 0, transparent 50%);
+    background-size: 200% 200%;
+    animation: mesh-move 20s ease infinite alternate;
+  }
 }

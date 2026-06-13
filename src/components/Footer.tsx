@@ -112,9 +112,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[10px] text-text-muted font-bold uppercase tracking-[0.2em]">
-            © 2026 ZoraMeeto. All Rights Reserved.
-          </p>
+          
           <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
             {['Privacy Policy', 'Terms of Service', 'Cookies'].map((item) => (
               <Link key={item} className="text-[10px] text-text-muted hover:text-primary transition-colors uppercase tracking-[0.2em] font-bold" href="#">
