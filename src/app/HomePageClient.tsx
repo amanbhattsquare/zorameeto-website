@@ -1,12 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import Image from "next/image";
 
 export default function HomePageClient() {
-  const [isBlogOpen, setIsBlogOpen] = useState(false);
-
   return (
     <main className="min-h-screen bg-background selection:bg-primary/10">
       
@@ -70,7 +67,7 @@ export default function HomePageClient() {
             <div className="absolute -left-2 lg:left-0 top-4 w-[200px] md:w-[260px] aspect-[9/19.5] bg-surface rounded-[2.5rem] shadow-[0_40px_80px_rgba(0,0,0,0.15)] border-[8px] border-text-main overflow-hidden rotate-[-8deg] hover:rotate-0 hover:scale-105 transition-all duration-1000 group z-10">
               <img 
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800" 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms]"
+                className="w-full h-full object-cover group-hover:scale-100 transition-transform duration-[2000ms]"
                 alt="Profile Experience"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/95 to-transparent z-30 text-white space-y-1">
@@ -80,13 +77,14 @@ export default function HomePageClient() {
             </div>
 
             {/* Screen 2: The Matching View - IMAGE STABILIZED WITH ROBUST LINK */}
-            <div className="absolute right-0 lg:right-4 bottom-4 w-[200px] md:w-[260px] aspect-[9/19.5] bg-surface rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.2)] border-[8px] border-text-main overflow-hidden rotate-[8deg] hover:rotate-0 hover:scale-105 transition-all duration-1000 group z-20">
-              <img 
-                src="https://images.pexels.com/photos/1417255/pexels-photo-1417255.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms]"
-                alt="Match Experience"
-              />
-              <div className="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/95 to-transparent z-30 text-white space-y-3">
+            <div className="absolute right-0 lg:right-4 bottom-4 w-[200px] md:w-[260px] aspect-[9/19.5] bg-surface rounded-[2.5rem] shadow-[0_40px_80px_rgba(0,0,0,0.15)] border-[8px] border-text-main overflow-hidden rotate-[8deg] hover:rotate-0 hover:scale-105 transition-all duration-1000 group z-10">
+             <img
+  src="https://images.pexels.com/photos/1417255/pexels-photo-1417255.jpeg?auto=compress&cs=tinysrgb&w=800"
+  className="w-full h-full object-cover rounded-[calc(2.5rem-8px)] group-hover:scale-100 transition-transform duration-[2000ms]"
+  alt="Match Experience"
+/>
+
+<div className="absolute inset-0 rounded-[calc(2.5rem-8px)] p-6 flex flex-col justify-end bg-gradient-to-t from-black/95 to-transparent z-30 text-white space-y-3">
                 <div className="flex items-center gap-2 px-3 py-1 bg-primary/30 backdrop-blur-md rounded-full w-fit border border-primary/50">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
                   <span className="text-[7px] font-bold uppercase tracking-widest text-white">98.4% Alignment</span>
@@ -177,7 +175,7 @@ export default function HomePageClient() {
               <div className="space-y-3 relative z-10">
                 <h3 className="text-3xl font-bold tracking-tight text-text-main leading-tight">The Art of the <br />Introduction</h3>
                 <p className="text-text-muted font-medium leading-relaxed text-base">
-                  You're not looking for more options; you're looking for the right one. Receive a handful of meticulously vetted introductions who truly align with your journey.
+                  You&apos;re not looking for more options; you&apos;re looking for the right one. Receive a handful of meticulously vetted introductions who truly align with your journey.
                 </p>
               </div>
             </div>
@@ -306,42 +304,18 @@ export default function HomePageClient() {
             From the <span className="text-primary italic font-light">ZoraMeeto</span> Journal
           </h2>
           <p className="mt-6 text-lg text-text-muted leading-relaxed max-w-2xl mx-auto">
-            In a world of fleeting connections, the first conversation is your opening statement. It's a chance to reveal not just what you do, but who you are. At ZoraMeeto, we believe in conversations that build, not just begin.
+            In a world of fleeting connections, the first conversation is your opening statement. It&apos;s a chance to reveal not just what you do, but who you are. At ZoraMeeto, we believe in conversations that build, not just begin.
           </p>
           <div className="mt-10">
-            <button
-              onClick={() => setIsBlogOpen(true)}
-              className="luxury-button bg-text-main text-white px-10 py-5 rounded-[1.5rem] font-bold text-xs uppercase tracking-[0.3em] shadow-xl shadow-black/10 hover:scale-105 transition-all duration-700"
+            <Link
+              href="/journal/first-conversation"
+              className="luxury-button inline-flex bg-text-main text-white px-10 py-5 rounded-[1.5rem] font-bold text-xs uppercase tracking-[0.3em] shadow-xl shadow-black/10 hover:scale-105 transition-all duration-700"
             >
               Read Full Post
-            </button>
+            </Link>
           </div>
         </div>
       </section>
-
-      {isBlogOpen && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-lg z-50 flex items-center justify-center p-4 animate-fade-in">
-          <div className="bg-white rounded-[3rem] max-w-2xl w-full p-10 sm:p-14 relative shadow-2xl animate-slide-up">
-            <button
-              onClick={() => setIsBlogOpen(false)}
-              className="absolute top-6 right-6 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-all duration-300 flex items-center justify-center z-10"
-            >
-              <span className="material-symbols-outlined text-lg">close</span>
-            </button>
-            <div className="space-y-6">
-              <h3 className="text-3xl font-bold tracking-tight text-text-main">The Art of the First Conversation: Beyond Small Talk</h3>
-              <div className="space-y-4 text-text-muted leading-relaxed text-left max-h-[60vh] overflow-y-auto pr-4">
-                <p>In a world of fleeting connections, the first conversation is your opening statement. It's a chance to reveal not just what you do, but who you are. At ZoraMeeto, we believe in conversations that build, not just begin. This is where you move beyond the superficial and into the substantive.</p>
-                <p><strong className="text-text-main">1. Ask Questions That Open Doors, Not Close Them:</strong> Instead of "What do you do?", try "What problem are you most passionate about solving right now?". This shifts the focus from a title to a purpose.</p>
-                <p><strong className="text-text-main">2. The Power of the Pause:</strong> A moment of silence isn't a void to be filled. It's a space for thought. A well-placed pause can indicate you're truly listening and processing, a rare commodity in modern dating.</p>
-                <p><strong className="text-text-main">3. Vulnerability is a Superpower:</strong> Sharing a small, authentic vulnerability can create an instant bond. It signals trust and invites the other person to do the same. This isn't about oversharing; it's about sharing something real.</p>
-                <p><strong className="text-text-main">4. Find the 'And':</strong> Successful people often have many facets. They are a CEO *and* a passionate chef, a surgeon *and* a dedicated marathon runner. Look for the 'and'. It's where the most interesting stories live.</p>
-                <p>At ZoraMeeto, every match is an invitation to a meaningful dialogue. We provide the platform; you bring the curiosity. Your next great conversation is waiting.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
 
 
