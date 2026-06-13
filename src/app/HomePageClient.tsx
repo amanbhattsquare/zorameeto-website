@@ -31,23 +31,23 @@ export default function HomePageClient() {
             <div className="space-y-5">
               <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-xl border border-white shadow-lg shadow-black/5 mx-auto lg:mx-0">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-text-main">Admission by Invitation Only</span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-text-main">Curated Dating for Ambitious Singles</span>
               </div>
               
               <div className="space-y-3">
                 <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tighter text-text-main leading-[1.1]">
-                  Meet the Elite. <br />
-                  <span className="text-primary italic font-light">Date with Intention.</span>
+                  Meet Someone Who <br />
+                  <span className="text-primary italic font-light">Matches Your Ambition.</span>
                 </h1>
                 <p className="text-base text-text-muted max-w-lg mx-auto lg:mx-0 leading-relaxed font-bold glass-card-premium p-5 rounded-2xl border border-white/50 shadow-sm">
-                  The world's most sophisticated dating network for high-achievers. Precision matching meets deep human resonance.
+                  ZoraMeeto is a selective dating collective for people building extraordinary lives, where every introduction is shaped by compatibility, privacy, and real intention.
                 </p>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-6 lg:justify-start">
-              <Link href="/features" className="luxury-button bg-text-main text-white px-10 py-5 rounded-[1.5rem] font-bold text-xs uppercase tracking-[0.3em] shadow-xl shadow-black/10 hover:scale-105 transition-all duration-700">
-                Explore
+              <Link href="/pricing" className="luxury-button bg-text-main text-white px-10 py-5 rounded-[1.5rem] font-bold text-xs uppercase tracking-[0.3em] shadow-xl shadow-black/10 hover:scale-105 transition-all duration-700">
+                Explore Membership
               </Link>
               
               <div className="flex flex-col items-center lg:items-start gap-1.5">
@@ -58,7 +58,7 @@ export default function HomePageClient() {
                     </div>
                   ))}
                 </div>
-                <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-text-muted">2.4k+ Vetted members</p>
+                <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-text-muted">2.4k+ selectively vetted members</p>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function HomePageClient() {
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/95 to-transparent z-30 text-white space-y-1">
                 <p className="text-lg font-bold">Sophia, 26</p>
-                <p className="text-[7px] font-bold uppercase tracking-widest text-white/60">Creative Director • Mumbai</p>
+                <p className="text-[7px] font-bold uppercase tracking-widest text-white/60">Creative Director | Mumbai</p>
               </div>
             </div>
 
@@ -89,14 +89,14 @@ export default function HomePageClient() {
               <div className="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/95 to-transparent z-30 text-white space-y-3">
                 <div className="flex items-center gap-2 px-3 py-1 bg-primary/30 backdrop-blur-md rounded-full w-fit border border-primary/50">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-                  <span className="text-[7px] font-bold uppercase tracking-widest text-white">98.4% Resonance</span>
+                  <span className="text-[7px] font-bold uppercase tracking-widest text-white">98.4% Alignment</span>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-xl font-bold leading-tight">Match Found</p>
-                  <p className="text-[8px] font-medium text-white/60">Shared values & aesthetic alignment.</p>
+                  <p className="text-xl font-bold leading-tight">High-Intent Match</p>
+                  <p className="text-[8px] font-medium text-white/60">Shared values, lifestyle, and long-term goals.</p>
                 </div>
                 <button className="w-full py-4 bg-white text-text-main rounded-2xl font-bold text-[9px] uppercase tracking-widest shadow-xl hover:bg-primary hover:text-white transition-colors">
-                  Initiate Connection
+                  Start Conversation
                 </button>
               </div>
             </div>
