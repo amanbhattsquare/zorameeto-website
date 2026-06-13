@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+// import image1 from "@/public/hero-img-1.png";
 
 export default function HomePageClient() {
   return (
@@ -65,11 +66,18 @@ export default function HomePageClient() {
             
             {/* Screen 1: The Profile View */}
             <div className="absolute -left-2 lg:left-0 top-4 w-[200px] md:w-[260px] aspect-[9/19.5] bg-surface rounded-[2.5rem] shadow-[0_40px_80px_rgba(0,0,0,0.15)] border-[8px] border-text-main overflow-hidden rotate-[-8deg] hover:rotate-0 hover:scale-105 transition-all duration-1000 group z-10">
-              <img 
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800" 
+            <Image 
+                src="/hero-img-1.png" 
+                alt="ZoraMeeto Mobile App" 
+                width={800}
+                height={800}
+                className="w-full h-full object-cover group-hover:scale-100 transition-transform duration-[2000ms]"
+              />
+              {/* <img 
+                src={image1.src}
                 className="w-full h-full object-cover group-hover:scale-100 transition-transform duration-[2000ms]"
                 alt="Profile Experience"
-              />
+              /> */}
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/95 to-transparent z-30 text-white space-y-1">
                 <p className="text-lg font-bold">Sophia, 26</p>
                 <p className="text-[7px] font-bold uppercase tracking-widest text-white/60">Creative Director | Mumbai</p>
