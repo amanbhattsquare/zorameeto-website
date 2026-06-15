@@ -55,11 +55,13 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/features", label: "Features" },
-    { href: "/how-it-works", label: "Process" },
+    { href: "/about-us", label: "About Us" },
     { href: "/app-showcase", label: "Showcase" },
-    { href: "/love-stories", label: "Stories" },
-    { href: "/pricing", label: "Membership" },
-  ];
+    { href: "/love-stories", label: "The Zora Journal" },
+    { href: "/earn-and-grow", label: "Earn & Grow" },
+    // { href: "/how-it-works", label: "Process" },
+    // { href: "/pricing", label: "Membership" },
+  ];  
 
   return (
     <>

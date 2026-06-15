@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { AppStoreLogo, GooglePlayLogo } from "@/components/StoreLogos";
 // import image1 from "@/public/hero-img-1.png";
 
 export default function HomePageClient() {
@@ -38,20 +39,18 @@ export default function HomePageClient() {
                   <span className="text-primary italic font-light">Matches Your Life.</span>
                 </h1>
                 <p className="text-base text-text-muted max-w-lg mx-auto lg:mx-0 leading-relaxed font-bold glass-card-premium p-5 rounded-2xl border border-white/50 shadow-sm">
-                  ZoraMeeto is a dating app for serious people. Meet verified matches with privacy, safety, and clear dating goals.
+                  Earnings are available to verified users who actively follow platform rules. Fake activity, spam, fraud, or policy violations may lead to restricted or revoked earning access.
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-6 lg:justify-start">
+            <div className="flex flex-col items-center sm:items-start gap-4 lg:justify-start">
+              <p className="text-xl font-semibold text-text-muted center">Available on</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 {/* Premium App Store Button */}
                 <a href="#" className="flex items-center gap-5 bg-[#111111] text-white px-6 py-3.5 rounded-[1.25rem] hover:bg-black hover:scale-105 transition-all duration-500 shadow-xl group border border-white/5">
                   <div className="flex flex-col items-center gap-2">
-                     <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg">
-                       <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.1 2.48-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .76-3.27.82-1.31.05-2.31-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.24-1.99 1.1-3.15-1.03.04-2.28.67-3.02 1.52-.66.76-1.24 1.94-1.1 3.08 1.14.09 2.29-.62 3.02-1.45z"/>
-                     </svg>
-                     <div className="text-[7px] font-extralight tracking-[0.3em] leading-none text-white/50">APPLE</div>
+                    <AppStoreLogo className="h-8 w-8 shrink-0 rounded-lg shadow-sm" />
                   </div>
                   <div className="w-[1px] h-8 bg-white/10"></div>
                   <div className="text-left">
@@ -65,13 +64,7 @@ export default function HomePageClient() {
                 {/* Premium Play Store Button */}
                 <a href="#" className="flex items-center gap-5 bg-white border border-border text-text-main px-6 py-3.5 rounded-[1.25rem] hover:border-text-main hover:scale-105 transition-all duration-500 shadow-xl group">
                   <div className="flex flex-col items-center gap-2">
-                     <svg viewBox="0 0 24 24" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
-                       <path d="M3,20.5V3.5C3,2.9,3.3,2.5,3.7,2.2l12.4,12.4l-3,3l-9.4,9.4C3.3,21.5,3,21.1,3,20.5z" fill="#00df9a"/>
-                       <path d="M23.3,12.5l-3.3-1.9l-3.3,3.3 l3.3,3.3l3.3-1.9C23.8,15.1,24,14.6,24,14S23.8,12.9,23.3,12.5z" fill="#ffcf00"/>
-                       <path d="M4.7,2.2l12.4,12.4l3.3-3.3L5.4,1.4C5.1,1.1,4.7,1.3,4.7,2.2z" fill="#00b0ff"/>
-                       <path d="M17.1,14.6L4.7,27l0.7,0.8l15.1-8.7L17.1,14.6z" fill="#ff3d00"/>
-                     </svg>
-                     <div className="text-[7px] font-extralight tracking-[0.3em] leading-none text-text-muted">PLAY_</div>
+                    <GooglePlayLogo className="h-8 w-8 shrink-0" />
                   </div>
                   <div className="w-[1px] h-8 bg-border"></div>
                   <div className="text-left">
@@ -325,10 +318,7 @@ export default function HomePageClient() {
               {/* Premium App Store Button */}
               <a href="#" className="flex items-center gap-5 bg-[#111111] text-white px-6 py-3.5 rounded-[1.25rem] hover:bg-black hover:scale-105 transition-all duration-500 shadow-xl group border border-white/5">
                 <div className="flex flex-col items-center gap-2">
-                   <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.1 2.48-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .76-3.27.82-1.31.05-2.31-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.24-1.99 1.1-3.15-1.03.04-2.28.67-3.02 1.52-.66.76-1.24 1.94-1.1 3.08 1.14.09 2.29-.62 3.02-1.45z"/>
-                   </svg>
-                   <div className="text-[7px] font-extralight tracking-[0.3em] leading-none text-white/50">APPLE</div>
+                  <AppStoreLogo className="h-8 w-8 shrink-0 rounded-lg shadow-sm" />
                 </div>
                 <div className="w-[1px] h-8 bg-white/10"></div>
                 <div className="text-left">
@@ -342,13 +332,7 @@ export default function HomePageClient() {
               {/* Premium Play Store Button */}
               <a href="#" className="flex items-center gap-5 bg-white border border-border text-text-main px-6 py-3.5 rounded-[1.25rem] hover:border-text-main hover:scale-105 transition-all duration-500 shadow-xl group">
                 <div className="flex flex-col items-center gap-2">
-                   <svg viewBox="0 0 24 24" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M3,20.5V3.5C3,2.9,3.3,2.5,3.7,2.2l12.4,12.4l-3,3l-9.4,9.4C3.3,21.5,3,21.1,3,20.5z" fill="#00df9a"/>
-                     <path d="M23.3,12.5l-3.3-1.9l-3.3,3.3 l3.3,3.3l3.3-1.9C23.8,15.1,24,14.6,24,14S23.8,12.9,23.3,12.5z" fill="#ffcf00"/>
-                     <path d="M4.7,2.2l12.4,12.4l3.3-3.3L5.4,1.4C5.1,1.1,4.7,1.3,4.7,2.2z" fill="#00b0ff"/>
-                     <path d="M17.1,14.6L4.7,27l0.7,0.8l15.1-8.7L17.1,14.6z" fill="#ff3d00"/>
-                   </svg>
-                   <div className="text-[7px] font-extralight tracking-[0.3em] leading-none text-text-muted">PLAY_</div>
+                  <GooglePlayLogo className="h-8 w-8 shrink-0" />
                 </div>
                 <div className="w-[1px] h-8 bg-border"></div>
                 <div className="text-left">
