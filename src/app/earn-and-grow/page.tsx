@@ -94,6 +94,24 @@ export default function EarnAndGrow() {
     }
   ];
 
+  const ctaHighlights = [
+    {
+      icon: "verified_user",
+      title: "Verified Members Only",
+      desc: "Earning access opens after profile checks, activity quality review, and account approval."
+    },
+    {
+      icon: "analytics",
+      title: "Clear Progress Dashboard",
+      desc: "Track referrals, activity points, eligibility status, and reward milestones in one place."
+    },
+    {
+      icon: "account_balance_wallet",
+      title: "Simple Payout Flow",
+      desc: "Approved rewards can be requested through the app after payout details are confirmed."
+    }
+  ];
+
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -109,7 +127,7 @@ export default function EarnAndGrow() {
             <span className="text-primary italic font-light">Connect & Grow.</span>
           </h1>
           <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-xl mx-auto">
-            Turn your social influence and active participation into real earnings. Build meaningful connections while growing your income on India's most trusted dating platform.
+            Turn your social influence and active participation into real earnings. Build meaningful connections while growing your income on India&apos;s most trusted dating platform.
           </p>
         </div>
       </section>
@@ -231,15 +249,34 @@ export default function EarnAndGrow() {
 
       {/* CTA Section */}
       <section className="py-24 px-6 bg-white">
-        <div className="max-w-4xl mx-auto spotlight-card rounded-[3.5rem] p-16 text-center space-y-10 relative overflow-hidden bg-text-main shadow-2xl shadow-black/10">
+        <div className="max-w-5xl mx-auto spotlight-card rounded-[3.5rem] p-8 md:p-14 lg:p-16 text-center space-y-10 relative overflow-hidden bg-text-main shadow-2xl shadow-black/10">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-primary/20 to-transparent"></div>
           <h2 className="text-4xl lg:text-6xl font-bold tracking-tighter text-white relative z-10 leading-tight">
             Start Earning <br />
             <span className="text-primary italic font-light">Today.</span>
           </h2>
           <p className="text-lg text-white/70 max-w-xl mx-auto font-medium relative z-10 leading-relaxed">
-            Join thousands of members who are already earning while building meaningful connections on ZoraMeeto.
+            Complete your profile, stay authentic, and unlock earning tools designed for verified ZoraMeeto members.
           </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10 text-left">
+            {ctaHighlights.map((item) => (
+              <div key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+                <div className="w-11 h-11 rounded-2xl bg-white/10 flex items-center justify-center text-primary mb-5">
+                  <span className="material-symbols-outlined text-2xl">{item.icon}</span>
+                </div>
+                <h3 className="text-white text-lg font-extrabold mb-3">{item.title}</h3>
+                <p className="text-sm text-white/65 leading-6 font-medium">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="relative z-10 flex flex-wrap items-center justify-center gap-4 text-white/70">
+            {["No fake activity", "Quality-first rewards", "Transparent review"].map((item) => (
+              <span key={item} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.18em]">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                {item}
+              </span>
+            ))}
+          </div>
           <div className="pt-4 relative z-10">
             <button className="bg-white text-text-main px-12 py-6 rounded-2xl font-bold text-sm uppercase tracking-widest shadow-xl hover:scale-105 transition-all">
               Get Started Now
