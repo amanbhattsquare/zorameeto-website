@@ -1,6 +1,12 @@
 import Link from "next/link";
 
 export default function Footer() {
+  const legalLinks = [
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'Terms & Conditions', href: '/terms-and-conditions' },
+    { label: 'Cookies', href: '/privacy-policy#5-cookies-and-similar-technologies' },
+  ];
+
   const socialIcons = [
     { 
       name: 'Facebook', 
@@ -114,9 +120,9 @@ export default function Footer() {
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
           
           <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
-            {['Privacy Policy', 'Terms of Service', 'Cookies'].map((item) => (
-              <Link key={item} className="text-[10px] text-text-muted hover:text-primary transition-colors uppercase tracking-[0.2em] font-bold" href="#">
-                {item}
+            {legalLinks.map((item) => (
+              <Link key={item.label} className="text-[10px] text-text-muted hover:text-primary transition-colors uppercase tracking-[0.2em] font-bold" href={item.href}>
+                {item.label}
               </Link>
             ))}
           </div>

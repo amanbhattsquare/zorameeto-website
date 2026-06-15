@@ -142,7 +142,7 @@ export default function HomePageClient() {
         <div className="flex whitespace-nowrap animate-marquee">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-16 items-center px-8">
-              {['Intellectual Curiosity', 'Ambitious Goals', 'Creative Pursuits', 'Global Adventures', 'Wellness Journeys', 'Philanthropic Hearts'].map((item) => (
+              {['AI Matchmaking', 'Verified Profiles', 'Secure Chat', 'Privacy Controls', 'Compatibility Score', 'Curated Introductions', 'Earn Money'].map((item) => (
                 <div key={item} className="flex items-center gap-4">
                   <span className="w-1 h-1 rounded-full bg-primary/30"></span>
                   <span className="text-[9px] font-bold uppercase tracking-[0.4em] text-text-muted">{item}</span>
