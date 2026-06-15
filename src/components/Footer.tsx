@@ -118,13 +118,27 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
+          {/* Copyright - Left Side */}
+          <div className="order-2 md:order-1">
+            <p className="text-[10px] text-text-muted tracking-wide">
+              © {new Date().getFullYear()} ZoraMeeto. All rights reserved.
+            </p>
+          </div>
           
-          <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
+          {/* Legal Links - Center */}
+          <div className="order-1 md:order-2 flex flex-wrap justify-center gap-x-10 gap-y-4">
             {legalLinks.map((item) => (
               <Link key={item.label} className="text-[10px] text-text-muted hover:text-primary transition-colors uppercase tracking-[0.2em] font-bold" href={item.href}>
                 {item.label}
               </Link>
             ))}
+          </div>
+          
+          {/* Team/Company Credits - Right Side */}
+          <div className="order-3">
+            <p className="text-[10px] text-text-muted tracking-wide">
+              Crafted with ❤️ by the <Link href="#" className="hover:text-primary transition-colors font-semibold">ZoraMeeto Team</Link>
+            </p>
           </div>
         </div>
       </div>
