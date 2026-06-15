@@ -27,12 +27,34 @@ export default function Navbar() {
     setIsMenuOpen(false);
   }, [pathname]);
 
+  const normalizePath = (path: string) => {
+    if (path === "/") return path;
+    return path.replace(/\/$/, "");
+  };
+
+  const isActivePath = (path: string) => {
+    const currentPath = normalizePath(pathname);
+    const targetPath = normalizePath(path);
+
+    if (targetPath === "/") {
+      return currentPath === "/";
+    }
+
+    return currentPath === targetPath || currentPath.startsWith(`${targetPath}/`);
+  };
+
   const getLinkClass = (path: string) => {
-    const isActive = pathname === path;
+    const isActive = isActivePath(path);
     if (isActive) {
       return "text-primary font-bold text-[10px] uppercase tracking-[0.2em] border-b-2 border-primary pb-1";
     }
     return "text-text-main/60 hover:text-text-main transition-all duration-300 font-bold text-[10px] uppercase tracking-[0.2em]";
+  };
+
+  const getMobileLinkClass = (path: string, isOpen: boolean) => {
+    const activeClass = isActivePath(path) ? "text-primary" : "text-text-main hover:text-primary";
+    const motionClass = isOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0";
+    return `text-2xl font-bold tracking-tight transition-all duration-300 ${activeClass} ${motionClass}`;
   };
 
   const navLinks = [
@@ -63,7 +85,7 @@ export default function Navbar() {
             />
           </Link>
           
-          <div className="hidden lg:flex gap-10 items-center">
+          <div className="hidden lg:flex gap-7 xl:gap-10 items-center">
             {navLinks.map(link => (
               <Link key={link.href} className={getLinkClass(link.href)} href={link.href}>
                 {link.label}
@@ -105,14 +127,14 @@ export default function Navbar() {
           {navLinks.map((link, i) => (
             <Link 
               key={link.href} 
-              className={`text-2xl font-bold tracking-tight text-text-main hover:text-primary transition-all duration-300 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+              className={getMobileLinkClass(link.href, isMenuOpen)}
               style={{ transitionDelay: `${i * 50}ms` }}
               href={link.href}
             >
               {link.label}
             </Link>
           ))}
-          <button className={`mt-8 bg-gradient-primary text-white px-12 py-4 rounded-full font-bold text-lg shadow-xl shadow-primary/20 transition-all duration-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '350ms' }}>
+          <button className={`mt-8 bg-gradient-primary text-white px-12 py-4 rounded-full font-bold text-lg shadow-xl shadow-primary/20 transition-all duration-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: `${navLinks.length * 50}ms` }}>
             Join ZoraMeeto
           </button>
         </div>
