@@ -52,7 +52,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-text-muted text-base leading-relaxed max-w-xs font-medium">
-              The modern standard for elite connections. High-performance design meets human resonance.
+              A safe dating app for serious singles. Meet verified people and build real connections.
             </p>
             <div className="flex gap-4 pt-2">
               {socialIcons.map((social) => (
@@ -74,7 +74,7 @@ export default function Footer() {
               Experience
             </h5>
             <ul className="space-y-5">
-              {['About Zora', 'Elite Features', 'Success Stories', 'The Process'].map((item) => (
+              {['About Zora', 'App Features', 'Success Stories', 'How It Works'].map((item) => (
                 <li key={item}>
                   <Link className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-muted hover:text-primary transition-colors" href="#">{item}</Link>
                 </li>
@@ -101,7 +101,7 @@ export default function Footer() {
               Newsletter
             </h5>
             <p className="text-sm text-text-muted font-medium leading-relaxed">
-              Join the network for dating insights and member-only events.
+              Join for dating tips, app updates, and member events.
             </p>
             <div className="flex flex-col gap-3">
               <input
@@ -110,7 +110,7 @@ export default function Footer() {
                 type="email"
               />
               <button className="bg-primary text-white py-4 rounded-xl text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-primary-hover transition-all duration-500">
-                Join Network
+                Join Now
               </button>
             </div>
           </div>

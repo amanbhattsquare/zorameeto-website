@@ -3,94 +3,94 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Features | ZoraMeeto Elite Dating Platform",
+  title: "Features | ZoraMeeto Dating App",
   description:
-    "Explore ZoraMeeto features for verified dating, private discovery, high-intent matching, member safety, and a premium mobile experience.",
+    "Explore ZoraMeeto features for verified dating, private profiles, better matches, member safety, and a simple mobile app.",
 };
 
 const coreFeatures = [
   {
     icon: "psychology",
-    title: "Resonance Matching",
-    desc: "Compatibility signals are shaped around lifestyle, intent, emotional rhythm, and long-term relationship goals.",
+    title: "Smart Matching",
+    desc: "Matches are based on lifestyle, dating goals, interests, and future plans.",
   },
   {
     icon: "verified_user",
     title: "Verified Members",
-    desc: "Manual review helps preserve quality, reduce noise, and keep the network aligned with selective dating standards.",
+    desc: "Profile review helps keep fake profiles and low-quality activity away.",
   },
   {
     icon: "visibility_off",
-    title: "Private Discovery",
-    desc: "Members can explore with discretion, controlled visibility, and a more thoughtful path to connection.",
+    title: "Private Browsing",
+    desc: "Control who can see your profile and explore matches with more privacy.",
   },
   {
     icon: "forum",
-    title: "Guided Conversation",
-    desc: "Prompted introductions and cleaner profile context help people start with substance instead of small talk.",
+    title: "Easy Conversation",
+    desc: "Profile prompts and clear details help people start better chats.",
   },
   {
     icon: "event_available",
-    title: "Date Readiness",
-    desc: "The experience supports clear next steps from match review to planning, so momentum is never left vague.",
+    title: "Plan a Date",
+    desc: "Move from match to chat to date planning with clear next steps.",
   },
   {
     icon: "workspace_premium",
-    title: "Premium Experience",
-    desc: "Every interaction is built to feel calm, polished, and high-trust across mobile and desktop touchpoints.",
+    title: "Clean App Design",
+    desc: "The app feels simple, calm, and easy to use on mobile and desktop.",
   },
 ];
 
 const platformLayers = [
   {
-    label: "Profile Intelligence",
-    title: "Profiles Built For Depth",
-    desc: "ZoraMeeto profiles make values, lifestyle, ambition, and expectations easier to scan before a member commits attention.",
+    label: "Profiles",
+    title: "Profiles With Useful Details",
+    desc: "Profiles show values, lifestyle, goals, and expectations clearly before you start talking.",
     icon: "badge",
   },
   {
     label: "Match Quality",
     title: "Fewer Matches, Better Fit",
-    desc: "The platform favors intentional recommendations over endless browsing, helping members focus on higher-signal connections.",
+    desc: "The app shows fewer random profiles and focuses on matches that make more sense.",
     icon: "filter_alt",
   },
   {
     label: "Member Safety",
     title: "Trust At Every Step",
-    desc: "Verification, controlled visibility, and privacy-first flows keep the experience professional and respectful.",
+    desc: "Verification, privacy controls, and reporting tools help keep the app respectful.",
     icon: "shield_lock",
   },
 ];
 
 const privacyFeatures = [
-  "Controlled profile visibility",
-  "Verified network access",
-  "Discreet mobile experience",
-  "Quality-focused reporting paths",
-  "No noisy public social feed",
-  "Intent-first member journey",
+  "Control who sees your profile",
+  "Verified member access",
+  "Private mobile experience",
+  "Simple reporting tools",
+  "No public social feed",
+  "Made for serious dating",
 ];
 
 const journey = [
   {
     step: "01",
     title: "Apply",
-    desc: "Members begin with a selective access flow designed to preserve the quality of the community.",
+    desc: "Start with a simple profile and access request.",
   },
   {
     step: "02",
     title: "Verify",
-    desc: "Identity, intent, and profile quality are reviewed before the dating experience opens fully.",
+    desc: "Identity, goals, and profile quality are checked before full access.",
   },
   {
     step: "03",
     title: "Discover",
-    desc: "Curated recommendations help members spend less time searching and more time evaluating real potential.",
+    desc: "Better suggestions help you spend less time searching.",
   },
   {
     step: "04",
     title: "Connect",
-    desc: "The product supports focused conversations and clear next steps toward meaningful meetings.",
+    desc: "Chat clearly and take the next step when both people are ready.",
   },
 ];
 
@@ -132,17 +132,16 @@ export default function Features() {
         <div className="relative z-10 mx-auto max-w-4xl space-y-6 animate-fade-up">
           <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-primary/10 bg-primary/5 px-3 py-1.5">
             <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-primary">
-              The Capabilities
+              App Features
             </span>
           </div>
           <h1 className="text-4xl font-extrabold leading-tight tracking-tighter text-text-main md:text-6xl">
-            Precision <br />
-            <span className="font-light italic text-primary">Innovation.</span>
+            Simple Features for <br />
+            <span className="font-light italic text-primary">Better Dating.</span>
           </h1>
           <p className="mx-auto max-w-xl text-base font-medium leading-relaxed text-text-muted md:text-lg">
-            A high-performance suite of features designed for the discerning
-            individual. Every touchpoint is optimized for depth, security, and
-            resonant connection.
+            ZoraMeeto gives you verified profiles, better matches, private browsing,
+            and simple tools to build real connections.
           </p>
         </div>
       </section>
@@ -151,10 +150,10 @@ export default function Features() {
         <div className="mx-auto max-w-7xl space-y-10">
           <div className="max-w-3xl space-y-4">
             <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
-              Core Capabilities
+              Main Features
             </span>
             <h2 className="text-3xl font-extrabold leading-tight text-text-main md:text-5xl">
-              More than matching. A complete trust layer.
+              More than matching. Built for trust.
             </h2>
           </div>
 
@@ -213,15 +212,15 @@ export default function Features() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-8">
             <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
-              Privacy System
+              Privacy Tools
             </span>
             <div className="space-y-5">
               <h2 className="text-3xl font-extrabold leading-tight text-text-main md:text-5xl">
-                Discretion is designed into the product.
+                Privacy is built into the app.
               </h2>
               <p className="max-w-2xl text-base font-medium leading-8 text-text-muted">
-                ZoraMeeto avoids public-feed behavior and gives members a calmer,
-                more controlled environment for exploring potential connections.
+                ZoraMeeto avoids public feeds and gives members a private place
+                to explore real matches.
               </p>
             </div>
 
@@ -257,10 +256,10 @@ export default function Features() {
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl space-y-4">
               <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
-                Member Journey
+              User Journey
               </span>
               <h2 className="text-3xl font-extrabold leading-tight text-text-main md:text-5xl">
-                A guided path from access to connection.
+                A simple path from signup to connection.
               </h2>
             </div>
             <Link
@@ -299,14 +298,13 @@ export default function Features() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div className="space-y-5">
             <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
-              Product Proof
+              App Screens
             </span>
             <h2 className="text-3xl font-extrabold leading-tight text-text-main md:text-5xl">
-              Real screens. Real interaction patterns.
+              Real screens. Real app flow.
             </h2>
             <p className="text-base font-medium leading-8 text-text-muted">
-              The feature set is backed by a live mobile experience with clear
-              profile surfaces, focused discovery, and a refined visual system.
+              See how profiles, matches, and app features look on real screens.
             </p>
           </div>
 
@@ -330,21 +328,21 @@ export default function Features() {
       <section className="bg-text-main px-6 py-20 text-white lg:py-24">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 text-center">
           <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
-            Built For High-Intent Members
+            Built For Serious Singles
           </span>
           <h2 className="text-4xl font-extrabold leading-tight md:text-6xl">
-            Dating features that respect time, privacy, and standards.
+            Dating features that respect your time and privacy.
           </h2>
           <p className="max-w-2xl text-base font-medium leading-8 text-white/70">
-            ZoraMeeto is shaped for people who want fewer distractions, better
-            context, and a more deliberate path to meaningful connection.
+            ZoraMeeto is made for people who want fewer distractions and better
+            chances to meet someone real.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link
               href="/pricing"
               className="inline-flex min-h-14 items-center justify-center rounded-2xl bg-white px-8 text-sm font-bold uppercase tracking-[0.16em] text-text-main transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
             >
-              Request Access
+              Get Started
             </Link>
             <Link
               href="/app-showcase"

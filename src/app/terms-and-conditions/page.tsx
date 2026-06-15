@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
-  description: "Review the terms that govern access to ZoraMeeto dating services, memberships, safety rules, and mobile experiences.",
+  description: "Review the rules for using ZoraMeeto dating services, memberships, safety tools, and mobile app.",
 };
 
 const sections = [
@@ -34,7 +34,7 @@ const sections = [
   {
     title: "4. Member Conduct",
     body: [
-      "You agree to treat other members with respect and to use ZoraMeeto for lawful, genuine, and high-intent dating purposes.",
+      "You agree to treat other members with respect and to use ZoraMeeto for lawful, genuine, and serious dating purposes.",
       "You may not harass, threaten, exploit, stalk, defame, discriminate, solicit money from, or otherwise harm another member.",
       "You may not post or send illegal, explicit, abusive, misleading, hateful, violent, infringing, spam, or commercial content.",
       "You may not scrape, copy, sell, export, or misuse member profiles, photos, messages, or platform data.",
@@ -143,7 +143,7 @@ export default function TermsAndConditions() {
             Terms & <span className="text-primary italic font-light">Conditions.</span>
           </h1>
           <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-2xl mx-auto">
-            These terms set expectations for safe, respectful, and high-intent use of ZoraMeeto across our dating app, memberships, and digital services.
+            These terms explain how to use ZoraMeeto safely and respectfully across our dating app, memberships, and online services.
           </p>
           <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-text-muted">
             Last updated: June 15, 2026

@@ -29,16 +29,16 @@ export default function HomePageClient() {
             <div className="space-y-5">
               <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-xl border border-white shadow-lg shadow-black/5 mx-auto lg:mx-0">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-text-main">Curated Dating for Ambitious Singles</span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-text-main">Smart Dating for Serious Singles</span>
               </div>
               
               <div className="space-y-3">
                 <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tighter text-text-main leading-[1.1]">
                   Meet Someone Who <br />
-                  <span className="text-primary italic font-light">Matches Your Ambition.</span>
+                  <span className="text-primary italic font-light">Matches Your Life.</span>
                 </h1>
                 <p className="text-base text-text-muted max-w-lg mx-auto lg:mx-0 leading-relaxed font-bold glass-card-premium p-5 rounded-2xl border border-white/50 shadow-sm">
-                  ZoraMeeto is a selective dating collective for people building extraordinary lives, where every introduction is shaped by compatibility, privacy, and real intention.
+                  ZoraMeeto is a dating app for serious people. Meet verified matches with privacy, safety, and clear dating goals.
                 </p>
               </div>
             </div>
@@ -119,11 +119,11 @@ export default function HomePageClient() {
 <div className="absolute inset-0 rounded-[calc(2.5rem-8px)] p-6 flex flex-col justify-end bg-gradient-to-t from-black/95 to-transparent z-30 text-white space-y-3">
                 <div className="flex items-center gap-2 px-3 py-1 bg-primary/30 backdrop-blur-md rounded-full w-fit border border-primary/50">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-                  <span className="text-[7px] font-bold uppercase tracking-widest text-white">98.4% Alignment</span>
+                  <span className="text-[7px] font-bold uppercase tracking-widest text-white">98.4% Match</span>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-xl font-bold leading-tight">High-Intent Match</p>
-                  <p className="text-[8px] font-medium text-white/60">Shared values, lifestyle, and long-term goals.</p>
+                  <p className="text-xl font-bold leading-tight">Strong Match</p>
+                  <p className="text-[8px] font-medium text-white/60">Shared values, lifestyle, and future plans.</p>
                 </div>
                 <button className="w-full py-4 bg-white text-text-main rounded-2xl font-bold text-[9px] uppercase tracking-widest shadow-xl hover:bg-primary hover:text-white transition-colors">
                   Start Conversation
@@ -142,7 +142,7 @@ export default function HomePageClient() {
         <div className="flex whitespace-nowrap animate-marquee">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-16 items-center px-8">
-              {['AI Matchmaking', 'Verified Profiles', 'Secure Chat', 'Privacy Controls', 'Compatibility Score', 'Curated Introductions', 'Earn Money'].map((item) => (
+              {['AI Matchmaking', 'Verified Profiles', 'Secure Chat', 'Privacy Controls', 'Match Score', 'Smart Introductions', 'Earn Money'].map((item) => (
                 <div key={item} className="flex items-center gap-4">
                   <span className="w-1 h-1 rounded-full bg-primary/30"></span>
                   <span className="text-[9px] font-bold uppercase tracking-[0.4em] text-text-muted">{item}</span>
@@ -158,8 +158,8 @@ export default function HomePageClient() {
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-10 text-center md:text-left">
           {[
             { label: "Matches", value: "85%", icon: "favorite" },
-            { label: "Vetted", value: "100%", icon: "verified" },
-            { label: "Elite", value: "TOP 1%", icon: "payments" },
+            { label: "Verified", value: "100%", icon: "verified" },
+            { label: "Active", value: "TOP 1%", icon: "payments" },
             { label: "Hubs", value: "40+", icon: "public" }
           ].map((stat, i) => (
             <div key={i} className="flex items-center gap-4 group hover-lift mx-auto md:mx-0">
@@ -180,9 +180,9 @@ export default function HomePageClient() {
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-4 mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
-              <span className="text-[9px] font-bold uppercase tracking-[0.3em]">The Architecture</span>
+              <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Key Features</span>
             </div>
-            <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">Engineered for <span className="text-primary italic font-light">Resonance.</span></h2>
+            <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">Built for <span className="text-primary italic font-light">Better Matches.</span></h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -192,9 +192,9 @@ export default function HomePageClient() {
                 <span className="material-symbols-outlined text-2xl text-primary">psychology_alt</span>
               </div>
               <div className="space-y-3 relative z-10">
-                <h3 className="text-3xl font-bold tracking-tight text-text-main leading-tight">The ZoraMeeto <br />Algorithm</h3>
+                <h3 className="text-3xl font-bold tracking-tight text-text-main leading-tight">Smart <br />Matching</h3>
                 <p className="text-text-muted font-medium leading-relaxed text-base">
-                  Forget endless swiping. Our AI understands your essence, analyzing deep compatibility layers to introduce you not to a person, but to a potential narrative.
+                  Stop wasting time on endless swiping. Our AI looks at your profile, choices, and goals to suggest better matches.
                 </p>
               </div>
             </div>
@@ -205,9 +205,9 @@ export default function HomePageClient() {
                 <span className="material-symbols-outlined text-2xl text-primary">handshake</span>
               </div>
               <div className="space-y-3 relative z-10">
-                <h3 className="text-3xl font-bold tracking-tight text-text-main leading-tight">The Art of the <br />Introduction</h3>
+                <h3 className="text-3xl font-bold tracking-tight text-text-main leading-tight">Better <br />Introductions</h3>
                 <p className="text-text-muted font-medium leading-relaxed text-base">
-                  You&apos;re not looking for more options; you&apos;re looking for the right one. Receive a handful of meticulously vetted introductions who truly align with your journey.
+                  You do not need hundreds of random profiles. Get a smaller list of checked members who match what you are looking for.
                 </p>
               </div>
             </div>
@@ -218,9 +218,9 @@ export default function HomePageClient() {
                 <span className="material-symbols-outlined text-2xl text-primary">visibility_off</span>
               </div>
               <div className="space-y-3 relative z-10">
-                <h3 className="text-3xl font-bold tracking-tight text-text-main leading-tight">Stealth Mode <br />Privacy</h3>
+                <h3 className="text-3xl font-bold tracking-tight text-text-main leading-tight">Privacy <br />Controls</h3>
                 <p className="text-text-muted font-medium leading-relaxed text-base">
-                  Date with absolute discretion. Blur your profile, hide from contacts, and reveal yourself only to those you choose. Your privacy is our highest priority.
+                  Control who can see you. Blur your profile, hide from contacts, and share details only when you are ready.
                 </p>
               </div>
             </div>
@@ -231,9 +231,9 @@ export default function HomePageClient() {
                 <span className="material-symbols-outlined text-2xl text-primary">celebration</span>
               </div>
               <div className="space-y-3 relative z-10">
-                <h3 className="text-3xl font-bold tracking-tight text-text-main leading-tight">The Inner <br />Circle</h3>
+                <h3 className="text-3xl font-bold tracking-tight text-text-main leading-tight">Events & <br />Community</h3>
                 <p className="text-text-muted font-medium leading-relaxed text-base">
-                  Membership is your key to a world of exclusive experiences, from private gallery viewings to Michelin-starred dinners. Connect in extraordinary settings.
+                  Meet people online and at selected events. Build real connections in safe and comfortable spaces.
                 </p>
               </div>
             </div>
@@ -250,18 +250,18 @@ export default function HomePageClient() {
               <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Earn Money</span>
             </div>
             <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">
-              Earn Through <br />
-              <span className="text-primary italic font-light">Real Conversations.</span>
+              Earn by <br />
+              <span className="text-primary italic font-light">Talking.</span>
             </h2>
             <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-xl">
-              Verified users can earn money when members connect through audio calls, video calls, or send virtual gifts inside the app. First complete face verification, then activate earning features.
+              Verified users can earn money when members call, video call, or send gifts in the app. First complete face verification, then start earning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/how-it-works" className="bg-text-main text-white px-8 py-4 rounded-xl font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-primary transition-all duration-500 shadow-xl shadow-black/10 text-center">
                 How It Works
               </Link>
               <Link href="/app-showcase" className="bg-white border border-border text-text-main px-8 py-4 rounded-xl font-bold text-[10px] uppercase tracking-[0.2em] hover:border-text-main transition-all duration-500 text-center">
-                Open App Features
+                See App Features
               </Link>
             </div>
           </div>
@@ -271,22 +271,22 @@ export default function HomePageClient() {
               {
                 icon: "face_retouching_natural",
                 title: "Face Verification",
-                desc: "Complete a real-person check before earning access is enabled."
+                desc: "Complete a quick face check before earning starts."
               },
               {
                 icon: "call",
                 title: "Audio Calls",
-                desc: "Earn when eligible members connect with you through in-app calls."
+                desc: "Earn when eligible members call you in the app."
               },
               {
                 icon: "video_call",
                 title: "Video Calls",
-                desc: "Receive rewards for verified video call engagement inside ZoraMeeto."
+                desc: "Earn from approved video calls inside ZoraMeeto."
               },
               {
                 icon: "redeem",
                 title: "Virtual Gifts",
-                desc: "Gift value is added to your balance based on platform rules."
+                desc: "Gift value is added to your wallet as per app rules."
               }
             ].map((feature) => (
               <div key={feature.title} className="glass-card-premium rounded-[2rem] p-7 bg-background border border-border shadow-sm hover-lift space-y-5">
@@ -310,14 +310,14 @@ export default function HomePageClient() {
           <div className="space-y-10 animate-fade-up">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
-                <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Mobile Experience</span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Mobile App</span>
               </div>
               <h2 className="text-4xl lg:text-7xl font-extrabold tracking-tighter text-text-main leading-[1.1]">
-                The Collective, <br />
+                ZoraMeeto, <br />
                 <span className="text-primary italic font-light">in Your Pocket.</span>
               </h2>
               <p className="text-xl text-text-muted max-w-lg font-medium leading-relaxed">
-                Experience the precision of ZoraMeeto anywhere. Our mobile ecosystem is designed for the modern high-achiever—seamless, secure, and sophisticated.
+                Use ZoraMeeto anywhere. The app is simple, safe, and made for serious dating.
               </p>
             </div>
 
@@ -392,13 +392,13 @@ export default function HomePageClient() {
       <section className="py-24 px-6 bg-surface-soft/30 relative z-10 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
-            <span className="text-[9px] font-bold uppercase tracking-[0.3em]">The Journal</span>
+            <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Dating Tips</span>
           </div>
           <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight mt-4">
-            From the <span className="text-primary italic font-light">ZoraMeeto</span> Journal
+            Dating Tips from <span className="text-primary italic font-light">ZoraMeeto</span>
           </h2>
           <p className="mt-6 text-lg text-text-muted leading-relaxed max-w-2xl mx-auto">
-            In a world of fleeting connections, the first conversation is your opening statement. It&apos;s a chance to reveal not just what you do, but who you are. At ZoraMeeto, we believe in conversations that build, not just begin.
+            A good first chat can make a real difference. Learn simple ways to start better conversations and build trust.
           </p>
           <div className="mt-10">
             <Link

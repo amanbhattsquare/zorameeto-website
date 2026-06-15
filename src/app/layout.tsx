@@ -12,11 +12,11 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: {
-    default: "ZoraMeeto | The Elite Dating Collective",
+    default: "ZoraMeeto | Smart Dating for Serious Singles",
     template: "%s | ZoraMeeto"
   },
-  description: "ZoraMeeto is the world's most sophisticated dating network for high-achievers. Precision matching meets deep human resonance.",
-  keywords: ["elite dating", "professional dating", "exclusive network", "high-intent matches"],
+  description: "ZoraMeeto is a safe dating app for serious singles. Meet verified people, chat privately, and build real connections.",
+  keywords: ["dating app", "verified dating", "serious dating", "private dating"],
   icons: {
     icon: [{ url: "/favicon.png", type: "image/png" }],
     shortcut: "/favicon.png",

@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import HomePageClient from "./HomePageClient";
 
 export const metadata: Metadata = {
-  title: "ZoraMeeto | The Exclusive Dating Collective for High-Achievers",
-  description: "Meet the elite and date with intention. ZoraMeeto is a precision-engineered dating network for the modern high-achiever.",
+  title: "ZoraMeeto | Smart Dating for Serious Singles",
+  description: "Meet verified singles and date with clear intention. ZoraMeeto is a safe dating app for serious people.",
 };
 
 export default function Home() {

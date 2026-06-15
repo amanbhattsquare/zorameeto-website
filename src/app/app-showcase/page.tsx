@@ -3,9 +3,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "App Showcase | ZoraMeeto Mobile Experience",
+  title: "App Showcase | ZoraMeeto Mobile App",
   description:
-    "Explore the real ZoraMeeto mobile experience with curated discovery, private profiles, matching flows, and a premium member journey.",
+    "Explore the ZoraMeeto mobile app with real screens, private profiles, matching, and simple user flow.",
 };
 
 const screenshots = [
@@ -33,18 +33,18 @@ const screenshots = [
 
 const features = [
   {
-    title: "Designed Around Intent",
-    desc: "Screens are structured for qualified discovery, profile depth, and deliberate action so members can move with clarity.",
+    title: "Made for Serious Dating",
+    desc: "Screens help users view profiles, understand matches, and take the next step easily.",
     icon: "target",
   },
   {
     title: "Private By Default",
-    desc: "The interface favors discretion, member control, and focused interactions without noisy social-feed behavior.",
+    desc: "The app gives users control and avoids noisy public social feeds.",
     icon: "lock",
   },
   {
-    title: "Premium Mobile Polish",
-    desc: "Large visuals, readable spacing, and clear calls to action create a high-trust experience from first open.",
+    title: "Clean Mobile Design",
+    desc: "Large visuals, easy spacing, and clear buttons make the app simple to use.",
     icon: "verified",
   },
 ];
@@ -85,17 +85,16 @@ export default function AppShowcase() {
         <div className="relative z-10 mx-auto max-w-4xl space-y-6 animate-fade-up">
           <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-primary/10 bg-primary/5 px-3 py-1.5">
             <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-primary">
-              The Application
+              Mobile App
             </span>
           </div>
           <h1 className="text-4xl font-extrabold leading-tight tracking-tighter text-text-main md:text-6xl">
-            The <br />
-            <span className="font-light italic text-primary">Atelier.</span>
+            See the <br />
+            <span className="font-light italic text-primary">ZoraMeeto App.</span>
           </h1>
           <p className="mx-auto max-w-xl text-base font-medium leading-relaxed text-text-muted md:text-lg">
-            The ZoraMeeto mobile platform is a high-performance digital
-            environment crafted for the modern individual who values depth over
-            distraction.
+            See real app screens for profiles, matching, private browsing,
+            chat, and user safety.
           </p>
         </div>
       </section>
@@ -146,14 +145,13 @@ export default function AppShowcase() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="space-y-6">
             <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
-              Launch Ready
+              Ready for Users
             </span>
             <h2 className="text-3xl font-extrabold leading-tight text-text-main md:text-5xl">
-              A sharper showcase for a premium dating product.
+              A clear view of the dating app.
             </h2>
             <p className="text-base font-medium leading-8 text-text-muted">
-              The page is now built around real visual proof, clear positioning,
-              responsive phone frames, and conversion-ready calls to action.
+              Real screenshots show how the app works on mobile and desktop.
             </p>
           </div>
 
@@ -161,8 +159,8 @@ export default function AppShowcase() {
             {[
               "Real screenshots replace stock imagery",
               "Responsive layouts for mobile and desktop",
-              "Cleaner product copy for a premium audience",
-              "Clear pathways to pricing and feature pages",
+              "Simple copy for Indian users",
+              "Clear links to pricing and feature pages",
             ].map((item) => (
               <div
                 key={item}
@@ -181,27 +179,27 @@ export default function AppShowcase() {
       <section className="bg-text-main px-6 py-20 text-white lg:py-24">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 text-center">
           <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
-            Invitation Only
+            Start Dating
           </span>
           <h2 className="text-4xl font-extrabold leading-tight md:text-6xl">
-            Bring the right members into the right experience.
+            Bring the right people into one safe app.
           </h2>
           <p className="max-w-2xl text-base font-medium leading-8 text-white/70">
-            ZoraMeeto now has an app showcase that presents the product with
-            real screens, stronger trust signals, and a premium mobile story.
+            ZoraMeeto shows real screens, useful features, and clear reasons
+            to trust the app.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link
               href="/pricing"
               className="inline-flex min-h-14 items-center justify-center rounded-2xl bg-white px-8 text-sm font-bold uppercase tracking-[0.16em] text-text-main transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
             >
-              Apply for Access
+              Get Started
             </Link>
             <Link
               href="/how-it-works"
               className="inline-flex min-h-14 items-center justify-center rounded-2xl border border-white/20 px-8 text-sm font-bold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/10"
             >
-              View Process
+              See Process
             </Link>
           </div>
         </div>

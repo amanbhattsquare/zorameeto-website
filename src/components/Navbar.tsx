@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -22,10 +21,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [pathname]);
 
   const normalizePath = (path: string) => {
     if (path === "/") return path;
@@ -130,6 +125,7 @@ export default function Navbar() {
               className={getMobileLinkClass(link.href, isMenuOpen)}
               style={{ transitionDelay: `${i * 50}ms` }}
               href={link.href}
+              onClick={() => setIsMenuOpen(false)}
             >
               {link.label}
             </Link>

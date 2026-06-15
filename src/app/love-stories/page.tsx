@@ -1,28 +1,27 @@
-import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Success Stories | ZoraMeeto Resonant Connections",
-  description: "Witness the resonance. Real connections engineered through the ZoraMeeto network.",
+  title: "Success Stories | ZoraMeeto",
+  description: "Read simple stories of real people who met through ZoraMeeto.",
 };
 
 export default function LoveStories() {
   return (
     <main className="min-h-screen bg-background">
-      {/* Sophisticated Center-Aligned Compact Hero */}
+      {/* Simple Center-Aligned Compact Hero */}
       <section className="relative pt-32 pb-12 px-6 overflow-hidden bg-gradient-mesh text-center">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-primary/5 blur-[100px] rounded-full z-0"></div>
         
         <div className="max-w-4xl mx-auto space-y-6 relative z-10 animate-fade-up">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/5 border border-primary/10 mx-auto">
-            <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-primary">The Network Proof</span>
+            <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-primary">Real Stories</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">
-            The <br />
-            <span className="text-primary italic font-light">Success.</span>
+            Real <br />
+            <span className="text-primary italic font-light">Connections.</span>
           </h1>
           <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-xl mx-auto">
-            Witness the resonance. A collection of real connections engineered through the ZoraMeeto system, where human intent meets precision engineering.
+            See how real people used ZoraMeeto to meet someone serious, start better chats, and build meaningful relationships.
           </p>
         </div>
       </section>
@@ -42,11 +41,11 @@ export default function LoveStories() {
                   <span className="material-symbols-outlined text-3xl">format_quote</span>
                 </div>
                 <blockquote className="text-3xl font-bold text-text-main leading-tight tracking-tight italic">
-                  "ZoraMeeto isn't just an app; it's a filter for the noise. We found resonance where others found only distraction."
+                  &quot;ZoraMeeto helped us avoid random chats and meet with clear intention. We found something real.&quot;
                 </blockquote>
                 <div className="space-y-1">
                   <p className="text-2xl font-bold text-text-main">Ananya & Vikram</p>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.4em] text-primary">Found via Precision Match • Vetted Hubs</p>
+                  <p className="text-[9px] font-bold uppercase tracking-[0.4em] text-primary">Found through smart matching</p>
                 </div>
               </div>
             </div>
@@ -58,17 +57,17 @@ export default function LoveStories() {
               { 
                 names: 'Priya & Arjun', 
                 img: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=800',
-                quote: "The system identifies the core values that truly matter. We're getting married this June."
+                quote: "The app helped us find the values that matter. We are getting married this June."
               },
               { 
                 names: 'Meera & Kabir', 
                 img: 'https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?auto=format&fit=crop&q=80&w=800',
-                quote: "Finally, a platform that respects my time and intelligence. Kabir is my perfect synergy."
+                quote: "Finally, an app that respects my time. Kabir and I matched for the right reasons."
               },
               { 
                 names: 'Sonal & Rajiv', 
                 img: 'https://images.unsplash.com/photo-1529634597503-139d3726fed5?auto=format&fit=crop&q=80&w=800',
-                quote: "It's never too late for a second narrative. We found our match at fifty, and it's been electric."
+                quote: "It is never too late to meet someone good. We found our match after fifty."
               }
             ].map((story, i) => (
               <div key={i} className="spotlight-card rounded-[2.5rem] p-3 group hover-lift bg-white border border-border shadow-sm">
@@ -76,10 +75,10 @@ export default function LoveStories() {
                   <img src={story.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={story.names} />
                 </div>
                 <div className="p-4 space-y-4">
-                  <p className="text-lg font-bold text-text-main tracking-tight leading-snug">"{story.quote}"</p>
+                  <p className="text-lg font-bold text-text-main tracking-tight leading-snug">&quot;{story.quote}&quot;</p>
                   <div className="pt-1">
                     <p className="text-base font-bold text-text-main">{story.names}</p>
-                    <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-primary">Vetted Connection</p>
+                    <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-primary">Verified Match</p>
                   </div>
                 </div>
               </div>
@@ -94,14 +93,14 @@ export default function LoveStories() {
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-primary/20 to-transparent"></div>
           <h2 className="text-4xl lg:text-6xl font-bold tracking-tighter text-white relative z-10 leading-tight">
             Start Your <br />
-            <span className="text-primary italic font-light">Success Narrative.</span>
+            <span className="text-primary italic font-light">Story.</span>
           </h2>
           <p className="text-lg text-white/70 max-w-xl mx-auto font-medium relative z-10 leading-relaxed">
-            Join the collective of high-achievers who have already found their resonance within our global network.
+            Join serious singles who want safer matches, better conversations, and real relationships.
           </p>
           <div className="pt-4 relative z-10">
             <button className="bg-white text-text-main px-12 py-6 rounded-2xl font-bold text-sm uppercase tracking-widest shadow-xl hover:scale-105 transition-all">
-              Request Invitation
+              Get Started
             </button>
           </div>
         </div>

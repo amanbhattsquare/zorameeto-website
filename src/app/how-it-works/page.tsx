@@ -1,34 +1,34 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Architecture | How ZoraMeeto Works",
-  description: "Learn about our multi-layer verification and resonance system designed for the intentional high-achiever.",
+  title: "How ZoraMeeto Works",
+  description: "Learn how ZoraMeeto verifies users, suggests matches, protects privacy, and lets verified users earn money.",
 };
 
 export default function HowItWorks() {
   const steps = [
     {
       no: "01",
-      title: "Request Access",
-      desc: "Submit your basic profile for review by our editorial network.",
+      title: "Create Profile",
+      desc: "Add your basic details, photos, interests, and dating goals.",
       icon: "app_registration"
     },
     {
       no: "02",
-      title: "Vetting Process",
-      desc: "Our team verifies identity and professional status to ensure community integrity.",
+      title: "Profile Check",
+      desc: "We check identity and profile quality to keep the community safe.",
       icon: "verified_user"
     },
     {
       no: "03",
-      title: "Psychological Sync",
-      desc: "Complete our resonance assessment to unlock precision matching.",
+      title: "Match Questions",
+      desc: "Answer simple questions so we can suggest better matches.",
       icon: "analytics"
     },
     {
       no: "04",
-      title: "Enter the Network",
-      desc: "Connect with high-intent individuals curated specifically for you.",
+      title: "Start Matching",
+      desc: "See verified people who match your interests and goals.",
       icon: "diversity_3"
     }
   ];
@@ -58,20 +58,20 @@ export default function HowItWorks() {
 
   return (
     <main className="min-h-screen bg-background">
-      {/* Sophisticated Center-Aligned Compact Hero */}
+      {/* Simple Center-Aligned Compact Hero */}
       <section className="relative pt-32 pb-12 px-6 overflow-hidden bg-gradient-mesh text-center">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-primary/5 blur-[100px] rounded-full z-0"></div>
         
         <div className="max-w-4xl mx-auto space-y-6 relative z-10 animate-fade-up">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/5 border border-primary/10 mx-auto">
-            <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-primary">The System</span>
+            <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-primary">How It Works</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">
-            The <br />
-            <span className="text-primary italic font-light">Architecture.</span>
+            How <br />
+            <span className="text-primary italic font-light">ZoraMeeto Works.</span>
           </h1>
           <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-xl mx-auto">
-            Our multi-layer verification and resonance system ensures that every connection on ZoraMeeto is intentional, high-intent, and deeply compatible.
+            ZoraMeeto helps you create a profile, verify your identity, find better matches, and chat safely.
           </p>
         </div>
       </section>
@@ -107,10 +107,10 @@ export default function HowItWorks() {
               </div>
               <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">
                 Earn by <br />
-                <span className="text-primary italic font-light">Real Conversations.</span>
+                <span className="text-primary italic font-light">Real Talks.</span>
               </h2>
               <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-xl">
-                ZoraMeeto lets verified users earn money through meaningful engagement. First complete face verification, then earn when members call, video call, or send gifts inside the app.
+                ZoraMeeto lets verified users earn money through calls, video calls, and gifts. First complete face verification, then start earning.
               </p>
 
               <div className="grid grid-cols-2 gap-4 max-w-xl">
@@ -145,7 +145,7 @@ export default function HowItWorks() {
 
           <div className="mt-10 rounded-[2rem] border border-primary/20 bg-primary/5 p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <p className="text-sm text-text-muted font-medium leading-relaxed max-w-3xl">
-              Earnings depend on completed verification, eligible activity, platform rules, fraud checks, and payout availability. Fake engagement, spam, or unsafe behavior can remove earning access.
+              Earnings depend on verification, real activity, app rules, fraud checks, and payout availability. Fake activity, spam, or unsafe behavior can stop earning access.
             </p>
             <button className="shrink-0 bg-text-main text-white px-8 py-4 rounded-xl font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-primary transition-all duration-500">
               Start Earning
@@ -158,21 +158,21 @@ export default function HowItWorks() {
       <section className="py-24 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center space-y-10">
           <h2 className="text-4xl lg:text-6xl font-bold tracking-tighter text-text-main leading-tight">
-            Built on <span className="text-primary italic font-light">Integrity.</span>
+            Built on <span className="text-primary italic font-light">Trust.</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
             <div className="spotlight-card rounded-[2rem] p-8 space-y-4 bg-white border border-border shadow-sm hover-lift">
-              <h4 className="text-xl font-bold text-text-main">Manual Vetting</h4>
-              <p className="text-text-muted font-medium text-sm">Every application is reviewed by a human moderator to ensure community quality and high-intent alignment.</p>
+              <h4 className="text-xl font-bold text-text-main">Human Review</h4>
+              <p className="text-text-muted font-medium text-sm">Profiles are reviewed by our team to keep the app safe and useful.</p>
             </div>
             <div className="spotlight-card rounded-[2rem] p-8 space-y-4 bg-white border border-border shadow-sm hover-lift">
-              <h4 className="text-xl font-bold text-text-main">Data Sovereignty</h4>
-              <p className="text-text-muted font-medium text-sm">Your data belongs to you. We use end-to-end encryption for all personal communications and identity records.</p>
+              <h4 className="text-xl font-bold text-text-main">Data Control</h4>
+              <p className="text-text-muted font-medium text-sm">Your data belongs to you. We protect chats and identity details with strong security.</p>
             </div>
           </div>
           <div className="pt-4">
             <button className="luxury-button px-12 py-5 rounded-xl font-bold text-xs uppercase tracking-widest shadow-xl shadow-primary/20">
-              Start Application
+              Start Now
             </button>
           </div>
         </div>

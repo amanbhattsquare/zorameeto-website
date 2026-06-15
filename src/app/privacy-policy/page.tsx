@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Read how ZoraMeeto collects, uses, protects, and shares information across its dating platform and mobile experience.",
+  description: "Read how ZoraMeeto collects, uses, protects, and shares information in the app.",
 };
 
 const sections = [
@@ -118,7 +118,7 @@ export default function PrivacyPolicy() {
             Privacy <span className="text-primary italic font-light">Policy.</span>
           </h1>
           <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-2xl mx-auto">
-            We design ZoraMeeto around trust, discretion, and member safety. This policy explains what we collect, why we collect it, and the choices available to you.
+            ZoraMeeto is built around trust, privacy, and member safety. This policy explains what we collect, why we collect it, and what choices you have.
           </p>
           <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-text-muted">
             Last updated: June 15, 2026
@@ -148,7 +148,7 @@ export default function PrivacyPolicy() {
           <article className="space-y-8">
             <div className="rounded-[2rem] border border-border bg-surface-soft/40 p-8">
               <p className="text-sm md:text-base text-text-muted leading-relaxed font-medium">
-                This Privacy Policy applies to ZoraMeeto websites, apps, member services, events, and related support channels. It should be read together with our{" "}
+                This Privacy Policy applies to ZoraMeeto websites, apps, member services, events, and support channels. Please read it with our{" "}
                 <Link href="/terms-and-conditions" className="text-primary font-bold hover:underline">
                   Terms & Conditions
                 </Link>
