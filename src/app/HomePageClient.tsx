@@ -241,6 +241,68 @@ export default function HomePageClient() {
         </div>
       </section>
 
+      {/* Earn Money Feature Section */}
+      <section className="py-24 px-6 bg-white border-y border-border relative z-10 overflow-hidden">
+        <div className="absolute -left-24 top-1/3 w-[320px] h-[320px] bg-primary/5 blur-[110px] rounded-full"></div>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-12 lg:gap-16 items-center relative z-10">
+          <div className="space-y-7">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
+              <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Earn Money</span>
+            </div>
+            <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">
+              Earn Through <br />
+              <span className="text-primary italic font-light">Real Conversations.</span>
+            </h2>
+            <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-xl">
+              Verified users can earn money when members connect through audio calls, video calls, or send virtual gifts inside the app. First complete face verification, then activate earning features.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/how-it-works" className="bg-text-main text-white px-8 py-4 rounded-xl font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-primary transition-all duration-500 shadow-xl shadow-black/10 text-center">
+                How It Works
+              </Link>
+              <Link href="/app-showcase" className="bg-white border border-border text-text-main px-8 py-4 rounded-xl font-bold text-[10px] uppercase tracking-[0.2em] hover:border-text-main transition-all duration-500 text-center">
+                Open App Features
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {[
+              {
+                icon: "face_retouching_natural",
+                title: "Face Verification",
+                desc: "Complete a real-person check before earning access is enabled."
+              },
+              {
+                icon: "call",
+                title: "Audio Calls",
+                desc: "Earn when eligible members connect with you through in-app calls."
+              },
+              {
+                icon: "video_call",
+                title: "Video Calls",
+                desc: "Receive rewards for verified video call engagement inside ZoraMeeto."
+              },
+              {
+                icon: "redeem",
+                title: "Virtual Gifts",
+                desc: "Gift value is added to your balance based on platform rules."
+              }
+            ].map((feature) => (
+              <div key={feature.title} className="glass-card-premium rounded-[2rem] p-7 bg-background border border-border shadow-sm hover-lift space-y-5">
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+                  <span className="material-symbols-outlined text-xl">{feature.icon}</span>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold tracking-tight text-text-main">{feature.title}</h3>
+                  <p className="text-sm text-text-muted font-medium leading-relaxed">{feature.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* App Showcase Section - Professional & Industry Ready */}
       <section className="py-24 px-6 bg-white relative z-10 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
