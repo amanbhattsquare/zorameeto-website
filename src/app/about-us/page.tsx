@@ -47,7 +47,8 @@ export default function AboutUs() {
             <span className="text-primary italic font-light">ZoraMeeto.</span>
           </h1>
           <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-xl mx-auto">
-            We're on a mission to transform online dating by creating a platform where serious singles can find meaningful, lasting connections.
+            Meet real people, build genuine connections, and enjoy meaningful conversations.
+ZoraMeeto is where connections create value.
           </p>
         </div>
       </section>

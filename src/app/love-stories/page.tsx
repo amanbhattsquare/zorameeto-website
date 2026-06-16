@@ -66,7 +66,6 @@ export default function LoveStories() {
     },
   ];
 
-  const topics = ["First chats", "Profile tips", "Safe dating", "Serious matching", "Relationship readiness"];
 
   const editorialStandards = [
     {
@@ -230,16 +229,8 @@ export default function LoveStories() {
                 Practical advice for safer, smarter dating.
               </h2>
               <p className="text-base font-semibold leading-8 text-text-muted">
-                Helpful reads for better first chats, stronger profiles, safer decisions, and relationship-ready dating.
+                Helpful reads for better first chats,  profiles, safer decisions, and relationship-ready dating.
               </p>
-            </div>
-
-            <div className="flex flex-wrap gap-2">
-              {topics.map((topic) => (
-                <span key={topic} className="rounded-full border border-border bg-surface-soft px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.18em] text-text-muted">
-                  {topic}
-                </span>
-              ))}
             </div>
           </div>
 

@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 
 const screenshots = [
   {
-    src: "/zorameeto-ss-1.jpeg",
+    src: "/zorameeto-ss-1.png",
     alt: "ZoraMeeto mobile app screen showing the member experience",
   },
   {
-    src: "/zorameeto-ss-2.jpeg",
+    src: "/zorameeto-ss-2.png",
     alt: "ZoraMeeto mobile app screen showing profile discovery",
   },
   {

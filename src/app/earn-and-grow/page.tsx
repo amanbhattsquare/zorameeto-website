@@ -127,7 +127,7 @@ export default function EarnAndGrow() {
             <span className="text-primary italic font-light">Connect & Grow.</span>
           </h1>
           <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-xl mx-auto">
-            Turn your social influence and active participation into real earnings. Build meaningful connections while growing your income on India&apos;s most trusted dating platform.
+            Your presence has value. Once verified, you can earn from calls, video interactions, and gifts shared by other members while building genuine connections.
           </p>
         </div>
       </section>

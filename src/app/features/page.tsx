@@ -422,8 +422,8 @@ export default function Features() {
 
           <div className="grid grid-cols-3 gap-3 sm:gap-5">
             {[
-              "/zorameeto-ss-1.jpeg",
-              "/zorameeto-ss-2.jpeg",
+              "/zorameeto-ss-1.png",
+              "/zorameeto-ss-2.png",
               "/zorameeto-ss-4.jpeg",
             ].map((src, index) => (
               <PhoneFrame
