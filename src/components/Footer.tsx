@@ -7,6 +7,20 @@ export default function Footer() {
     { label: 'Cookies', href: '/privacy-policy#5-cookies-and-similar-technologies' },
   ];
 
+  const experienceLinks = [
+    { label: 'About Zora', href: '/about-us' },
+    { label: 'App Features', href: '/features' },
+    { label: 'Success Stories', href: '/love-stories' },
+    { label: 'How It Works', href: '/how-it-works' },
+  ];
+
+  const supportLinks = [
+    { label: 'Safety Center', href: '/contact-us' },
+    { label: 'Help Desk', href: '/contact-us' },
+    { label: 'Community', href: '/love-stories' },
+    { label: 'Contact Us', href: '/contact-us' },
+  ];
+
   const socialIcons = [
     { 
       name: 'Facebook', 
@@ -74,9 +88,9 @@ export default function Footer() {
               Experience
             </h5>
             <ul className="space-y-5">
-              {['About Zora', 'App Features', 'Success Stories', 'How It Works'].map((item) => (
-                <li key={item}>
-                  <Link className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-muted hover:text-primary transition-colors" href="#">{item}</Link>
+              {experienceLinks.map((item) => (
+                <li key={item.label}>
+                  <Link className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-muted hover:text-primary transition-colors" href={item.href}>{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -87,9 +101,9 @@ export default function Footer() {
               Support
             </h5>
             <ul className="space-y-5">
-              {['Safety Center', 'Help Desk', 'Community', 'Contact Us'].map((item) => (
-                <li key={item}>
-                  <Link className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-muted hover:text-primary transition-colors" href="#">{item}</Link>
+              {supportLinks.map((item) => (
+                <li key={item.label}>
+                  <Link className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-muted hover:text-primary transition-colors" href={item.href}>{item.label}</Link>
                 </li>
               ))}
             </ul>

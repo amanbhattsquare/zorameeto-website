@@ -59,6 +59,7 @@ export default function Navbar() {
     { href: "/app-showcase", label: "Showcase" },
     { href: "/love-stories", label: "The Zora Journal" },
     { href: "/earn-and-grow", label: "Earn & Grow" },
+    { href: "/contact-us", label: "Contact" },
     // { href: "/how-it-works", label: "Process" },
     // { href: "/pricing", label: "Membership" },
   ];  
