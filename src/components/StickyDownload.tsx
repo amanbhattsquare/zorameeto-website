@@ -29,7 +29,7 @@ export default function StickyDownload() {
           <GooglePlayLogo className="h-8 w-8 shrink-0" />
           <div className="text-left">
             <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white/50 leading-none mb-1">Get it on</p>
-            <p className="text-sm font-bold leading-none tracking-tight">Google Play</p>
+            <p className="text-sm font-bold leading-none tracking-tight">PlayStore</p>
           </div>
         </div>
         

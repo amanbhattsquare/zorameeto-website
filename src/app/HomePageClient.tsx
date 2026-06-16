@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { AppStoreLogo, GooglePlayLogo } from "@/components/StoreLogos";
+import { AppStoreBadge, GooglePlayBadge } from "@/components/StoreLogos";
 // import image1 from "@/public/hero-img-1.png";
 
 export default function HomePageClient() {
@@ -39,41 +39,16 @@ export default function HomePageClient() {
                   <span className="text-primary italic font-light">Matches Your Life.</span>
                 </h1>
                 <p className="text-base text-text-muted max-w-lg mx-auto lg:mx-0 leading-relaxed font-bold glass-card-premium p-5 rounded-2xl border border-white/50 shadow-sm">
-                  Earnings are available to verified users who actively follow platform rules. Fake activity, spam, fraud, or policy violations may lead to restricted or revoked earning access.
+                  Zorameeto is a smart relationship platform that connects genuine singles through verified profiles, intelligent matching, and meaningful conversations—helping people find someone who truly matches their life.
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col items-center sm:items-start gap-4 lg:justify-start">
-              <p className="text-xl font-semibold text-text-muted center">Available on</p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                {/* Premium App Store Button */}
-                <a href="#" className="flex items-center gap-5 bg-[#111111] text-white px-6 py-3.5 rounded-[1.25rem] hover:bg-black hover:scale-105 transition-all duration-500 shadow-xl group border border-white/5">
-                  <div className="flex flex-col items-center gap-2">
-                    <AppStoreLogo className="h-8 w-8 shrink-0 rounded-lg shadow-sm" />
-                  </div>
-                  <div className="w-[1px] h-8 bg-white/10"></div>
-                  <div className="text-left">
-                    <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white/40 leading-none mb-1">Download on the</p>
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-base font-bold tracking-tight">App Store</span>
-                    </div>
-                  </div>
-                </a>
-                
-                {/* Premium Play Store Button */}
-                <a href="#" className="flex items-center gap-5 bg-white border border-border text-text-main px-6 py-3.5 rounded-[1.25rem] hover:border-text-main hover:scale-105 transition-all duration-500 shadow-xl group">
-                  <div className="flex flex-col items-center gap-2">
-                    <GooglePlayLogo className="h-8 w-8 shrink-0" />
-                  </div>
-                  <div className="w-[1px] h-8 bg-border"></div>
-                  <div className="text-left">
-                    <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-text-muted leading-none mb-1">Get it on</p>
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-base font-bold tracking-tight text-text-main">Google Play</span>
-                    </div>
-                  </div>
-                </a>
+            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
+              <p className="text-xl font-semibold text-text-main">Get the app!</p>
+              <div className="flex flex-col items-center gap-5 sm:flex-row">
+                <AppStoreBadge />
+                <GooglePlayBadge />
               </div>
             </div>
           </div>
@@ -314,34 +289,9 @@ export default function HomePageClient() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              {/* Premium App Store Button */}
-              <a href="#" className="flex items-center gap-5 bg-[#111111] text-white px-6 py-3.5 rounded-[1.25rem] hover:bg-black hover:scale-105 transition-all duration-500 shadow-xl group border border-white/5">
-                <div className="flex flex-col items-center gap-2">
-                  <AppStoreLogo className="h-8 w-8 shrink-0 rounded-lg shadow-sm" />
-                </div>
-                <div className="w-[1px] h-8 bg-white/10"></div>
-                <div className="text-left">
-                  <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white/40 leading-none mb-1">Download on the</p>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-base font-bold tracking-tight">App Store</span>
-                  </div>
-                </div>
-              </a>
-              
-              {/* Premium Play Store Button */}
-              <a href="#" className="flex items-center gap-5 bg-white border border-border text-text-main px-6 py-3.5 rounded-[1.25rem] hover:border-text-main hover:scale-105 transition-all duration-500 shadow-xl group">
-                <div className="flex flex-col items-center gap-2">
-                  <GooglePlayLogo className="h-8 w-8 shrink-0" />
-                </div>
-                <div className="w-[1px] h-8 bg-border"></div>
-                <div className="text-left">
-                  <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-text-muted leading-none mb-1">Get it on</p>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-base font-bold tracking-tight text-text-main">Google Play</span>
-                  </div>
-                </div>
-              </a>
+            <div className="flex flex-col gap-5 sm:flex-row">
+              <AppStoreBadge />
+              <GooglePlayBadge />
             </div>
 
             <div className="pt-6 flex items-center gap-6">
