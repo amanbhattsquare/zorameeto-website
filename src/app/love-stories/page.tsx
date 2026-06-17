@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+
 export const metadata: Metadata = {
   title: "The Zora Journal | Stories & Dating Blogs | ZoraMeeto",
   description:
@@ -14,6 +15,8 @@ export default function LoveStories() {
     location: "Mumbai",
     timeline: "Matched in 21 days",
     img: "/success-story-elite.png",
+    // tag: "Thoughtful Match Success",
+    
     quote:
       "ZoraMeeto helped us avoid random chats and meet with clear intention. We found something real because the match felt thoughtful from the start.",
   };
@@ -175,7 +178,7 @@ export default function LoveStories() {
                 <div>
                   <p className="text-2xl font-extrabold text-text-main">{featuredStory.names}</p>
                   <p className="mt-1 text-[10px] font-extrabold uppercase tracking-[0.32em] text-primary">
-                    Smart matching success
+                    {featuredStory.tag}
                   </p>
                 </div>
               </div>

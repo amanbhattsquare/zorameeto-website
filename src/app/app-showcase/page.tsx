@@ -190,7 +190,7 @@ export default function AppShowcase() {
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link
-              href="/pricing"
+              href="/"
               className="inline-flex min-h-14 items-center justify-center rounded-2xl bg-white px-8 text-sm font-bold uppercase tracking-[0.16em] text-text-main transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
             >
               Get Started

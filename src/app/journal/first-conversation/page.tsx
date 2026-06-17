@@ -94,7 +94,7 @@ export default function FirstConversationPage() {
 
           <div className="pt-4">
             <Link
-              href="/pricing"
+              href="/"
               className="luxury-button inline-flex rounded-[1.5rem] bg-text-main px-10 py-5 text-xs font-bold uppercase tracking-[0.3em] text-white shadow-xl shadow-black/10 transition-all duration-700 hover:scale-105"
             >
               See Plans

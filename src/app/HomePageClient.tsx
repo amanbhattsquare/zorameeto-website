@@ -51,6 +51,16 @@ export default function HomePageClient() {
                 <GooglePlayBadge />
               </div>
             </div>
+             <div className="pt-6 flex items-center gap-6">
+              <div className="flex -space-x-2">
+                {[1, 2, 3,4,5].map((i) => (
+                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-surface-soft flex items-center justify-center text-[10px] font-bold">
+                    <span className="material-symbols-outlined text-xs text-primary">star</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs font-bold text-text-muted uppercase tracking-widest">4.9/5 Rating on App Stores</p>
+            </div>
           </div>
 
           {/* Right Column: 3D Mockups - BOTH IMAGES STABILIZED */}
@@ -126,7 +136,7 @@ export default function HomePageClient() {
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-10 text-center md:text-left">
           {[
             { label: "Matches", value: "85%", icon: "favorite" },
-            { label: "SECURE DATES", value: "95%", icon: "verified" },
+            { label: "SECURE DATES", value: "100%", icon: "verified" },
             { label: "Active", value: "TOP 1%", icon: "payments" },
             { label: "Hubs", value: "40+", icon: "public" }
           ].map((stat, i) => (
@@ -213,7 +223,7 @@ export default function HomePageClient() {
       <section className="py-24 px-6 bg-white border-y border-border relative z-10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_30%,rgba(255,45,85,0.08),transparent_32%),radial-gradient(circle_at_86%_20%,rgba(0,122,255,0.07),transparent_30%)]"></div>
         <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-center relative z-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/85 text-primary border border-primary/20 shadow-lg shadow-primary/5 backdrop-blur-xl">
               <span className="material-symbols-outlined text-base">paid</span>
@@ -254,9 +264,13 @@ export default function HomePageClient() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-[2.5rem] border border-primary/10 bg-white/40 backdrop-blur-sm"></div>
-            <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="relative space-y-6">
+            <div className="absolute -inset-4 rounded-[2.5rem] bg-white/40 backdrop-blur-sm"></div>
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/85 text-primary border border-primary/20 shadow-lg shadow-primary/5 backdrop-blur-xl">
+              <span className="material-symbols-outlined text-base">checklist</span>
+              <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Complete steps to start earning</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {[
                 {
                   icon: "face_retouching_natural",
@@ -302,18 +316,7 @@ export default function HomePageClient() {
               ))}
             </div>
 
-            <div className="relative mt-5 rounded-[1.75rem] border border-border bg-text-main p-5 text-white shadow-2xl shadow-black/10">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-white/45">Creator Wallet</p>
-                  <p className="mt-2 text-2xl font-extrabold tracking-tight">Calls, gifts, and rewards in one place.</p>
-                </div>
-                <div className="flex items-center gap-2 rounded-2xl bg-white/10 px-4 py-3 text-sm font-bold">
-                  <span className="material-symbols-outlined text-primary">account_balance_wallet</span>
-                  In-app credits
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
       </section>
@@ -325,32 +328,29 @@ export default function HomePageClient() {
           <div className="space-y-10 animate-fade-up">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
-                <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Mobile App</span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.3em]"> Creator Wallet</span>
               </div>
               <h2 className="text-4xl lg:text-7xl font-extrabold tracking-tighter text-text-main leading-[1.1]">
                 ZoraMeeto, <br />
                 <span className="text-primary italic font-light">in Your Pocket.</span>
               </h2>
-              <p className="text-xl text-text-muted max-w-lg font-medium leading-relaxed">
-                Use ZoraMeeto anywhere. The app is simple, safe, and made for serious dating.
-              </p>
+              
+                <div>
+               
+                  <p className="mt-2 text-2xl font-extrabold tracking-tight">Calls, gifts, and rewards in one place.</p>
+                </div>
+               
+             
             </div>
 
             <div className="flex flex-col gap-5 sm:flex-row">
-              <AppStoreBadge />
-              <GooglePlayBadge />
+               <div className="inline-flex h-[47px] w-[144px] shrink-0 items-center gap-2 rounded-[7px] border border-[#a6a6a6] bg-black px-3 text-sm font-bold text-white shadow-sm transition-transform duration-300 hover:scale-[1.03] hover:bg-black">
+                  <span className="material-symbols-outlined text-[23px] text-red-500">account_balance_wallet</span>
+                  In-app credits
+                </div>
             </div>
 
-            <div className="pt-6 flex items-center gap-6">
-              <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-surface-soft flex items-center justify-center text-[10px] font-bold">
-                    <span className="material-symbols-outlined text-xs text-primary">star</span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-xs font-bold text-text-muted uppercase tracking-widest">4.9/5 Rating on App Stores</p>
-            </div>
+           
           </div>
 
           <div className="relative group animate-fade-up" style={{ animationDelay: '0.2s' }}>
