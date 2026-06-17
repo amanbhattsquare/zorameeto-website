@@ -38,7 +38,7 @@ export default function HomePageClient() {
                   Meet Someone Who <br />
                   <span className="text-primary italic font-light">Matches Your Life.</span>
                 </h1>
-                <p className="text-base text-text-muted max-w-lg mx-auto lg:mx-0 leading-relaxed font-bold glass-card-premium p-5 rounded-2xl border border-white/50 shadow-sm">
+                <p className="text-base text-text-muted max-w-lg mx-auto lg:mx-0 leading-relaxed text-justify font-bold glass-card-premium p-5 rounded-2xl border border-white/50 shadow-sm">
                   Zorameeto is a smart relationship platform that connects genuine singles through verified profiles, intelligent matching, and meaningful conversations—helping people find someone who truly matches their life.
                 </p>
               </div>
@@ -126,7 +126,7 @@ export default function HomePageClient() {
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-10 text-center md:text-left">
           {[
             { label: "Matches", value: "85%", icon: "favorite" },
-            { label: "Verified", value: "100%", icon: "verified" },
+            { label: "SECURE DATES", value: "95%", icon: "verified" },
             { label: "Active", value: "TOP 1%", icon: "payments" },
             { label: "Hubs", value: "40+", icon: "public" }
           ].map((stat, i) => (
