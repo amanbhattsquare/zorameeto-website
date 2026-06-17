@@ -211,62 +211,109 @@ export default function HomePageClient() {
 
       {/* Earn Money Feature Section */}
       <section className="py-24 px-6 bg-white border-y border-border relative z-10 overflow-hidden">
-        <div className="absolute -left-24 top-1/3 w-[320px] h-[320px] bg-primary/5 blur-[110px] rounded-full"></div>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-12 lg:gap-16 items-center relative z-10">
-          <div className="space-y-7">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_30%,rgba(255,45,85,0.08),transparent_32%),radial-gradient(circle_at_86%_20%,rgba(0,122,255,0.07),transparent_30%)]"></div>
+        <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-center relative z-10">
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/85 text-primary border border-primary/20 shadow-lg shadow-primary/5 backdrop-blur-xl">
+              <span className="material-symbols-outlined text-base">paid</span>
               <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Earn Money</span>
             </div>
-            <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">
-              Earn by <br />
-              <span className="text-primary italic font-light">Talking.</span>
-            </h2>
-            <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-xl">
-              Verified users can earn money when members call, video call, or send gifts in the app. First complete face verification, then start earning.
-            </p>
+
+            <div className="space-y-5">
+              <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">
+                Turn real <br />
+                <span className="text-primary italic font-light">conversations</span> <br className="hidden sm:block" />
+                into rewards.
+              </h2>
+              <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-xl">
+                Once your profile is verified, ZoraMeeto lets eligible creators earn through meaningful audio calls, video calls, and gifts from members who value their time.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl">
+              {[
+                { value: "01", label: "Verify identity" },
+                { value: "02", label: "Accept calls" },
+                { value: "03", label: "Receive wallet credits" }
+              ].map((step) => (
+                <div key={step.value} className="rounded-2xl border border-border bg-white/80 p-4 shadow-sm backdrop-blur">
+                  <p className="text-xs font-extrabold text-primary">{step.value}</p>
+                  <p className="mt-2 text-sm font-bold leading-snug text-text-main">{step.label}</p>
+                </div>
+              ))}
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/how-it-works" className="bg-text-main text-white px-8 py-4 rounded-xl font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-primary transition-all duration-500 shadow-xl shadow-black/10 text-center">
+              <Link href="/how-it-works" className="luxury-button bg-text-main text-white px-8 py-4 rounded-xl font-bold text-[10px] uppercase tracking-[0.2em] shadow-xl shadow-black/10 text-center">
                 How It Works
               </Link>
-              <Link href="/app-showcase" className="bg-white border border-border text-text-main px-8 py-4 rounded-xl font-bold text-[10px] uppercase tracking-[0.2em] hover:border-text-main transition-all duration-500 text-center">
+              <Link href="/app-showcase" className="bg-white/90 border border-border text-text-main px-8 py-4 rounded-xl font-bold text-[10px] uppercase tracking-[0.2em] hover:border-primary hover:text-primary hover:shadow-lg hover:shadow-primary/10 transition-all duration-500 text-center">
                 See App Features
               </Link>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {[
-              {
-                icon: "face_retouching_natural",
-                title: "Face Verification",
-                desc: "Complete a quick face check before earning starts."
-              },
-              {
-                icon: "call",
-                title: "Audio Calls",
-                desc: "Earn when eligible members call you in the app."
-              },
-              {
-                icon: "video_call",
-                title: "Video Calls",
-                desc: "Earn from approved video calls inside ZoraMeeto."
-              },
-              {
-                icon: "redeem",
-                title: "Virtual Gifts",
-                desc: "Gift value is added to your wallet as per app rules."
-              }
-            ].map((feature) => (
-              <div key={feature.title} className="glass-card-premium rounded-[2rem] p-7 bg-background border border-border shadow-sm hover-lift space-y-5">
-                <div className="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
-                  <span className="material-symbols-outlined text-xl">{feature.icon}</span>
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-[2.5rem] border border-primary/10 bg-white/40 backdrop-blur-sm"></div>
+            <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {[
+                {
+                  icon: "face_retouching_natural",
+                  title: "Face Verification",
+                  desc: "A quick identity check keeps earning access trusted, safer, and member-friendly.",
+                  tone: "bg-primary/10 border-primary/20 text-primary"
+                },
+                {
+                  icon: "call",
+                  title: "Audio Calls",
+                  desc: "Earn from eligible in-app calls while keeping your personal number private.",
+                  tone: "bg-secondary/10 border-secondary/20 text-secondary"
+                },
+                {
+                  icon: "video_call",
+                  title: "Video Calls",
+                  desc: "Approved video calls help members connect with confidence before meeting.",
+                  tone: "bg-text-main/5 border-text-main/10 text-text-main"
+                },
+                {
+                  icon: "redeem",
+                  title: "Virtual Gifts",
+                  desc: "Gift value is credited to your wallet according to ZoraMeeto earning rules.",
+                  tone: "bg-primary/10 border-primary/20 text-primary"
+                }
+              ].map((feature, index) => (
+                <div
+                  key={feature.title}
+                  className="group relative min-h-[220px] overflow-hidden rounded-[1.75rem] border border-border bg-white/90 p-7 shadow-[0_24px_60px_rgba(28,28,30,0.07)] transition-all duration-500 hover:-translate-y-2 hover:border-primary/30 hover:shadow-[0_30px_80px_rgba(255,45,85,0.12)]"
+                >
+                  <div className="absolute right-5 top-5 text-5xl font-extrabold tracking-tighter text-text-main/[0.03]">
+                    0{index + 1}
+                  </div>
+                  <div className={`relative z-10 w-14 h-14 rounded-2xl border flex items-center justify-center ${feature.tone} transition-transform duration-500 group-hover:scale-110`}>
+                    <span className="material-symbols-outlined text-2xl">{feature.icon}</span>
+                  </div>
+                  <div className="relative z-10 mt-8 space-y-3">
+                    <h3 className="text-xl font-extrabold tracking-tight text-text-main">{feature.title}</h3>
+                    <p className="text-sm text-text-muted font-medium leading-relaxed">{feature.desc}</p>
+                  </div>
+                  <div className="absolute bottom-0 left-7 right-7 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
                 </div>
-                <div className="space-y-3">
-                  <h3 className="text-xl font-bold tracking-tight text-text-main">{feature.title}</h3>
-                  <p className="text-sm text-text-muted font-medium leading-relaxed">{feature.desc}</p>
+              ))}
+            </div>
+
+            <div className="relative mt-5 rounded-[1.75rem] border border-border bg-text-main p-5 text-white shadow-2xl shadow-black/10">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-white/45">Creator Wallet</p>
+                  <p className="mt-2 text-2xl font-extrabold tracking-tight">Calls, gifts, and rewards in one place.</p>
+                </div>
+                <div className="flex items-center gap-2 rounded-2xl bg-white/10 px-4 py-3 text-sm font-bold">
+                  <span className="material-symbols-outlined text-primary">account_balance_wallet</span>
+                  In-app credits
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>

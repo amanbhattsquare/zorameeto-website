@@ -115,15 +115,15 @@ export default function AboutUs() {
               </p>
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="bg-white rounded-2xl p-6 border border-border shadow-sm">
-                  <p className="text-4xl font-extrabold text-primary">500K+</p>
+                  <p className="text-4xl font-extrabold text-primary">100K+</p>
                   <p className="text-sm text-text-muted mt-2 font-medium">
                     Downloads & Growing
                   </p>
                 </div>
                 <div className="bg-white rounded-2xl p-6 border border-border shadow-sm">
-                  <p className="text-4xl font-extrabold text-primary">100%</p>
+                  <p className="text-4xl font-extrabold text-primary">95%</p>
                   <p className="text-sm text-text-muted mt-2 font-medium">
-                    Verified Profiles
+                    REAL PROFILES
                   </p>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export default function AboutUs() {
             {[
               {
                 icon: "verified_user",
-                title: "100% Verified Profiles",
+                title: "95% REAL PROFILES",
                 desc: "Every single profile on our platform has been manually verified. No catfishing, no fake accounts, no exceptions.",
               },
               {
