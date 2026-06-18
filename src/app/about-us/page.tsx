@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us | ZoraMeeto",
   description:
-    "Learn about ZoraMeeto's mission and vision for safer, smarter, and more meaningful dating.",
+    "Learn how ZoraMeeto helps singles build safer, smarter, and more meaningful connections.",
 };
 
 export default function AboutUs() {
@@ -54,7 +54,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Our Mission Section */}
+      {/* Real Dating Section */}
       <section className="py-16 px-6 bg-white border-b border-border">
         <div className="max-w-7xl mx-auto">
           <div className="spotlight-card rounded-[3rem] overflow-hidden bg-surface-soft/50 border border-border">
@@ -68,13 +68,12 @@ export default function AboutUs() {
               </div>
               <div className="p-12 lg:p-16 space-y-8">
                 <h2 className="text-3xl md:text-4xl font-extrabold tracking-tighter text-text-main">
-                  Our <span className="text-primary italic font-light">Mission.</span>
+                  Real Dating, <span className="text-primary italic font-light">Real People.</span>
                 </h2>
                 <p className="text-text-muted leading-relaxed text-lg">
-                  Our mission is to make dating more honest, intentional, and
-                  comfortable for modern singles. ZoraMeeto was created for people
-                  who are tired of random swipes and want a better way to meet
-                  someone real.
+                  ZoraMeeto is here to make dating more honest, intentional, and
+                  comfortable for modern singles. We created it for people who are
+                  tired of random swipes and want a better way to meet someone real.
                 </p>
                 <p className="text-text-muted leading-relaxed">
                   We focus on verified profiles, clear intentions, and meaningful
@@ -94,18 +93,18 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Our Vision Section */}
+      {/* Better Way To Meet Section */}
       <section className="py-16 px-6 bg-surface-soft/30 border-b border-border">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter text-text-main">
-                Our <span className="text-primary italic font-light">Vision.</span>
+                A Better Way <span className="text-primary italic font-light">To Meet.</span>
               </h2>
               <p className="text-text-muted leading-relaxed text-lg">
-                Our vision is to become one of the most trusted dating platforms
-                for serious and genuine connections. We imagine a future where
-                meeting someone online feels natural, safe, and full of
+                We want ZoraMeeto to become one of the most trusted dating
+                platforms for serious and genuine connections. We imagine a future
+                where meeting someone online feels natural, safe, and full of
                 possibility.
               </p>
               <p className="text-text-muted leading-relaxed">
@@ -144,7 +143,7 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter text-text-main">
-              Why <span className="text-primary italic font-light">ZoraMeeto?</span>
+              Why Singles Choose <span className="text-primary italic font-light">ZoraMeeto.</span>
             </h2>
             <p className="text-text-muted max-w-2xl mx-auto">
               What sets us apart from every other dating app in India.
@@ -210,7 +209,7 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter text-text-main">
-              Safety & <span className="text-primary italic font-light">Security.</span>
+              Date With <span className="text-primary italic font-light">Confidence.</span>
             </h2>
             <p className="text-text-muted max-w-2xl mx-auto">
               Your safety is not just our priority - it is our responsibility.
@@ -277,7 +276,7 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter text-text-main">
-              Our <span className="text-primary italic font-light">Values.</span>
+              What We <span className="text-primary italic font-light">Stand For.</span>
             </h2>
             <p className="text-text-muted max-w-2xl mx-auto">
               These principles guide everything we do at ZoraMeeto.
