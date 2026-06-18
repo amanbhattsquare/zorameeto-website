@@ -217,12 +217,12 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="spotlight-card rounded-[3rem] overflow-hidden bg-white border border-border">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+            <div className="spotlight-card rounded-[3rem] overflow-hidden bg-white border border-border h-full min-h-[400px]">
               <img
                 src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1000"
                 alt="Security"
-                className="w-full aspect-video object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="space-y-8">
