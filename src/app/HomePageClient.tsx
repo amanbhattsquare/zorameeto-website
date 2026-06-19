@@ -39,7 +39,7 @@ export default function HomePageClient() {
                   <span className="text-primary italic font-light">Matches Your Life.</span>
                 </h1>
                 <p className="text-base text-text-muted max-w-lg mx-auto lg:mx-0 leading-relaxed text-justify font-bold glass-card-premium p-5 rounded-2xl border border-white/50 shadow-sm">
-                  Zorameeto is a smart relationship platform that connects genuine singles through verified profiles, intelligent matching, and meaningful conversations—helping people find someone who truly matches their life.
+                  Zorameeto is a smart relationship platform that helps verified singles connect through meaningful matches and genuine conversations.
                 </p>
               </div>
             </div>
@@ -53,9 +53,33 @@ export default function HomePageClient() {
             </div>
              <div className="pt-6 flex items-center gap-6">
               <div className="flex -space-x-2">
-                {[1, 2, 3,4,5].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-surface-soft flex items-center justify-center text-[10px] font-bold">
-                    <span className="material-symbols-outlined text-xs text-primary">star</span>
+                {[false, false, false, false, true].map((isHalfStar, index) => (
+                  <div key={index} className="w-10 h-10 rounded-full border-2 border-white bg-surface-soft flex items-center justify-center">
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      className="h-5 w-5 text-primary"
+                    >
+                      {isHalfStar && (
+                        <defs>
+                          <clipPath id={`hero-half-star-${index}`}>
+                            <rect width="12" height="24" />
+                          </clipPath>
+                        </defs>
+                      )}
+                      <path
+                        d="m12 2.5 2.95 5.98 6.6.96-4.78 4.66 1.13 6.58L12 17.58l-5.9 3.1 1.13-6.58-4.78-4.66 6.6-.96L12 2.5Z"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="m12 2.5 2.95 5.98 6.6.96-4.78 4.66 1.13 6.58L12 17.58l-5.9 3.1 1.13-6.58-4.78-4.66 6.6-.96L12 2.5Z"
+                        fill="currentColor"
+                        clipPath={isHalfStar ? `url(#hero-half-star-${index})` : undefined}
+                      />
+                    </svg>
                   </div>
                 ))}
               </div>
@@ -321,48 +345,78 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* App Showcase Section - Professional & Industry Ready */}
-      <section className="py-24 px-6 bg-white relative z-10 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Creator Wallet Section */}
+      <section className="py-24 px-4 sm:px-6 bg-white relative z-10 overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-stretch">
           
-          <div className="space-y-10 animate-fade-up">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
-                <span className="text-[9px] font-bold uppercase tracking-[0.3em]"> Creator Wallet</span>
+          <div className="animate-fade-up h-full">
+            <div className="relative h-full min-h-[440px] lg:min-h-[520px] flex flex-col py-6 lg:pr-8">
+              <div className="max-w-xl space-y-9">
+                <div className="inline-flex w-fit items-center gap-3 rounded-full border border-primary/20 bg-white px-4 py-2 text-primary shadow-[0_10px_30px_rgba(255,45,85,0.12)]">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-white">
+                    <span className="material-symbols-outlined text-[16px]">account_balance_wallet</span>
+                  </span>
+                  <span className="text-[9px] font-extrabold uppercase tracking-[0.3em]">Creator Wallet</span>
+                </div>
+
+                <div className="space-y-6 pt-4">
+                  <h2 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold tracking-tighter text-text-main leading-[1.02]">
+                    ZoraMeeto, <br />
+                    <span className="text-primary italic font-light">in Your Pocket.</span>
+                  </h2>
+                  <p className="text-xl sm:text-2xl font-extrabold tracking-tight text-text-main leading-snug max-w-lg">
+                    Calls, gifts, and rewards in one place.
+                  </p>
+                  <p className="text-base font-medium leading-relaxed text-text-muted max-w-lg">
+                    A focused wallet experience for verified creators to track credits, manage paid interactions, and keep earning activity clear.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-lg">
+                  {[
+                    { icon: "call", label: "Calls" },
+                    { icon: "redeem", label: "Gifts" },
+                    { icon: "payments", label: "Rewards" }
+                  ].map((item, index) => (
+                    <div key={item.label} className="relative">
+                      {index < 2 && (
+                        <div className="absolute left-1/2 top-1/2 hidden h-px w-full translate-x-1/2 bg-gradient-to-r from-primary/35 to-transparent sm:block"></div>
+                      )}
+                      <div className="relative z-10 inline-flex h-[54px] w-full items-center justify-center gap-2.5 rounded-xl border border-text-main/10 bg-text-main px-3 text-sm font-bold text-white shadow-[0_10px_24px_rgba(28,28,30,0.12)]">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-full border border-white/10 bg-white/10 text-[10px] font-extrabold text-white/80">
+                          0{index + 1}
+                        </span>
+                        <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                          <span className="material-symbols-outlined text-[19px]">{item.icon}</span>
+                        </span>
+                        <p className="leading-tight">{item.label}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <h2 className="text-4xl lg:text-7xl font-extrabold tracking-tighter text-text-main leading-[1.1]">
-                ZoraMeeto, <br />
-                <span className="text-primary italic font-light">in Your Pocket.</span>
-              </h2>
-              
-                <div>
-               
-                  <p className="mt-2 text-2xl font-extrabold tracking-tight">Calls, gifts, and rewards in one place.</p>
-                </div>
-               
-             
             </div>
-
-            <div className="flex flex-col gap-5 sm:flex-row">
-               <div className="inline-flex h-[47px] w-[144px] shrink-0 items-center gap-2 rounded-[7px] border border-[#a6a6a6] bg-black px-3 text-sm font-bold text-white shadow-sm transition-transform duration-300 hover:scale-[1.03] hover:bg-black">
-                  <span className="material-symbols-outlined text-[23px] text-red-500">account_balance_wallet</span>
-                  In-app credits
-                </div>
-            </div>
-
-           
           </div>
 
-          <div className="relative group animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            <div className="absolute inset-0 bg-primary/10 blur-[120px] rounded-full scale-75 group-hover:scale-100 transition-transform duration-1000"></div>
-            <div className="relative rounded-[3rem] overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.1)] border border-white/50">
-              <Image 
-                src="/app-showcase-premium.png" 
-                alt="ZoraMeeto Mobile App" 
-                width={800}
-                height={800}
-                className="w-full h-auto hover:scale-105 transition-transform duration-[3000ms]"
-              />
+          <div className="relative group animate-fade-up h-full" style={{ animationDelay: '0.2s' }}>
+            <div className="relative h-full min-h-[440px] lg:min-h-[520px] flex flex-col px-4 py-6 lg:px-8">
+              <div className="inline-flex w-fit items-center gap-3 rounded-full border border-primary/20 bg-white/85 px-4 py-2 text-primary shadow-lg shadow-primary/5 backdrop-blur-xl">
+                <span className="material-symbols-outlined text-base">payments</span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Wallet credits ready</span>
+              </div>
+              <div className="relative flex flex-1 items-center justify-center pt-4">
+                <div className="absolute bottom-0 right-0 hidden rounded-full border border-primary/20 bg-white/95 px-4 py-2 text-primary shadow-[0_16px_40px_rgba(255,45,85,0.14)] backdrop-blur md:flex items-center gap-2">
+                  <span className="material-symbols-outlined text-base">verified</span>
+                  <span className="text-[9px] font-extrabold uppercase tracking-[0.22em]">Verified</span>
+                </div>
+                <Image 
+                  src="/app-showcase-premium.png" 
+                  alt="ZoraMeeto Mobile App" 
+                  width={900}
+                  height={900}
+                  className="relative z-10 w-full max-w-[680px] rounded-[1.75rem] object-contain shadow-[0_36px_90px_rgba(28,28,30,0.18)] ring-1 ring-border/70 transition-transform duration-[3000ms] group-hover:scale-[1.025]"
+                />
+              </div>
             </div>
           </div>
 
