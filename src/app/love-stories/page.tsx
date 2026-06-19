@@ -15,7 +15,7 @@ export default function LoveStories() {
     location: "Mumbai",
     timeline: "Matched in 21 days",
     img: "/success-story-elite.png",
-    // tag: "Thoughtful Match Success",
+    tag: "Thoughtful match success",
     
     quote:
       "ZoraMeeto helped us avoid random chats and meet with clear intention. We found something real because the match felt thoughtful from the start.",
