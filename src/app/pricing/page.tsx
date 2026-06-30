@@ -56,7 +56,7 @@ export default function Pricing() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
             {tiers.map((tier, i) => (
-              <div key={i} className={`spotlight-card rounded-[3rem] p-10 flex flex-col justify-between relative group bg-white border border-border hover-lift shadow-sm ${tier.popular ? "border-primary/50 ring-1 ring-primary/20 shadow-xl shadow-primary/10" : ""}`}>
+              <div key={i} className={`spotlight-card relative flex flex-col justify-between rounded-3xl border border-border bg-white p-6 shadow-sm group hover-lift sm:p-8 lg:rounded-[3rem] lg:p-10 ${tier.popular ? "border-primary/50 ring-1 ring-primary/20 shadow-xl shadow-primary/10" : ""}`}>
                 {tier.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-primary text-white text-[9px] font-bold uppercase tracking-widest rounded-full shadow-lg shadow-primary/40">
                     Most Popular
@@ -93,14 +93,14 @@ export default function Pricing() {
       <section className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl lg:text-6xl font-bold tracking-tighter text-center mb-16 text-text-main leading-tight">Plan Comparison</h2>
-          <div className="spotlight-card rounded-[3rem] overflow-hidden border border-border bg-white shadow-xl shadow-black/[0.01]">
-            <table className="w-full text-left">
+          <div className="spotlight-card overflow-x-auto rounded-3xl border border-border bg-white shadow-xl shadow-black/[0.01] lg:rounded-[3rem]">
+            <table className="w-full min-w-[640px] text-left">
               <thead>
                 <tr className="border-b border-border bg-surface-soft">
-                  <th className="p-8 text-[9px] font-bold uppercase tracking-[0.3em] text-text-muted">Features</th>
-                  <th className="p-8 text-[9px] font-bold uppercase tracking-[0.3em] text-text-muted text-center">Free</th>
-                  <th className="p-8 text-[9px] font-bold uppercase tracking-[0.3em] text-primary text-center">Plus</th>
-                  <th className="p-8 text-[9px] font-bold uppercase tracking-[0.3em] text-text-muted text-center">Premium</th>
+                  <th className="p-5 sm:p-8 text-[9px] font-bold uppercase tracking-[0.3em] text-text-muted">Features</th>
+                  <th className="p-5 sm:p-8 text-[9px] font-bold uppercase tracking-[0.3em] text-text-muted text-center">Free</th>
+                  <th className="p-5 sm:p-8 text-[9px] font-bold uppercase tracking-[0.3em] text-primary text-center">Plus</th>
+                  <th className="p-5 sm:p-8 text-[9px] font-bold uppercase tracking-[0.3em] text-text-muted text-center">Premium</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
@@ -111,10 +111,10 @@ export default function Pricing() {
                   { name: "Support", f: "Basic", c: "Priority", ic: "Personal" }
                 ].map((row, i) => (
                   <tr key={i} className="hover:bg-surface-soft/50 transition-colors">
-                    <td className="p-8 text-sm font-bold text-text-main uppercase tracking-widest">{row.name}</td>
-                    <td className="p-8 text-center text-text-muted font-medium text-sm">{row.f}</td>
-                    <td className="p-8 text-center text-primary font-bold text-sm">{row.c}</td>
-                    <td className="p-8 text-center text-text-main font-bold text-sm">{row.ic}</td>
+                    <td className="p-5 sm:p-8 text-sm font-bold text-text-main uppercase tracking-widest">{row.name}</td>
+                    <td className="p-5 sm:p-8 text-center text-text-muted font-medium text-sm">{row.f}</td>
+                    <td className="p-5 sm:p-8 text-center text-primary font-bold text-sm">{row.c}</td>
+                    <td className="p-5 sm:p-8 text-center text-text-main font-bold text-sm">{row.ic}</td>
                   </tr>
                 ))}
               </tbody>

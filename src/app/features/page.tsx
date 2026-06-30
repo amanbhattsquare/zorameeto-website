@@ -71,29 +71,6 @@ const privacyFeatures = [
   "Made for serious dating",
 ];
 
-const journey = [
-  {
-    step: "01",
-    title: "Apply",
-    desc: "Start with a simple profile and access request.",
-  },
-  {
-    step: "02",
-    title: "Verify",
-    desc: "Identity, goals, and profile quality are checked before full access.",
-  },
-  {
-    step: "03",
-    title: "Discover",
-    desc: "Better suggestions help you spend less time searching.",
-  },
-  {
-    step: "04",
-    title: "Connect",
-    desc: "Chat clearly and take the next step when both people are ready.",
-  },
-];
-
 function PhoneFrame({
   src,
   alt,

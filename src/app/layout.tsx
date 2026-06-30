@@ -1,9 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GoToTop from "@/components/GoToTop";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+
+/* Material Symbols is a shared icon font loaded once by the App Router layout. */
+/* eslint-disable @next/next/no-page-custom-font */
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -25,6 +28,14 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#ffffff",
+  colorScheme: "light",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,8 +52,14 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} bg-background text-text-main font-sans selection:bg-primary/10 antialiased`}
       >
+        <a
+          href="#main-content"
+          className="fixed left-4 top-4 z-[200] -translate-y-24 rounded-xl bg-text-main px-5 py-3 text-sm font-bold text-white shadow-xl transition-transform focus:translate-y-0"
+        >
+          Skip to content
+        </a>
         <Navbar />
-        {children}
+        <div id="main-content">{children}</div>
         <GoToTop />
         <Footer />
       </body>

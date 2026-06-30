@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Us | ZoraMeeto",
@@ -60,13 +61,16 @@ export default function AboutUs() {
           <div className="spotlight-card rounded-[3rem] overflow-hidden bg-surface-soft/50 border border-border">
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
               <div className="aspect-video lg:aspect-auto h-full overflow-hidden">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=1200"
                   alt="Our Team"
+                  width={1200}
+                  height={800}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-12 lg:p-16 space-y-8">
+              <div className="space-y-6 p-6 sm:p-8 lg:space-y-8 lg:p-16">
                 <h2 className="text-3xl md:text-4xl font-extrabold tracking-tighter text-text-main">
                   Real Dating, <span className="text-primary italic font-light">Real People.</span>
                 </h2>
@@ -96,7 +100,7 @@ export default function AboutUs() {
       {/* Better Way To Meet Section */}
       <section className="py-16 px-6 bg-surface-soft/30 border-b border-border">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16 items-center">
             <div className="space-y-8">
               <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter text-text-main">
                 A Better Way <span className="text-primary italic font-light">To Meet.</span>
@@ -112,25 +116,28 @@ export default function AboutUs() {
                 where respect comes first, conversations have value, and technology
                 helps people find relationships that fit their real lives.
               </p>
-              <div className="grid grid-cols-2 gap-6 pt-4">
-                <div className="bg-white rounded-2xl p-6 border border-border shadow-sm">
-                  <p className="text-4xl font-extrabold text-primary">100K+</p>
+              <div className="grid grid-cols-1 gap-4 pt-4 min-[380px]:grid-cols-2 sm:gap-6">
+                <div className="bg-white rounded-2xl p-5 sm:p-6 border border-border shadow-sm">
+                  <p className="text-3xl font-extrabold text-primary sm:text-4xl">100K+</p>
                   <p className="text-sm text-text-muted mt-2 font-medium">
                     Downloads & Growing
                   </p>
                 </div>
-                <div className="bg-white rounded-2xl p-6 border border-border shadow-sm">
-                  <p className="text-4xl font-extrabold text-primary">95%</p>
+                <div className="bg-white rounded-2xl p-5 sm:p-6 border border-border shadow-sm">
+                  <p className="text-3xl font-extrabold text-primary sm:text-4xl">95%</p>
                   <p className="text-sm text-text-muted mt-2 font-medium">
                     REAL PROFILES
                   </p>
                 </div>
               </div>
             </div>
-            <div className="spotlight-card rounded-[3rem] overflow-hidden bg-white border border-border p-8">
-              <img
+            <div className="spotlight-card rounded-3xl overflow-hidden bg-white border border-border p-4 sm:p-8 lg:rounded-[3rem]">
+              <Image
                 src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800"
                 alt="Our Vision"
+                width={800}
+                height={533}
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="w-full rounded-2xl object-cover"
               />
             </div>
@@ -217,11 +224,14 @@ export default function AboutUs() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-            <div className="spotlight-card rounded-[3rem] overflow-hidden bg-white border border-border h-full min-h-[400px]">
-              <img
+            <div className="spotlight-card h-full min-h-[260px] overflow-hidden rounded-3xl border border-border bg-white sm:min-h-[360px] lg:min-h-[400px] lg:rounded-[3rem]">
+              <Image
                 src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1000"
                 alt="Security"
-                className="w-full h-full object-cover"
+                width={1000}
+                height={667}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="min-h-[260px] w-full h-full object-cover sm:min-h-[360px] lg:min-h-[400px]"
               />
             </div>
             <div className="space-y-8">

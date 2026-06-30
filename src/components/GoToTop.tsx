@@ -21,7 +21,7 @@ export default function GoToTop() {
     <button
       onClick={scrollToTop}
       aria-label="Scroll to top"
-      className={`fixed bottom-8 right-8 z-[100] w-14 h-14 rounded-2xl bg-primary text-white shadow-2xl shadow-primary/30 border border-white/20 flex items-center justify-center transition-all duration-500 ease-out backdrop-blur-md ${
+      className={`fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-4 z-[90] flex h-12 w-12 items-center justify-center rounded-xl border border-white/20 bg-primary text-white shadow-2xl shadow-primary/30 transition-all duration-500 ease-out backdrop-blur-md sm:bottom-6 sm:right-6 sm:h-14 sm:w-14 sm:rounded-2xl lg:bottom-8 lg:right-8 ${
         isVisible
           ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
           : "opacity-0 translate-y-8 scale-75 pointer-events-none"

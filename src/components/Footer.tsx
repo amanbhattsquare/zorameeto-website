@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const legalLinks = [
@@ -52,17 +53,20 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-background pt-24 pb-12 px-6 md:px-12 border-t border-border overflow-hidden">
+    <footer className="relative overflow-hidden border-t border-border bg-background px-5 pb-[max(2rem,env(safe-area-inset-bottom))] pt-16 sm:px-6 md:px-10 lg:pt-20">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
+        <div className="grid grid-cols-1 gap-10 min-[380px]:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12 xl:gap-16 mb-14 lg:mb-16">
           
           {/* Brand Section */}
-          <div className="space-y-8">
+          <div className="space-y-8 min-[380px]:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block group">
-              <img 
+              <Image
                 src="/Logo.png" 
                 alt="ZoraMeeto" 
-                className="h-10 md:h-12 w-auto object-contain transition-transform duration-500 hover:scale-105" 
+                width={1936}
+                height={470}
+                sizes="180px"
+                className="h-10 md:h-11 w-auto object-contain transition-transform duration-500 hover:scale-105"
               />
             </Link>
             <p className="text-text-muted text-base leading-relaxed max-w-xs font-medium">
@@ -83,7 +87,7 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <div className="space-y-10">
+          <div className="space-y-6 sm:space-y-10">
             <h5 className="text-[10px] font-bold uppercase tracking-[0.3em] text-text-main">
               Experience
             </h5>
@@ -96,7 +100,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-10">
+          <div className="space-y-6 sm:space-y-10">
             <h5 className="text-[10px] font-bold uppercase tracking-[0.3em] text-text-main">
               Support
             </h5>
@@ -110,7 +114,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter Section */}
-          <div className="space-y-8">
+          <div className="space-y-8 min-[380px]:col-span-2 lg:col-span-1">
             <h5 className="text-[10px] font-bold uppercase tracking-[0.3em] text-text-main">
               Newsletter
             </h5>
@@ -122,8 +126,11 @@ export default function Footer() {
                 className="w-full bg-surface-soft border border-border rounded-xl px-5 py-4 text-sm focus:outline-none focus:border-primary transition-all placeholder:text-text-muted/40"
                 placeholder="Enter your email"
                 type="email"
+                inputMode="email"
+                autoComplete="email"
+                aria-label="Email address"
               />
-              <button className="bg-primary text-white py-4 rounded-xl text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-primary-hover transition-all duration-500">
+              <button type="button" className="min-h-12 bg-primary text-white py-3 rounded-xl text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-primary-hover transition-all duration-500">
                 Join Now
               </button>
             </div>
@@ -131,16 +138,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="pt-8 border-t border-border flex flex-col lg:flex-row justify-between items-center gap-6 text-center lg:text-left">
           {/* Copyright - Left Side */}
-          <div className="order-2 md:order-1">
+          <div className="order-2 lg:order-1">
             <p className="text-[10px] text-text-muted tracking-wide">
               © {new Date().getFullYear()} ZoraMeeto. All rights reserved.
             </p>
           </div>
           
           {/* Legal Links - Center */}
-          <div className="order-1 md:order-2 flex flex-wrap justify-center gap-x-10 gap-y-4">
+          <div className="order-1 lg:order-2 flex flex-wrap justify-center gap-x-6 sm:gap-x-10 gap-y-4">
             {legalLinks.map((item) => (
               <Link key={item.label} className="text-[10px] text-text-muted hover:text-primary transition-colors uppercase tracking-[0.2em] font-bold" href={item.href}>
                 {item.label}
@@ -151,7 +158,7 @@ export default function Footer() {
           {/* Team/Company Credits - Right Side */}
           <div className="order-3">
             <p className="text-[10px] text-text-muted tracking-wide">
-              Crafted with ❤️ by the <Link href="#" className="hover:text-primary transition-colors font-semibold">ZoraMeeto Team</Link>
+              Crafted with ❤️ by the <span className="font-semibold">ZoraMeeto Team</span>
             </p>
           </div>
         </div>

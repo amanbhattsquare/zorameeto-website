@@ -278,7 +278,7 @@ export default function EarnAndGrow() {
             ))}
           </div>
           <div className="pt-4 relative z-10">
-            <button className="bg-white text-text-main px-12 py-6 rounded-2xl font-bold text-sm uppercase tracking-widest shadow-xl hover:scale-105 transition-all">
+            <button className="w-full rounded-2xl bg-white px-6 py-5 text-sm font-bold uppercase tracking-wider text-text-main shadow-xl transition-all hover:scale-105 sm:w-auto sm:px-12 sm:py-6 sm:tracking-widest">
               Get Started Now
             </button>
           </div>

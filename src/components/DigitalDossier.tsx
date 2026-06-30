@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function DigitalDossier() {
   const [activeTab, setActiveTab] = useState("profile");
@@ -17,11 +18,11 @@ export default function DigitalDossier() {
   };
 
   return (
-    <div className="bg-[#fdfdfb] border border-[#e8e6df] rounded-[3rem] p-12 shadow-2xl relative overflow-hidden group spotlight-card">
-      <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
+    <div className="spotlight-card group relative overflow-hidden rounded-3xl border border-[#e8e6df] bg-[#fdfdfb] p-6 shadow-2xl sm:p-8 lg:rounded-[3rem] lg:p-12">
+      <div className="mb-9 flex flex-col justify-between gap-6 sm:flex-row sm:items-start lg:mb-12 lg:gap-8">
         <div className="space-y-4">
           <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Member Profile</span>
-          <h3 className="text-5xl font-headline tracking-tighter text-text-main">{dossierData.name}</h3>
+          <h3 className="text-3xl font-headline tracking-tighter text-text-main sm:text-4xl lg:text-5xl">{dossierData.name}</h3>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-text-muted">{dossierData.status}</p>
           <div className="flex flex-wrap gap-2 pt-2">
             {dossierData.tags.map(tag => (
@@ -29,12 +30,12 @@ export default function DigitalDossier() {
             ))}
           </div>
         </div>
-        <div className="w-32 h-32 rounded-3xl overflow-hidden shadow-xl rotate-3 group-hover:rotate-0 transition-all duration-700">
-          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400" alt="Member" className="w-full h-full object-cover" />
+        <div className="h-24 w-24 shrink-0 overflow-hidden rounded-2xl shadow-xl rotate-3 group-hover:rotate-0 transition-all duration-700 sm:h-28 sm:w-28 lg:h-32 lg:w-32 lg:rounded-3xl">
+          <Image src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400" alt="Member" width={400} height={400} className="h-full w-full object-cover" />
         </div>
       </div>
 
-      <div className="flex gap-10 border-b border-border mb-8">
+      <div className="mb-8 flex gap-5 overflow-x-auto border-b border-border sm:gap-10">
         {["profile", "interests", "values"].map(tab => (
           <button
             key={tab}
