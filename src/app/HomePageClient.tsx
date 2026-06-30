@@ -15,7 +15,7 @@ export default function HomePageClient() {
         - 3D Hardware Mockups with perfect hardware definition
         - Optimized for standard laptop folds
       */}
-      <section className="relative flex min-h-screen min-h-[100svh] items-center overflow-hidden border-b border-border bg-mesh-ultra px-4 pb-12 pt-28 sm:px-6 lg:min-h-[680px] lg:py-28">
+      <section className="hero-section relative flex min-h-screen min-h-[100svh] items-center overflow-hidden border-b border-border bg-mesh-ultra px-4 pb-12 pt-28 sm:px-6 lg:min-h-[680px] lg:py-28">
         
         {/* Background Depth Orbs */}
         <div className="absolute inset-0 z-0">
@@ -26,7 +26,7 @@ export default function HomePageClient() {
         <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-14 xl:gap-20">
           
           {/* Left Column: Authoritative Messaging */}
-          <div className="space-y-6 text-center lg:space-y-8 lg:text-left animate-fade-up">
+          <div className="hero-copy space-y-6 text-center lg:text-left animate-fade-up">
             <div className="space-y-5">
               <div className="mx-auto inline-flex max-w-full items-center gap-2 rounded-full border border-white bg-white/80 px-3 py-2 text-center shadow-lg shadow-black/5 backdrop-blur-xl sm:gap-3 sm:px-4 lg:mx-0">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
@@ -51,7 +51,7 @@ export default function HomePageClient() {
                 <GooglePlayBadge />
               </div>
             </div>
-             <div className="flex flex-col items-center justify-center gap-4 pt-2 sm:flex-row sm:gap-6 lg:justify-start lg:pt-6">
+             <div className="hero-rating flex flex-col items-center justify-center gap-4 pt-2 sm:flex-row sm:gap-6 lg:justify-start">
               <div className="flex -space-x-2">
                 {[false, false, false, false, true].map((isHalfStar, index) => (
                   <div key={index} className="w-10 h-10 rounded-full border-2 border-white bg-surface-soft flex items-center justify-center">
@@ -88,10 +88,10 @@ export default function HomePageClient() {
           </div>
 
           {/* Right Column: 3D Mockups - BOTH IMAGES STABILIZED */}
-          <div className="relative flex h-[390px] items-center justify-center sm:h-[460px] md:h-[600px] lg:justify-end animate-fade-up" style={{ animationDelay: '0.4s' }}>
+          <div className="hero-phones relative flex h-[390px] items-center justify-center sm:h-[460px] md:h-[600px] lg:justify-end animate-fade-up" style={{ animationDelay: '0.4s' }}>
             
             {/* Screen 1: The Profile View */}
-            <div className="absolute left-1 top-4 z-10 aspect-[9/19.5] w-[44vw] min-w-[138px] max-w-[190px] rotate-[-6deg] rounded-[1.75rem] border-[6px] border-text-main bg-text-main shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-all duration-1000 group will-change-transform hover:rotate-0 hover:scale-105 sm:left-4 sm:w-[200px] sm:max-w-none sm:rounded-[2.5rem] sm:border-[8px] md:w-[260px] lg:left-0">
+            <div className="hero-phone hero-phone-profile absolute left-1 top-4 z-10 aspect-[9/19.5] w-[44vw] min-w-[138px] max-w-[190px] rotate-[-6deg] rounded-[1.75rem] border-[6px] border-text-main bg-text-main shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-all duration-1000 group will-change-transform hover:rotate-0 hover:scale-105 sm:left-4 sm:w-[200px] sm:max-w-none sm:rounded-[2.5rem] sm:border-[8px] md:w-[260px] lg:left-0">
               <div className="absolute inset-0 isolate overflow-hidden rounded-[1.35rem] bg-surface [clip-path:inset(0_round_1.35rem)] sm:rounded-[2rem] sm:[clip-path:inset(0_round_2rem)]">
                 <Image
                   src="/hero-img-1.png"
@@ -108,7 +108,7 @@ export default function HomePageClient() {
             </div>
 
             {/* Screen 2: The Matching View - IMAGE STABILIZED WITH ROBUST LINK */}
-            <div className="absolute bottom-4 right-1 z-10 aspect-[9/19.5] w-[44vw] min-w-[138px] max-w-[190px] rotate-[6deg] rounded-[1.75rem] border-[6px] border-text-main bg-text-main shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-all duration-1000 group will-change-transform hover:rotate-0 hover:scale-105 sm:right-4 sm:w-[200px] sm:max-w-none sm:rounded-[2.5rem] sm:border-[8px] md:w-[260px] lg:right-4">
+            <div className="hero-phone hero-phone-match absolute bottom-4 right-1 z-10 aspect-[9/19.5] w-[44vw] min-w-[138px] max-w-[190px] rotate-[6deg] rounded-[1.75rem] border-[6px] border-text-main bg-text-main shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-all duration-1000 group will-change-transform hover:rotate-0 hover:scale-105 sm:right-4 sm:w-[200px] sm:max-w-none sm:rounded-[2.5rem] sm:border-[8px] md:w-[260px] lg:right-4">
               <div className="absolute inset-0 isolate overflow-hidden rounded-[1.35rem] bg-surface [clip-path:inset(0_round_1.35rem)] sm:rounded-[2rem] sm:[clip-path:inset(0_round_2rem)]">
                 <Image
                   src="https://images.pexels.com/photos/1417255/pexels-photo-1417255.jpeg?auto=compress&cs=tinysrgb&w=800"

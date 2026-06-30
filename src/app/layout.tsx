@@ -2,16 +2,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GoToTop from "@/components/GoToTop";
 import type { Metadata, Viewport } from "next";
-import { Manrope } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 
 /* Material Symbols is a shared icon font loaded once by the App Router layout. */
 /* eslint-disable @next/next/no-page-custom-font */
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const urbanist = Urbanist({
+  variable: "--font-urbanist",
   subsets: ["latin"],
-  weight: ["400", "500", "700", "800"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -50,7 +50,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${manrope.variable} bg-background text-text-main font-sans selection:bg-primary/10 antialiased`}
+        className={`${urbanist.variable} bg-background text-text-main font-sans selection:bg-primary/10 antialiased`}
       >
         <a
           href="#main-content"
