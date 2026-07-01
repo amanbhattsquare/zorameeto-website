@@ -3,19 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { AppStoreBadge, GooglePlayBadge } from "@/components/StoreLogos";
-// import image1 from "@/public/hero-img-1.png";
 
 export default function HomePageClient() {
   return (
     <main className="min-h-screen bg-background selection:bg-primary/10">
       
-      {/* 
-        ULTRA-COMPACT APP HERO - FINAL IMAGE STABILIZATION 
-        - Hard-linked robust image assets
-        - 3D Hardware Mockups with perfect hardware definition
-        - Optimized for standard laptop folds
-      */}
-      <section className="hero-section relative flex min-h-screen min-h-[100svh] items-center overflow-hidden border-b border-border bg-mesh-ultra px-4 pb-12 pt-28 sm:px-6 lg:min-h-[680px] lg:py-28">
+      <section className="hero-section relative flex min-h-screen min-h-[100svh] items-center overflow-hidden border-b border-border bg-mesh-ultra px-4 pb-12 pt-28 sm:px-6">
         
         {/* Background Depth Orbs */}
         <div className="absolute inset-0 z-0">
@@ -23,7 +16,7 @@ export default function HomePageClient() {
           <div className="absolute bottom-1/4 -right-24 w-[500px] h-[500px] bg-secondary/5 blur-[140px] rounded-full animate-float-slow" style={{ animationDelay: '-5s' }}></div>
         </div>
         
-        <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-14 xl:gap-20">
+        <div className="hero-layout relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center">
           
           {/* Left Column: Authoritative Messaging */}
           <div className="hero-copy space-y-6 text-center lg:text-left animate-fade-up">
@@ -44,9 +37,9 @@ export default function HomePageClient() {
               </div>
             </div>
 
-            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
-              <p className="text-xl font-semibold text-text-main">Get the app!</p>
-              <div className="flex flex-col items-center gap-5 sm:flex-row">
+            <div className="hero-download flex flex-col items-center gap-x-4 gap-y-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
+              <p className="shrink-0 text-xl font-semibold text-text-main">Get the app!</p>
+              <div className="flex shrink-0 flex-col items-center gap-3 min-[360px]:flex-row sm:gap-4">
                 <AppStoreBadge />
                 <GooglePlayBadge />
               </div>
@@ -87,56 +80,60 @@ export default function HomePageClient() {
             </div>
           </div>
 
-          {/* Right Column: 3D Mockups - BOTH IMAGES STABILIZED */}
-          <div className="hero-phones relative flex h-[390px] items-center justify-center sm:h-[460px] md:h-[600px] lg:justify-end animate-fade-up" style={{ animationDelay: '0.4s' }}>
+          {/* Right Column: both devices share one proportional stage. */}
+          <div className="hero-phones flex w-full items-center justify-center animate-fade-up lg:justify-end" style={{ animationDelay: '0.4s' }}>
+            <div className="hero-device-stage">
             
-            {/* Screen 1: The Profile View */}
-            <div className="hero-phone hero-phone-profile absolute left-1 top-4 z-10 aspect-[9/19.5] w-[44vw] min-w-[138px] max-w-[190px] rotate-[-6deg] rounded-[1.75rem] border-[6px] border-text-main bg-text-main shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-all duration-1000 group will-change-transform hover:rotate-0 hover:scale-105 sm:left-4 sm:w-[200px] sm:max-w-none sm:rounded-[2.5rem] sm:border-[8px] md:w-[260px] lg:left-0">
-              <div className="absolute inset-0 isolate overflow-hidden rounded-[1.35rem] bg-surface [clip-path:inset(0_round_1.35rem)] sm:rounded-[2rem] sm:[clip-path:inset(0_round_2rem)]">
-                <Image
-                  src="/hero-img-1.png"
-                  alt="ZoraMeeto Mobile App"
-                  width={800}
-                  height={800}
-                  className="h-full w-full object-cover transition-transform duration-[2000ms] group-hover:scale-100"
-                />
-                <div className="absolute bottom-0 left-0 right-0 z-30 space-y-1 bg-gradient-to-t from-black/95 to-transparent p-3 text-white sm:p-6">
-                  <p className="text-sm font-bold sm:text-lg">Shreya, 25</p>
-                  <p className="text-[7px] font-bold uppercase tracking-widest text-white/60">Creative Director | Mumbai</p>
+              {/* Screen 1: The Profile View */}
+              <div className="hero-phone hero-phone-profile group">
+                <div className="hero-phone-screen absolute inset-0 isolate overflow-hidden bg-surface">
+                  <Image
+                    src="/hero-img-1.png"
+                    alt="Profile screen in the ZoraMeeto mobile app"
+                    width={1023}
+                    height={1537}
+                    sizes="(min-width: 1024px) 235px, (min-width: 640px) 205px, 43vw"
+                    priority
+                    className="h-full w-full object-cover transition-transform duration-[2000ms] group-hover:scale-100"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 z-30 space-y-1 bg-gradient-to-t from-black/95 to-transparent p-3 text-white sm:p-6">
+                    <p className="text-sm font-bold sm:text-lg">Shreya, 25</p>
+                    <p className="text-[7px] font-bold uppercase tracking-widest text-white/60">Creative Director | Mumbai</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Screen 2: The Matching View - IMAGE STABILIZED WITH ROBUST LINK */}
-            <div className="hero-phone hero-phone-match absolute bottom-4 right-1 z-10 aspect-[9/19.5] w-[44vw] min-w-[138px] max-w-[190px] rotate-[6deg] rounded-[1.75rem] border-[6px] border-text-main bg-text-main shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-all duration-1000 group will-change-transform hover:rotate-0 hover:scale-105 sm:right-4 sm:w-[200px] sm:max-w-none sm:rounded-[2.5rem] sm:border-[8px] md:w-[260px] lg:right-4">
-              <div className="absolute inset-0 isolate overflow-hidden rounded-[1.35rem] bg-surface [clip-path:inset(0_round_1.35rem)] sm:rounded-[2rem] sm:[clip-path:inset(0_round_2rem)]">
-                <Image
-                  src="https://images.pexels.com/photos/1417255/pexels-photo-1417255.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  width={800}
-                  height={1200}
-                  sizes="(min-width: 768px) 260px, 44vw"
-                  className="h-full w-full object-cover transition-transform duration-[2000ms] group-hover:scale-100"
-                  alt="Match Experience"
-                />
+              {/* Screen 2: The Matching View */}
+              <div className="hero-phone hero-phone-match group">
+                <div className="hero-phone-screen absolute inset-0 isolate overflow-hidden bg-surface">
+                  <Image
+                    src="/hero-match-couple.jpg"
+                    width={1200}
+                    height={800}
+                    sizes="(min-width: 1024px) 235px, (min-width: 640px) 205px, 43vw"
+                    className="h-full w-full object-cover transition-transform duration-[2000ms] group-hover:scale-100"
+                    alt="A couple representing a strong ZoraMeeto match"
+                  />
 
-                <div className="absolute inset-0 z-30 flex flex-col justify-end space-y-2 bg-gradient-to-t from-black/95 to-transparent p-3 text-white sm:space-y-3 sm:p-6">
-                  <div className="flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-primary/30 px-3 py-1 backdrop-blur-md">
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
-                    <span className="text-[7px] font-bold uppercase tracking-widest text-white">98.4% Match</span>
+                  <div className="absolute inset-0 z-30 flex flex-col justify-end space-y-2 bg-gradient-to-t from-black/95 to-transparent p-3 text-white sm:space-y-3 sm:p-6">
+                    <div className="flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-primary/30 px-3 py-1 backdrop-blur-md">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
+                      <span className="text-[7px] font-bold uppercase tracking-widest text-white">98.4% Match</span>
+                    </div>
+                    <div className="space-y-1">
+                      <p className="text-base font-bold leading-tight sm:text-xl">Strong Match</p>
+                      <p className="text-[8px] font-medium text-white/60">Shared values, lifestyle, and future plans.</p>
+                    </div>
+                    <button type="button" className="w-full rounded-xl bg-white py-2.5 text-[8px] font-bold uppercase tracking-wider text-text-main shadow-xl transition-colors hover:bg-primary hover:text-white sm:rounded-2xl sm:py-4 sm:text-[9px] sm:tracking-widest">
+                      Start Conversation
+                    </button>
                   </div>
-                  <div className="space-y-1">
-                    <p className="text-base font-bold leading-tight sm:text-xl">Strong Match</p>
-                    <p className="text-[8px] font-medium text-white/60">Shared values, lifestyle, and future plans.</p>
-                  </div>
-                  <button className="w-full rounded-xl bg-white py-2.5 text-[8px] font-bold uppercase tracking-wider text-text-main shadow-xl transition-colors hover:bg-primary hover:text-white sm:rounded-2xl sm:py-4 sm:text-[9px] sm:tracking-widest">
-                    Start Conversation
-                  </button>
                 </div>
               </div>
-            </div>
 
-            {/* Decorative Glows */}
-            <div className="absolute -right-10 top-1/2 -translate-y-1/2 w-80 h-80 bg-primary/10 blur-[120px] rounded-full z-0"></div>
+              {/* Decorative Glow */}
+              <div className="absolute -right-10 top-1/2 z-0 h-80 w-80 -translate-y-1/2 rounded-full bg-primary/10 blur-[120px]"></div>
+            </div>
           </div>
         </div>
       </section>
