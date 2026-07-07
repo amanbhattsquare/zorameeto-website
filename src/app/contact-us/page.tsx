@@ -366,7 +366,7 @@ export default function ContactUs() {
               href="/terms-and-conditions"
               className="inline-flex min-h-14 items-center justify-center rounded-2xl border border-white/15 px-8 text-xs font-extrabold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:text-primary"
             >
-              Terms & Conditions
+              Terms of Service
             </Link>
           </div>
         </div>

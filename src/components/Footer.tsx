@@ -4,8 +4,9 @@ import Image from "next/image";
 export default function Footer() {
   const legalLinks = [
     { label: 'Privacy Policy', href: '/privacy-policy' },
-    { label: 'Terms & Conditions', href: '/terms-and-conditions' },
-    { label: 'Cookies', href: '/privacy-policy#5-cookies-and-similar-technologies' },
+    { label: 'Terms of Service', href: '/terms-and-conditions' },
+    { label: 'Community Guidelines', href: '/community-guidelines' },
+    { label: 'Cookies', href: '/privacy-policy#14-cookies-sdks-and-similar-technologies' },
   ];
 
   const experienceLinks = [
@@ -158,7 +159,7 @@ export default function Footer() {
           {/* Team/Company Credits - Right Side */}
           <div className="order-3">
             <p className="text-[10px] text-text-muted tracking-wide">
-              Crafted with ❤️ by the <span className="font-semibold">ZoraMeeto Team</span>
+              Built by the <span className="font-semibold">ZoraMeeto Team</span>
             </p>
           </div>
         </div>
