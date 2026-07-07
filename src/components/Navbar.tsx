@@ -75,26 +75,30 @@ export default function Navbar() {
 
   const getLinkClass = (path: string) => {
     const isActive = isActivePath(path);
+    const baseClass =
+      "relative inline-flex h-10 items-center rounded-full px-3.5 text-[11px] font-extrabold uppercase tracking-[0.16em] transition-all duration-300";
+
     if (isActive) {
-      return "text-primary font-bold text-[10px] uppercase tracking-[0.2em] border-b-2 border-primary pb-1";
+      return `${baseClass} bg-text-main text-white shadow-sm`;
     }
-    return "text-text-main/60 hover:text-text-main transition-all duration-300 font-bold text-[10px] uppercase tracking-[0.2em]";
+
+    return `${baseClass} text-text-muted hover:bg-surface-soft hover:text-text-main`;
   };
 
   const getMobileLinkClass = (path: string, isOpen: boolean) => {
     const activeClass = isActivePath(path) ? "text-primary" : "text-text-main hover:text-primary";
     const motionClass = isOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0";
-    return `text-2xl font-bold tracking-tight transition-all duration-300 ${activeClass} ${motionClass}`;
+    return `group flex min-h-14 items-center justify-between rounded-2xl border border-border bg-white px-5 text-left text-xl font-extrabold tracking-tight shadow-sm transition-all duration-300 hover:border-primary/30 hover:bg-surface-soft ${activeClass} ${motionClass}`;
   };
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/features", label: "Features" },
-    { href: "/about-us", label: "About Us" },
-    { href: "/app-showcase", label: "Showcase" },
-    { href: "/love-stories", label: "The Zora Journal" },
-    { href: "/earn-and-grow", label: "Earn & Grow" },
-    { href: "/contact-us", label: "Contact" },
+    { href: "/", label: "Home", icon: "home" },
+    { href: "/features", label: "Features", icon: "auto_awesome" },
+    { href: "/about-us", label: "About Us", icon: "groups" },
+    { href: "/app-showcase", label: "Showcase", icon: "phone_iphone" },
+    { href: "/love-stories", label: "The Zora Journal", icon: "article" },
+    { href: "/earn-and-grow", label: "Earn & Grow", icon: "trending_up" },
+    { href: "/contact-us", label: "Contact", icon: "mail" },
     // { href: "/how-it-works", label: "Process" },
     // { href: "/pricing", label: "Membership" },
   ];  
@@ -104,15 +108,21 @@ export default function Navbar() {
       <div id="nav-progress" aria-hidden="true" className="fixed top-0 left-0 h-0.5 bg-primary z-[60] transition-all duration-300" style={{ width: '0%' }}></div>
       <nav 
         aria-label="Primary navigation"
-        style={{ paddingTop: scrolled ? "max(0.5rem, env(safe-area-inset-top))" : "max(0.75rem, env(safe-area-inset-top))" }}
-        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        style={{ paddingTop: scrolled ? "max(0.5rem, env(safe-area-inset-top))" : "max(0.9rem, env(safe-area-inset-top))" }}
+        className={`fixed top-0 z-50 w-full px-3 transition-all duration-500 sm:px-5 lg:px-8 ${
           scrolled 
-            ? "bg-white/90 backdrop-blur-xl py-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
-            : "bg-white/70 backdrop-blur-md py-3 sm:bg-transparent sm:backdrop-blur-none sm:py-4"
+            ? "py-2"
+            : "py-3"
         }`}
       >
-        <div className="flex min-h-12 justify-between items-center w-full px-4 sm:px-6 lg:px-10 max-w-screen-2xl mx-auto">
-          <Link href="/" className="flex items-center group" aria-label="ZoraMeeto home">
+        <div
+          className={`mx-auto flex min-h-[4.25rem] w-full max-w-7xl items-center justify-between rounded-2xl border px-3.5 transition-all duration-500 sm:px-5 ${
+            scrolled
+              ? "border-border bg-white/[0.92] shadow-[0_18px_50px_rgba(17,24,39,0.08)] backdrop-blur-2xl"
+              : "border-white/80 bg-white/[0.82] shadow-[0_16px_45px_rgba(17,24,39,0.06)] backdrop-blur-xl"
+          }`}
+        >
+          <Link href="/" className="group flex min-w-0 items-center" aria-label="ZoraMeeto home">
             <Image
               src="/Logo.png" 
               alt="ZoraMeeto" 
@@ -120,11 +130,11 @@ export default function Navbar() {
               height={470}
               priority
               sizes="(min-width: 640px) 180px, 150px"
-              className="h-9 sm:h-11 lg:h-12 w-auto object-contain transition-transform duration-500 hover:scale-105"
+              className="h-9 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.03] sm:h-10 lg:h-11"
             />
           </Link>
           
-          <div className="hidden xl:flex gap-6 2xl:gap-9 items-center">
+          <div className="hidden items-center gap-1 rounded-full border border-border bg-white/75 p-1 shadow-inner xl:flex">
             {navLinks.map(link => (
               <Link key={link.href} className={getLinkClass(link.href)} href={link.href}>
                 {link.label}
@@ -132,9 +142,18 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link
+              href="/app-showcase"
+              className="hidden min-h-11 items-center gap-2 rounded-full bg-gradient-primary px-5 text-[11px] font-extrabold uppercase tracking-[0.16em] text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/25 sm:inline-flex"
+            >
+              Get the App
+              <span className="material-symbols-outlined text-[18px]" aria-hidden="true">
+                arrow_forward
+              </span>
+            </Link>
             <button
-              className="flex h-11 w-11 items-center justify-center rounded-xl text-text-main transition-colors hover:bg-surface-soft xl:hidden"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white text-text-main shadow-sm transition-colors hover:bg-surface-soft xl:hidden"
               onClick={() => setIsMenuOpen(true)}
               aria-label="Open menu"
               aria-controls="mobile-navigation"
@@ -151,24 +170,29 @@ export default function Navbar() {
         id="mobile-navigation"
         aria-hidden={!isMenuOpen}
         inert={!isMenuOpen}
-        className={`fixed inset-0 z-[100] flex h-screen h-[100dvh] flex-col overflow-y-auto overscroll-contain bg-white transition-all duration-500 ease-in-out xl:hidden ${
+        className={`fixed inset-0 z-[100] flex h-screen h-[100dvh] flex-col overflow-y-auto overscroll-contain bg-gradient-mesh transition-all duration-500 ease-in-out xl:hidden ${
           isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex min-h-20 shrink-0 justify-between items-center px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-6">
-          <Link href="/" className="inline-block" aria-label="ZoraMeeto home">
+        <div className="flex min-h-20 shrink-0 items-center justify-between px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-6">
+          <Link href="/" className="inline-block" aria-label="ZoraMeeto home" onClick={() => setIsMenuOpen(false)}>
             <Image src="/Logo.png" alt="ZoraMeeto" width={1936} height={470} className="h-9 sm:h-10 w-auto object-contain" />
           </Link>
           <button
             ref={closeButtonRef}
-            className="flex h-11 w-11 items-center justify-center rounded-xl text-text-main transition-colors hover:bg-surface-soft"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white text-text-main shadow-sm transition-colors hover:bg-surface-soft"
             onClick={() => setIsMenuOpen(false)}
             aria-label="Close menu"
           >
             <span className="material-symbols-outlined text-3xl">close</span>
           </button>
         </div>
-        <div className="mobile-menu-links mx-auto grid w-full max-w-2xl flex-1 grid-cols-1 content-center items-center gap-1 px-6 py-4 text-center sm:gap-3 sm:px-10">
+        <div className="mx-auto w-full max-w-2xl px-6 pt-4 sm:px-10">
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-text-muted">
+            Navigation
+          </p>
+        </div>
+        <div className="mobile-menu-links mx-auto grid w-full max-w-2xl flex-1 grid-cols-1 content-center items-center gap-3 px-6 py-4 sm:px-10">
           {navLinks.map((link, i) => (
             <Link 
               key={link.href} 
@@ -177,16 +201,27 @@ export default function Navbar() {
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
             >
-              {link.label}
+              <span className="flex min-w-0 items-center gap-3">
+                <span className="material-symbols-outlined text-[22px]" aria-hidden="true">
+                  {link.icon}
+                </span>
+                <span>{link.label}</span>
+              </span>
+              <span className="material-symbols-outlined text-[20px] text-text-muted transition-transform group-hover:translate-x-1" aria-hidden="true">
+                arrow_forward
+              </span>
             </Link>
           ))}
           <Link
             href="/app-showcase"
             onClick={() => setIsMenuOpen(false)}
-            className={`mx-auto mt-3 inline-flex min-h-12 items-center justify-center rounded-full bg-gradient-primary px-8 py-3 text-base font-bold text-white shadow-xl shadow-primary/20 transition-all duration-500 sm:mt-5 sm:px-12 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+            className={`mt-2 inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-gradient-primary px-8 py-3 text-sm font-extrabold uppercase tracking-[0.16em] text-white shadow-xl shadow-primary/20 transition-all duration-500 sm:mt-4 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
             style={{ transitionDelay: `${navLinks.length * 50}ms` }}
           >
-            Join ZoraMeeto
+            Get the App
+            <span className="material-symbols-outlined text-[20px]" aria-hidden="true">
+              arrow_forward
+            </span>
           </Link>
         </div>
       </div>
