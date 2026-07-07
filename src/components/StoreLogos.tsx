@@ -73,7 +73,7 @@ export function AppStoreBadge({ href = "#", className = "" }: StoreBadgeProps) {
       <AppleMark className="h-7 w-7 text-white" />
       <span className="flex flex-col text-left leading-none">
         <span className="mb-0.5 text-[8px] font-medium tracking-normal text-white">Download on the</span>
-        <span className="text-[18px] font-semibold tracking-normal text-white">App Store</span>
+        <span className="text-[18px] font-semibold tracking-normal text-white">App&#8201;Store</span>
       </span>
     </a>
   );
@@ -85,7 +85,7 @@ export function GooglePlayBadge({ href = "#", className = "" }: StoreBadgeProps)
       <GooglePlayLogo className="h-7 w-7 shrink-0" />
       <span className="flex flex-col text-left leading-none">
         <span className="mb-0.5 text-[8px] font-medium uppercase tracking-normal text-white">Get it on</span>
-        <span className="text-[17px] font-semibold tracking-normal text-white">Play Store</span>
+        <span className="text-[17px] font-semibold tracking-normal text-white">Play&#8201;Store</span>
       </span>
     </a>
   );
