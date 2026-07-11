@@ -606,25 +606,60 @@ export const termsOfService: LegalDocument = {
         {
           title: "6.1 Communications",
           body: [
-            "The Services may permit user-to-user chat, voice calls and video calls. Calls may be subject to eligibility, balance, recipient availability, network quality, safety controls and concurrent-call restrictions. A user may be shown as busy or unavailable. Connection time can vary due to internet, device, communications provider or infrastructure conditions.",
+            "The Services may permit users to communicate through chat, voice calls and video calls. Availability of these features may depend on eligibility, wallet balance, recipient availability, network conditions, device compatibility and other technical or operational factors. Zorameeto does not guarantee uninterrupted or error-free communication services.",
           ],
         },
         {
-          title: "6.2 Paid calls and metering",
+          title: "6.2 Paid Calls and Call Charges",
           body: [
-            "Where a call is paid, the applicable price or rate will be displayed or made available before or in connection with the call. Charges may be calculated using server-side call events, billing intervals and metered connected duration. Unless expressly stated otherwise in the interface, ringing time before connection is not intended to be billed. The displayed on-device timer is informational; the authoritative billing ledger is the server-side transaction record, subject to correction of demonstrable technical errors.",
+            "Certain voice and video calls may be chargeable. The applicable Audio and Video Call rates are available in the Call Rates section of the App and may also be displayed elsewhere within the Services.",
+            "By initiating a paid call, you acknowledge and agree to the applicable per-minute charges.",
+            "Charges apply only after the call is successfully connected. Ringing, unanswered, rejected, cancelled or failed call attempts are not charged, unless expressly stated otherwise within the App.",
+            "Call charges are calculated using Zorameeto's server-side billing system based on the connected call duration. The server-side transaction records shall be the authoritative record for billing purposes in the event of any discrepancy.",
           ],
         },
         {
-          title: "6.3 Call interruptions",
+          title: "6.3 Wallet Balance",
           body: [
-            "A call may disconnect because of network failure, device state, provider outage, recipient action, insufficient wallet balance, safety enforcement or technical error. Zorameeto does not guarantee uninterrupted or latency-free calls. If a verified billing defect causes an incorrect debit, the appropriate remedy may be a wallet correction, reversal or refund in accordance with these Terms and applicable law.",
+            "Users are responsible for maintaining sufficient wallet balance before initiating a paid call. If the available wallet balance becomes insufficient during a call, the call may automatically end and charges will apply only for the connected duration already consumed.",
           ],
         },
         {
-          title: "6.4 Recording and screenshots",
+          title: "6.4 Call Rate Changes",
           body: [
-            "Zorameeto does not record ordinary private call content by default. Users must not secretly record, screen-record, screenshot, distribute or exploit another person's private communications or intimate content in violation of law or without required consent. Device or third-party capabilities may exist outside Zorameeto's control. Report suspected non-consensual recording or distribution immediately.",
+            "Call rates may change from time to time at Zorameeto's sole discretion. The latest rates displayed within the App shall always apply. Continued use of paid calling features after any pricing update constitutes acceptance of the revised rates.",
+          ],
+        },
+        {
+          title: "6.5 Call Interruptions",
+          body: [
+            "Calls may disconnect due to network failure, internet connectivity, device issues, recipient action, insufficient wallet balance, service outages or other technical reasons beyond Zorameeto's control.",
+            "Zorameeto does not guarantee uninterrupted or latency-free calls. Refunds will not be provided solely due to poor network quality or connectivity issues unless a verified billing error has occurred.",
+          ],
+        },
+        {
+          title: "6.6 Billing Disputes and Refunds",
+          body: [
+            "If you believe you have been charged incorrectly, you must contact Zorameeto Support within 7 days of the transaction. Verified billing errors may be corrected by wallet adjustment, reversal or refund at Zorameeto's sole discretion in accordance with applicable law.",
+          ],
+        },
+        {
+          title: "6.7 Recording and Screenshots",
+          body: [
+            "Zorameeto does not record ordinary private voice or video calls by default. Users must not secretly record, screen-record, capture screenshots, distribute or misuse another user's private communications without their knowledge or as prohibited by applicable law.",
+          ],
+        },
+        {
+          title: "6.8 Acceptable Use",
+          body: [
+            "Paid calling services must not be used for unlawful activities, prostitution, escort services, solicitation of sexual services, human trafficking, harassment, fraud, blackmail, extortion or any activity prohibited by applicable law or these Terms.",
+            "Zorameeto reserves the right to suspend, restrict or permanently terminate accounts involved in such activities without prior notice and may cooperate with law enforcement authorities where required by law.",
+          ],
+        },
+        {
+          title: "6.9 Age Requirement",
+          body: [
+            "Voice calls, video calls and all paid communication features are available only to users who are 18 years of age or older. By using these features, you represent and warrant that you are at least 18 years old.",
           ],
         },
       ],
