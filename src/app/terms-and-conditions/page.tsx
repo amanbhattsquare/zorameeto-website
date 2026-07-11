@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Review Zorameeto rules for accounts, paid features, wallet balances, gifts, calls, user content and disputes.",
+    "Review the terms for Zorameeto, a product owned and operated by Bhatt Square Private Limited.",
 };
 
 export default function TermsAndConditions() {

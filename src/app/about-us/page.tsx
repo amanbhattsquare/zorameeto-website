@@ -47,10 +47,14 @@ export default function AboutUs() {
             About <br />
             <span className="text-primary italic font-light">ZoraMeeto.</span>
           </h1>
-          <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-xl mx-auto">
-            ZoraMeeto is built for people who want dating to feel real, respectful,
-            and safe. We help genuine singles meet, talk, and build connections
-            with more trust.
+          <p className="mx-auto max-w-3xl text-base font-medium leading-8 text-text-muted md:text-lg">
+            ZoraMeeto is a trusted dating platform for people who value genuine,
+            respectful, and meaningful connections. ZoraMeeto is a product and
+            brand of Bhatt Square Private Limited. It is owned, developed, and
+            operated by Bhatt Square Private Limited, a company incorporated under
+            the Companies Act, 2013. All intellectual property, services, branding,
+            software, and operations associated with ZoraMeeto are Owned & Operated
+            by Bhatt Square Private Limited, as applicable.
           </p>
         </div>
       </section>

@@ -73,6 +73,10 @@ export default function Footer() {
             <p className="text-text-muted text-base leading-relaxed max-w-xs font-medium">
               A safe dating app for serious singles. Meet verified people and build real connections.
             </p>
+            <p className="max-w-xs text-xs font-medium leading-relaxed text-text-muted">
+              ZoraMeeto is a product of Bhatt Square Private Limited and is owned,
+              developed, and operated by the company.
+            </p>
             <div className="flex gap-4 pt-2">
               {socialIcons.map((social) => (
                 <Link 
@@ -143,7 +147,7 @@ export default function Footer() {
           {/* Copyright - Left Side */}
           <div className="order-2 lg:order-1">
             <p className="text-[10px] text-text-muted tracking-wide">
-              © {new Date().getFullYear()} ZoraMeeto. All rights reserved.
+              © {new Date().getFullYear()} ZoraMeeto, a product of Bhatt Square Private Limited. All rights reserved.
             </p>
           </div>
           
@@ -159,7 +163,15 @@ export default function Footer() {
           {/* Team/Company Credits - Right Side */}
           <div className="order-3">
             <p className="text-[10px] text-text-muted tracking-wide">
-              Built by the <span className="font-semibold">ZoraMeeto Team</span>
+              Owned &amp; Operated by{" "}
+              <Link
+                href="https://bhattsquare.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-text-main transition-colors hover:text-primary"
+              >
+                Bhatt Square Private Limited
+              </Link>
             </p>
           </div>
         </div>

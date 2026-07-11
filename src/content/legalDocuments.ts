@@ -30,7 +30,7 @@ export type LegalDocument = {
 };
 
 const companyDetails = {
-  operator: "Bhatt Square Pvt Ltd",
+  operator: "Bhatt Square Private Limited",
   registeredOffice: "1/4, Vishesh Khand 2, Gomti Nagar, Lucknow",
   cin: "U62099UP2023PTC184782",
   gstin: "09AALCB7260P1ZX",
@@ -78,6 +78,10 @@ function extractDocumentFromTodo(heading: (typeof documentHeadings)[number]) {
 
 function withCompanyDetails(text: string) {
   return text
+    .replace(
+      /(Effective Date:[^\n]+\n)/,
+      "$1\nOwned & Operated by Bhatt Square Private Limited\n\nZorameeto is a product and brand owned, developed, operated, and managed by Bhatt Square Private Limited, a company incorporated under the Companies Act, 2013. All intellectual property, services, branding, software, and operations of Zorameeto are managed by Bhatt Square Private Limited.\n",
+    )
     .replace(/\[INSERT FULL LEGAL\s+ENTITY NAME\]/g, companyDetails.operator)
     .replace(/\[INSERT\s+REGISTERED OFFICE ADDRESS\]/g, companyDetails.registeredOffice)
     .replace(/\[INSERT INDIA CONTACT ADDRESS\]/g, companyDetails.registeredOffice)
@@ -111,11 +115,13 @@ export const communityGuidelines: LegalDocument = {
   title: "Community",
   titleAccent: "Guidelines",
   description:
-    "The safety and conduct standards for every Zorameeto user and every part of the Services.",
+    "The safety and conduct standards for Zorameeto, a product owned and managed by Bhatt Square Private Limited.",
   effectiveDate: "5 July 2026",
   version: "1.0",
   completionNotice,
   introduction: [
+    "Owned & Operated by Bhatt Square Private Limited",
+    "Zorameeto is a product and brand owned, developed, operated, and managed by Bhatt Square Private Limited, a company incorporated under the Companies Act, 2013. All intellectual property, services, branding, software, and operations of Zorameeto are managed by Bhatt Square Private Limited.",
     "These Guidelines state the safety and conduct standards for every Zorameeto user and every part of the Services.",
   ],
   rawText: withCompanyDetails(extractDocumentFromTodo("COMMUNITY GUIDELINES")),
@@ -277,7 +283,7 @@ export const communityGuidelines: LegalDocument = {
     {
       title: "26. Contact",
       body: [
-        "Operator: Bhatt Square Pvt Ltd",
+        "Operator: Bhatt Square Private Limited",
         "Registered Office: 1/4, Vishesh Khand 2, Gomti Nagar, Lucknow",
         "CIN - U62099UP2023PTC184782",
         "GSTIN (if applicable):  09AALCB7260P1ZX",
@@ -294,11 +300,13 @@ export const privacyPolicy: LegalDocument = {
   title: "Privacy",
   titleAccent: "Policy",
   description:
-    "How Zorameeto collects, uses, shares, protects and retains personal data, and how users may exercise applicable rights.",
+    "How Zorameeto, a product owned and managed by Bhatt Square Private Limited, collects, uses, shares, protects and retains personal data.",
   effectiveDate: "5 July 2026",
   version: "1.0",
   completionNotice,
   introduction: [
+    "Owned & Operated by Bhatt Square Private Limited",
+    "Zorameeto is a product and brand owned, developed, operated, and managed by Bhatt Square Private Limited, a company incorporated under the Companies Act, 2013. All intellectual property, services, branding, software, and operations of Zorameeto are managed by Bhatt Square Private Limited.",
     "This Policy explains how Zorameeto collects, uses, shares, protects and retains personal data and how users may exercise applicable rights. It should be read with the Terms of Service and Community Guidelines.",
   ],
   rawText: withCompanyDetails(extractDocumentFromTodo("PRIVACY POLICY")),
@@ -319,7 +327,7 @@ export const privacyPolicy: LegalDocument = {
         {
           title: "1.2 Operator details",
           body: [
-            "The Services are operated by Bhatt Square Pvt Ltd, having its registered office at 1/4, Vishesh Khand 2, Gomti Nagar, Lucknow (\"Zorameeto\", \"we\", \"us\", or \"our\"). Before publication, the operator must insert its legal entity name, registered office, support email, privacy contact and Grievance Officer details.",
+            "The Services are operated by Bhatt Square Private Limited, having its registered office at 1/4, Vishesh Khand 2, Gomti Nagar, Lucknow (\"Zorameeto\", \"we\", \"us\", or \"our\").",
           ],
         },
         {
@@ -504,6 +512,7 @@ export const privacyPolicy: LegalDocument = {
     {
       title: "14. Cookies, SDKs and Similar Technologies",
       body: [
+        "Owned & Operated by Bhatt Square Private Limited",
         "Our website and app may use local storage, cookies, software development kits and similar technologies for authentication, preferences, security, analytics, communications, media delivery and performance. Where legally required, we will provide consent or preference controls. Disabling necessary technologies may impair core functions.",
       ],
     },
@@ -528,7 +537,7 @@ export const privacyPolicy: LegalDocument = {
     {
       title: "18. Grievance and Data Protection Contact",
       body: [
-        "Operator: Bhatt Square Pvt Ltd",
+        "Operator: Bhatt Square Private Limited",
         "Registered Office: 1/4, Vishesh Khand 2, Gomti Nagar, Lucknow",
         "CIN - U62099UP2023PTC184782",
         "GSTIN (if applicable):  09AALCB7260P1ZX",
@@ -546,11 +555,13 @@ export const termsOfService: LegalDocument = {
   title: "Terms of",
   titleAccent: "Service",
   description:
-    "Rules for accounts, paid features, wallet balances, gifts, paid calls, recipient earnings, withdrawals, user content, moderation and disputes.",
+    "Terms for Zorameeto, a product owned and operated by Bhatt Square Private Limited, including accounts, paid features and disputes.",
   effectiveDate: "5 July 2026",
   version: "1.0",
   completionNotice,
   introduction: [
+    "Owned & Operated by Bhatt Square Private Limited",
+    "Zorameeto is a product and brand owned, developed, operated, and managed by Bhatt Square Private Limited, a company incorporated under the Companies Act, 2013. All intellectual property, services, branding, software, and operations of Zorameeto are managed by Bhatt Square Private Limited.",
     "These Terms govern access to and use of Zorameeto and establish rules for accounts, paid features, wallet balances, virtual gifts, paid voice/video calls, recipient earnings, withdrawals, user content, moderation and disputes.",
   ],
   rawText: withCompanyDetails(extractDocumentFromTodo("TERMS OF SERVICE")),
@@ -562,7 +573,7 @@ export const termsOfService: LegalDocument = {
     {
       title: "1. Acceptance and Contracting Party",
       body: [
-        "These Terms of Service (\"Terms\") form a binding electronic contract between you and Bhatt Square Pvt Ltd, operator of Zorameeto. By creating an account, checking the 18+ confirmation, accessing or using the Services, or purchasing a paid feature, you agree to these Terms, the Privacy Policy and Community Guidelines. If you do not agree, do not use the Services. Insert the operator's complete legal name, registered office, GSTIN/CIN if applicable, support email and grievance details before publication.",
+        "These Terms of Service (\"Terms\") form a binding electronic contract between you and Bhatt Square Private Limited, owner and operator of Zorameeto. By creating an account, checking the 18+ confirmation, accessing or using the Services, or purchasing a paid feature, you agree to these Terms, the Privacy Policy and Community Guidelines. If you do not agree, do not use the Services.",
       ],
     },
     {
@@ -826,7 +837,7 @@ export const termsOfService: LegalDocument = {
     {
       title: "29. Contact",
       body: [
-        "Operator: Bhatt Square Pvt Ltd",
+        "Operator: Bhatt Square Private Limited",
         "Registered Office: 1/4, Vishesh Khand 2, Gomti Nagar, Lucknow",
         "CIN - U62099UP2023PTC184782",
         "GSTIN (if applicable):  09AALCB7260P1ZX",

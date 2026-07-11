@@ -96,6 +96,10 @@ export default function ContactUs() {
               or the app experience? Send us a message and the right ZoraMeeto
               team will help.
             </p>
+            <p className="mx-auto max-w-2xl text-sm font-semibold leading-7 text-text-muted">
+              ZoraMeeto is owned, developed, operated, and managed by Bhatt Square
+              Private Limited, a company incorporated under the Companies Act, 2013.
+            </p>
           </div>
 
           <div className="mx-auto grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3">

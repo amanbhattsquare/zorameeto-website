@@ -109,6 +109,9 @@ export default function LegalDocumentPage({ document }: { document: LegalDocumen
               <p className="max-w-3xl text-base font-medium leading-8 text-text-muted md:text-lg">
                 {document.description}
               </p>
+              <p className="max-w-3xl text-sm font-extrabold uppercase tracking-[0.14em] text-text-main">
+                Owned &amp; Operated by Bhatt Square Private Limited
+              </p>
             </div>
           </div>
 
