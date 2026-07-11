@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   description: "ZoraMeeto is a safe dating app for serious singles. Meet verified people, chat privately, and build real connections.",
   keywords: ["dating app", "verified dating", "serious dating", "private dating"],
   icons: {
-    icon: [{ url: "/favicon.png", type: "image/png" }],
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [{ url: "/favicon-new.png", type: "image/png" }],
+    shortcut: "/favicon-new.png",
+    apple: "/favicon-new.png",
   },
 };
 

@@ -62,7 +62,7 @@ export default function Footer() {
           <div className="space-y-8 min-[380px]:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block group">
               <Image
-                src="/Logo.png" 
+                src="/zorameeto-Logo.png" 
                 alt="ZoraMeeto" 
                 width={1936}
                 height={470}

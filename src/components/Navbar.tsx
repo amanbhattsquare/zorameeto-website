@@ -124,7 +124,7 @@ export default function Navbar() {
         >
           <Link href="/" className="group flex min-w-0 items-center" aria-label="ZoraMeeto home">
             <Image
-              src="/Logo.png" 
+              src="/zorameeto-Logo.png" 
               alt="ZoraMeeto" 
               width={1936}
               height={470}
@@ -176,7 +176,7 @@ export default function Navbar() {
       >
         <div className="flex min-h-20 shrink-0 items-center justify-between px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-6">
           <Link href="/" className="inline-block" aria-label="ZoraMeeto home" onClick={() => setIsMenuOpen(false)}>
-            <Image src="/Logo.png" alt="ZoraMeeto" width={1936} height={470} className="h-9 sm:h-10 w-auto object-contain" />
+            <Image src="/zorameeto-Logo.png" alt="ZoraMeeto" width={1936} height={470} className="h-9 sm:h-10 w-auto object-contain" />
           </Link>
           <button
             ref={closeButtonRef}
