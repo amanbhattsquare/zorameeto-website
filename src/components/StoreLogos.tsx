@@ -79,9 +79,9 @@ export function AppStoreBadge({ href = "#", className = "" }: StoreBadgeProps) {
   );
 }
 
-export function GooglePlayBadge({ href = "#", className = "" }: StoreBadgeProps) {
+export function GooglePlayBadge({ href = "https://play.google.com/store/apps/details?id=com.zorameeto.zorameeto_app", className = "" }: StoreBadgeProps) {
   return (
-    <a href={href} aria-label="Get it on Google Play" className={`${storeBadgeBase} gap-2.5 px-3 ${className}`}>
+    <a href={href} target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play" className={`${storeBadgeBase} gap-2.5 px-3 ${className}`}>
       <GooglePlayLogo className="h-7 w-7 shrink-0" />
       <span className="flex flex-col text-left leading-none">
         <span className="mb-0.5 text-[8px] font-medium uppercase tracking-normal text-white">Get it on</span>

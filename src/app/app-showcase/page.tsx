@@ -14,7 +14,7 @@ const screenshots = [
     alt: "ZoraMeeto mobile app screen showing the member experience",
   },
   {
-    src: "/zorameeto-ss-2.png",
+    src: "/zorameeto-ss-2.jpeg",
     alt: "ZoraMeeto mobile app screen showing profile discovery",
   },
   {

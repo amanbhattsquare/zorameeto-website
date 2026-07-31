@@ -3,21 +3,22 @@
 import Link from "next/link";
 import Image from "next/image";
 import { AppStoreBadge, GooglePlayBadge } from "@/components/StoreLogos";
+import ScanToDownloadCard from "@/components/ScanToDownloadCard";
 
 export default function HomePageClient() {
   return (
     <main className="min-h-screen bg-background selection:bg-primary/10">
-      
+
       <section className="hero-section relative flex min-h-screen min-h-[100svh] items-center overflow-hidden border-b border-border bg-mesh-ultra px-4 pb-12 pt-28 sm:px-6">
-        
+
         {/* Background Depth Orbs */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-1/4 -left-24 w-[400px] h-[400px] bg-primary/5 blur-[120px] rounded-full animate-float-slow"></div>
           <div className="absolute bottom-1/4 -right-24 w-[500px] h-[500px] bg-secondary/5 blur-[140px] rounded-full animate-float-slow" style={{ animationDelay: '-5s' }}></div>
         </div>
-        
+
         <div className="hero-layout relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center">
-          
+
           {/* Left Column: Authoritative Messaging */}
           <div className="hero-copy space-y-6 text-center lg:text-left animate-fade-up">
             <div className="space-y-5">
@@ -25,7 +26,7 @@ export default function HomePageClient() {
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                 <span className="text-[8px] font-bold uppercase tracking-[0.18em] text-text-main sm:text-[9px] sm:tracking-[0.3em]">Smart Dating for Serious Singles</span>
               </div>
-              
+
               <div className="space-y-3">
                 <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tighter text-text-main leading-[1.08]">
                   Meet Someone Who <br />
@@ -37,14 +38,18 @@ export default function HomePageClient() {
               </div>
             </div>
 
-            <div className="hero-download flex flex-col items-center gap-x-4 gap-y-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
-              <p className="shrink-0 text-xl font-semibold text-text-main">Get the app!</p>
-              <div className="flex shrink-0 flex-col items-center gap-3 min-[360px]:flex-row sm:gap-4">
+            <div className="hero-download mx-auto flex max-w-lg flex-col items-center justify-center gap-5 pt-1 sm:flex-row sm:items-center sm:justify-between lg:mx-0">
+              <div className="space-y-2.5 text-center sm:text-left">
+                <p className="text-xl font-bold tracking-tight text-text-main">Get the app!</p>
+                <div className="flex flex-row items-center gap-3">
                 <AppStoreBadge />
                 <GooglePlayBadge />
               </div>
+              </div>
+
+              <ScanToDownloadCard />
             </div>
-             <div className="hero-rating flex flex-col items-center justify-center gap-4 pt-2 sm:flex-row sm:gap-6 lg:justify-start">
+            <div className="hero-rating flex flex-col items-center justify-center gap-4 pt-2 sm:flex-row sm:gap-6 lg:justify-start">
               <div className="flex -space-x-2">
                 {[false, false, false, false, true].map((isHalfStar, index) => (
                   <div key={index} className="w-10 h-10 rounded-full border-2 border-white bg-surface-soft flex items-center justify-center">
@@ -83,7 +88,7 @@ export default function HomePageClient() {
           {/* Right Column: both devices share one proportional stage. */}
           <div className="hero-phones flex w-full items-center justify-center animate-fade-up lg:justify-end" style={{ animationDelay: '0.4s' }}>
             <div className="hero-device-stage">
-            
+
               {/* Screen 1: The Profile View */}
               <div className="hero-phone hero-phone-profile group">
                 <div className="hero-phone-screen absolute inset-0 isolate overflow-hidden bg-surface">
@@ -305,150 +310,99 @@ export default function HomePageClient() {
                   icon: "call",
                   title: "Audio Calls",
                   desc: "Earn from eligible in-app calls while keeping your personal number private.",
-                  tone: "bg-secondary/10 border-secondary/20 text-secondary"
+                  tone: "bg-green-500/10 border-green-500/20 text-green-500"
                 },
                 {
-                  icon: "video_call",
+                  icon: "videocam",
                   title: "Video Calls",
-                  desc: "Approved video calls help members connect with confidence before meeting.",
-                  tone: "bg-text-main/5 border-text-main/10 text-text-main"
+                  desc: "Connect face-to-face with members who are serious about getting to know you.",
+                  tone: "bg-blue-500/10 border-blue-500/20 text-blue-500"
                 },
                 {
-                  icon: "redeem",
-                  title: "Virtual Gifts",
-                  desc: "Gift value is credited to your wallet according to ZoraMeeto earning rules.",
-                  tone: "bg-primary/10 border-primary/20 text-primary"
+                  icon: "card_giftcard",
+                  title: "Gifts & Tips",
+                  desc: "Receive virtual gifts and tips from members who appreciate your time and conversation.",
+                  tone: "bg-yellow-500/10 border-yellow-500/20 text-yellow-500"
                 }
-              ].map((feature, index) => (
-                <div
-                  key={feature.title}
-                  className="group relative min-h-[200px] overflow-hidden rounded-[1.5rem] border border-border bg-white/90 p-5 shadow-[0_24px_60px_rgba(28,28,30,0.07)] transition-all duration-500 hover:-translate-y-2 hover:border-primary/30 hover:shadow-[0_30px_80px_rgba(255,45,85,0.12)] sm:min-h-[220px] sm:rounded-[1.75rem] sm:p-7"
-                >
-                  <div className="absolute right-5 top-5 text-5xl font-extrabold tracking-tighter text-text-main/[0.03]">
-                    0{index + 1}
+              ].map((item) => (
+                <div key={item.title} className={`relative overflow-hidden rounded-2xl border bg-white/80 p-5 shadow-sm backdrop-blur-sm ${item.tone}`}>
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-white/50">
+                      <span className="material-symbols-outlined text-lg">{item.icon}</span>
+                    </div>
+                    <h4 className="font-bold text-text-main text-sm">{item.title}</h4>
                   </div>
-                  <div className={`relative z-10 w-14 h-14 rounded-2xl border flex items-center justify-center ${feature.tone} transition-transform duration-500 group-hover:scale-110`}>
-                    <span className="material-symbols-outlined text-2xl">{feature.icon}</span>
-                  </div>
-                  <div className="relative z-10 mt-8 space-y-3">
-                    <h3 className="text-xl font-extrabold tracking-tight text-text-main">{feature.title}</h3>
-                    <p className="text-sm text-text-muted font-medium leading-relaxed">{feature.desc}</p>
-                  </div>
-                  <div className="absolute bottom-0 left-7 right-7 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                  <p className="mt-3 text-xs leading-relaxed text-text-muted font-medium">{item.desc}</p>
                 </div>
               ))}
             </div>
-
-           
           </div>
         </div>
       </section>
 
-      {/* Creator Wallet Section */}
-      <section className="relative z-10 overflow-hidden bg-white px-5 py-16 sm:px-6 sm:py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-stretch">
-          
-          <div className="animate-fade-up h-full">
-            <div className="relative flex h-full flex-col py-2 sm:py-6 lg:min-h-[520px] lg:pr-8">
-              <div className="max-w-xl space-y-9">
-                <div className="inline-flex w-fit items-center gap-3 rounded-full border border-primary/20 bg-white px-4 py-2 text-primary shadow-[0_10px_30px_rgba(255,45,85,0.12)]">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-white">
-                    <span className="material-symbols-outlined text-[16px]">account_balance_wallet</span>
-                  </span>
-                  <span className="text-[9px] font-extrabold uppercase tracking-[0.3em]">Creator Wallet</span>
-                </div>
+      {/* Testimonials Section */}
+      <section className="relative z-10 bg-surface-soft/20 px-5 py-16 sm:px-6 sm:py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="mb-10 space-y-4 text-center sm:mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
+              <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Love Stories</span>
+            </div>
+            <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">Success Stories from <br /> <span className="text-primary italic font-light">Our Members</span></h2>
+          </div>
 
-                <div className="space-y-6 pt-4">
-                  <h2 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold tracking-tighter text-text-main leading-[1.02]">
-                    ZoraMeeto, <br />
-                    <span className="text-primary italic font-light">in Your Pocket.</span>
-                  </h2>
-                  <p className="text-xl sm:text-2xl font-extrabold tracking-tight text-text-main leading-snug max-w-lg">
-                    Calls, gifts, and rewards in one place.
-                  </p>
-                  <p className="text-base font-medium leading-relaxed text-text-muted max-w-lg">
-                    A focused wallet experience for verified creators to track credits, manage paid interactions, and keep earning activity clear.
-                  </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Priya & Rohan",
+                story: "We were tired of the usual dating apps. ZoraMeeto felt different from the start. The people were real, and the conversations were meaningful. We found each other in just a few weeks!",
+                image: "/testimonial-1.jpg"
+              },
+              {
+                name: "Aisha",
+                story: "As a creator, I love that I can earn while connecting with people who genuinely want to get to know me. It's a safe and respectful community.",
+                image: "/testimonial-2.jpg"
+              },
+              {
+                name: "Vikram",
+                story: "I travel a lot for work, so it's hard to meet people. ZoraMeeto's video call feature has been a game-changer. I met my partner while on a business trip, and we've been inseparable ever since.",
+                image: "/testimonial-3.jpg"
+              }
+            ].map((testimonial) => (
+              <div key={testimonial.name} className="glass-card-premium group relative flex flex-col justify-between space-y-6 overflow-hidden rounded-3xl border border-border bg-white p-6 shadow-2xl shadow-black/[0.02] transition-all duration-700 sm:p-8">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <Image src={testimonial.image} alt={testimonial.name} width={50} height={50} className="rounded-full" />
+                    <p className="font-bold text-text-main">{testimonial.name}</p>
+                  </div>
+                  <p className="text-text-muted font-medium leading-relaxed text-base">{testimonial.story}</p>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-lg">
-                  {[
-                    { icon: "call", label: "Calls" },
-                    { icon: "redeem", label: "Gifts" },
-                    { icon: "payments", label: "Rewards" }
-                  ].map((item, index) => (
-                    <div key={item.label} className="relative">
-                      {index < 2 && (
-                        <div className="absolute left-1/2 top-1/2 hidden h-px w-full translate-x-1/2 bg-gradient-to-r from-primary/35 to-transparent sm:block"></div>
-                      )}
-                      <div className="relative z-10 inline-flex h-[54px] w-full items-center justify-center gap-2.5 rounded-xl border border-text-main/10 bg-text-main px-3 text-sm font-bold text-white shadow-[0_10px_24px_rgba(28,28,30,0.12)]">
-                        <span className="flex h-6 w-6 items-center justify-center rounded-full border border-white/10 bg-white/10 text-[10px] font-extrabold text-white/80">
-                          0{index + 1}
-                        </span>
-                        <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                          <span className="material-symbols-outlined text-[19px]">{item.icon}</span>
-                        </span>
-                        <p className="leading-tight">{item.label}</p>
-                      </div>
-                    </div>
+                <div className="flex items-center gap-1 text-primary">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="material-symbols-outlined text-lg">star</span>
                   ))}
                 </div>
               </div>
-            </div>
+            ))}
           </div>
-
-          <div className="relative group animate-fade-up h-full" style={{ animationDelay: '0.2s' }}>
-            <div className="relative flex h-full min-h-[320px] flex-col px-0 py-4 sm:min-h-[400px] sm:px-4 sm:py-6 lg:min-h-[520px] lg:px-8">
-              <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-primary/20 bg-white/85 px-3 py-2 text-primary shadow-lg shadow-primary/5 backdrop-blur-xl sm:w-fit sm:gap-3 sm:px-4">
-                <span className="material-symbols-outlined text-base">payments</span>
-                <span className="text-[8px] font-bold uppercase tracking-[0.18em] sm:text-[9px] sm:tracking-[0.3em]">Wallet credits ready</span>
-              </div>
-              <div className="relative flex flex-1 items-center justify-center pt-4">
-                <div className="absolute bottom-0 right-0 hidden rounded-full border border-primary/20 bg-white/95 px-4 py-2 text-primary shadow-[0_16px_40px_rgba(255,45,85,0.14)] backdrop-blur md:flex items-center gap-2">
-                  <span className="material-symbols-outlined text-base">verified</span>
-                  <span className="text-[9px] font-extrabold uppercase tracking-[0.22em]">Verified</span>
-                </div>
-                <Image 
-                  src="/app-showcase-premium.png" 
-                  alt="ZoraMeeto Mobile App" 
-                  width={900}
-                  height={900}
-                  className="relative z-10 w-full max-w-[680px] rounded-[1.75rem] object-contain shadow-[0_36px_90px_rgba(28,28,30,0.18)] ring-1 ring-border/70 transition-transform duration-[3000ms] group-hover:scale-[1.025]"
-                />
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
-      {/* Blog Section */}
-      <section className="relative z-10 overflow-hidden bg-surface-soft/30 px-5 py-16 sm:px-6 sm:py-20 lg:py-24">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
-            <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Dating Tips</span>
-          </div>
-          <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight mt-4">
-            Dating Tips from <span className="text-primary italic font-light">ZoraMeeto</span>
+      {/* Final CTA */}
+      <section className="relative z-10 bg-white px-5 py-16 sm:px-6 sm:py-20 lg:py-24">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">
+            Ready to Find <br />
+            <span className="text-primary italic font-light">Your Person?</span>
           </h2>
-          <p className="mt-6 text-lg text-text-muted leading-relaxed max-w-2xl mx-auto">
-            A good first chat can make a real difference. Learn simple ways to start better conversations and build trust.
+          <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-2xl mx-auto">
+            Join ZoraMeeto today and start your journey towards a meaningful relationship. Download the app and discover a smarter way to date.
           </p>
-          <div className="mt-10">
-            <Link
-              href="/journal/first-conversation"
-              className="luxury-button inline-flex min-h-14 items-center justify-center rounded-[1.25rem] bg-text-main px-7 py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-white shadow-xl shadow-black/10 transition-all duration-700 hover:scale-105 sm:rounded-[1.5rem] sm:px-10 sm:py-5 sm:text-xs sm:tracking-[0.3em]"
-            >
-              Read Full Post
-            </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <AppStoreBadge large />
+            <GooglePlayBadge large />
           </div>
         </div>
       </section>
-
-
-
-   
-
     </main>
   );
 }
