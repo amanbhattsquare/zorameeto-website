@@ -9,7 +9,7 @@ export default function HomePageClient() {
   return (
     <main className="min-h-screen bg-background selection:bg-primary/10">
 
-      <section className="hero-section relative flex min-h-screen min-h-[100svh] items-center overflow-hidden border-b border-border bg-mesh-ultra px-4 pb-12 pt-28 sm:px-6">
+      <section className="hero-section relative flex min-h-screen min-h-[100svh] items-start overflow-hidden border-b border-border bg-mesh-ultra px-4 pb-12 pt-56 sm:px-6 sm:pt-60 lg:pt-64">
 
         {/* Background Depth Orbs */}
         <div className="absolute inset-0 z-0">
@@ -17,7 +17,7 @@ export default function HomePageClient() {
           <div className="absolute bottom-1/4 -right-24 w-[500px] h-[500px] bg-secondary/5 blur-[140px] rounded-full animate-float-slow" style={{ animationDelay: '-5s' }}></div>
         </div>
 
-        <div className="hero-layout relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center">
+        <div className="hero-layout relative z-10 mx-auto mt-24 grid w-full max-w-7xl grid-cols-1 items-center lg:mt-5">
 
           {/* Left Column: Authoritative Messaging */}
           <div className="hero-copy space-y-6 text-center lg:text-left animate-fade-up">
