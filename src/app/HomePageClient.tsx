@@ -93,7 +93,7 @@ export default function HomePageClient() {
               <div className="hero-phone hero-phone-profile group">
                 <div className="hero-phone-screen absolute inset-0 isolate overflow-hidden bg-surface">
                   <Image
-                    src="/hero-img-1.png"
+                    src="/hero-img-1.jpeg"
                     alt="Profile screen in the ZoraMeeto mobile app"
                     width={1023}
                     height={1537}
