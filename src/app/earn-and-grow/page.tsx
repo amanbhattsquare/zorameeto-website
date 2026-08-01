@@ -2,28 +2,28 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Earn & Grow | ZoraMeeto",
-  description: "Discover how you can earn rewards and grow your connections on ZoraMeeto's trusted dating platform.",
+  description: "Only verified users can earn rewards and grow their connections on ZoraMeeto's trusted dating platform.",
 };
 
 export default function EarnAndGrow() {
   const earningOpportunities = [
     {
-      icon: "group_add",
-      title: "Refer & Earn",
-      desc: "Invite friends to join ZoraMeeto and earn rewards for every verified user that signs up through your unique referral link.",
-      steps: ["Share your link", "Friends sign up & verify", "Earn instant rewards"]
+      icon: "call",
+      title: "Voice Calls",
+      desc: "Connect with members through secure voice calls and earn for every minute of conversation. Your time and insights are valuable.",
+      steps: ["Receive a call", "Engage in conversation", "Earn per minute"]
     },
     {
-      icon: "forum",
-      title: "Engage & Earn",
-      desc: "Stay active on the platform by initiating meaningful conversations, attending virtual events, and building genuine connections to unlock bonuses.",
-      steps: ["Stay active daily", "Start quality conversations", "Collect activity points"]
+      icon: "videocam",
+      title: "Video Calls",
+      desc: "Offer personalized video call experiences to members. Earn higher rates for direct, face-to-face interactions.",
+      steps: ["Initiate or accept video call", "Interact live", "Earn premium rates"]
     },
     {
-      icon: "event",
-      title: "Host Events",
-      desc: "Organize and host community events, speed dating sessions, or social mixers for members and earn from event participation.",
-      steps: ["Propose your event", "Get approved", "Earn from registrations"]
+      icon: "card_giftcard",
+      title: "Virtual Gifts",
+      desc: "Receive virtual gifts from appreciative members during calls or chats. Convert gifts into real money seamlessly.",
+      steps: ["Receive gifts", "Accumulate gift value", "Convert to cash"]
     }
   ];
 
@@ -53,23 +53,23 @@ export default function EarnAndGrow() {
   const howItWorks = [
     {
       step: "01",
-      title: "Create Your Account",
-      desc: "Sign up and complete your profile verification to access all earning opportunities."
+      title: "Complete Verification",
+      desc: "Ensure your profile is fully verified to unlock all earning functionalities and access the creator wallet."
     },
     {
       step: "02",
-      title: "Choose Your Path",
-      desc: "Select how you want to earn - refer friends, host events, or stay active on the platform."
+      title: "Engage with Members",
+      desc: "Connect via voice or video calls, and interact through chats where members can send virtual gifts."
     },
     {
       step: "03",
-      title: "Track Your Progress",
-      desc: "Use your personalized dashboard to monitor earnings, referrals, and upcoming milestones."
+      title: "Monitor Your Earnings",
+      desc: "Track your accumulated credits from calls and gifts in real-time through your personalized creator dashboard."
     },
     {
       step: "04",
-      title: "Withdraw & Enjoy",
-      desc: "Transfer your earnings securely to your bank account whenever you want."
+      title: "Cash Out Securely",
+      desc: "Convert your earned virtual credits into real money and withdraw securely to your linked bank account."
     }
   ];
 
@@ -120,14 +120,14 @@ export default function EarnAndGrow() {
         
         <div className="max-w-4xl mx-auto space-y-6 relative z-10 animate-fade-up">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/5 border border-primary/10 mx-auto">
-            <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-primary">Monetize Your Network</span>
+            <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-primary">Monetize Your Influence</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">
-            Earn While You <br />
-            <span className="text-primary italic font-light">Connect & Grow.</span>
+            Your Connections, <br />
+            <span className="text-primary italic font-light">Your Earnings.</span>
           </h1>
           <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-xl mx-auto">
-            Your presence has value. Once verified, you can earn from calls, video interactions, and gifts shared by other members while building genuine connections.
+            Leverage your genuine connections on ZoraMeeto. Engage in meaningful voice and video calls, receive virtual gifts, and convert your efforts into tangible income.
           </p>
         </div>
       </section>
