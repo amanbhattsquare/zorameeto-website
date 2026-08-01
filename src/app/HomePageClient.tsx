@@ -340,66 +340,106 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="relative z-10 bg-surface-soft/20 px-5 py-16 sm:px-6 sm:py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <div className="mb-10 space-y-4 text-center sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
-              <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Love Stories</span>
+      {/* App Showcase Section - Professional & Industry Ready */}
+      <section className="py-24 px-6 bg-white relative z-10 overflow-hidden">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8 animate-fade-up">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-rose-200/80 shadow-sm">
+              <div className="w-5 h-5 rounded bg-primary/10 flex items-center justify-center text-primary">
+                <span className="material-symbols-outlined text-xs">account_balance_wallet</span>
+              </div>
+              <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.2em] text-primary">
+                CREATOR WALLET
+              </span>
             </div>
-            <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">Success Stories from <br /> <span className="text-primary italic font-light">Our Members</span></h2>
+
+            <div className="space-y-4">
+              <h2 className="text-4xl lg:text-7xl font-extrabold tracking-tighter text-text-main leading-[1.05]">
+                ZoraMeeto,<br />
+                <span className="text-primary italic font-light">in Your Pocket.</span>
+              </h2>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-text-main tracking-tight pt-2">
+                Calls, gifts, and rewards in one place.
+              </h3>
+              <p className="text-base sm:text-lg text-text-muted max-w-lg font-medium leading-relaxed">
+                A focused wallet experience for verified creators to track credits, manage paid interactions, and keep earning activity clear.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3.5 pt-2">
+              <div className="flex items-center gap-3 bg-[#111111] text-white px-5 py-3.5 rounded-2xl shadow-lg border border-white/5 hover:scale-105 transition-transform duration-300">
+                <span className="w-6 h-6 rounded-full bg-white/10 text-white/70 text-[11px] font-bold flex items-center justify-center">01</span>
+                <span className="material-symbols-outlined text-primary text-xl">call</span>
+                <span className="text-sm font-bold tracking-wide">Calls</span>
+              </div>
+
+              <div className="flex items-center gap-3 bg-[#111111] text-white px-5 py-3.5 rounded-2xl shadow-lg border border-white/5 hover:scale-105 transition-transform duration-300">
+                <span className="w-6 h-6 rounded-full bg-white/10 text-white/70 text-[11px] font-bold flex items-center justify-center">02</span>
+                <span className="material-symbols-outlined text-primary text-xl">card_giftcard</span>
+                <span className="text-sm font-bold tracking-wide">Gifts</span>
+              </div>
+
+              <div className="flex items-center gap-3 bg-[#111111] text-white px-5 py-3.5 rounded-2xl shadow-lg border border-white/5 hover:scale-105 transition-transform duration-300">
+                <span className="w-6 h-6 rounded-full bg-white/10 text-white/70 text-[11px] font-bold flex items-center justify-center">03</span>
+                <span className="material-symbols-outlined text-primary text-xl">payments</span>
+                <span className="text-sm font-bold tracking-wide">Rewards</span>
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Priya & Rohan",
-                story: "We were tired of the usual dating apps. ZoraMeeto felt different from the start. The people were real, and the conversations were meaningful. We found each other in just a few weeks!",
-                image: "/testimonial-1.jpg"
-              },
-              {
-                name: "Aisha",
-                story: "As a creator, I love that I can earn while connecting with people who genuinely want to get to know me. It's a safe and respectful community.",
-                image: "/testimonial-2.jpg"
-              },
-              {
-                name: "Vikram",
-                story: "I travel a lot for work, so it's hard to meet people. ZoraMeeto's video call feature has been a game-changer. I met my partner while on a business trip, and we've been inseparable ever since.",
-                image: "/testimonial-3.jpg"
-              }
-            ].map((testimonial) => (
-              <div key={testimonial.name} className="glass-card-premium group relative flex flex-col justify-between space-y-6 overflow-hidden rounded-3xl border border-border bg-white p-6 shadow-2xl shadow-black/[0.02] transition-all duration-700 sm:p-8">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4">
-                    <Image src={testimonial.image} alt={testimonial.name} width={50} height={50} className="rounded-full" />
-                    <p className="font-bold text-text-main">{testimonial.name}</p>
-                  </div>
-                  <p className="text-text-muted font-medium leading-relaxed text-base">{testimonial.story}</p>
+          <div className="relative group animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            <div className="flex justify-end mb-4">
+              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-rose-200/80 shadow-sm">
+                <div className="w-5 h-5 rounded bg-primary/10 flex items-center justify-center text-primary">
+                  <span className="material-symbols-outlined text-xs">payments</span>
                 </div>
-                <div className="flex items-center gap-1 text-primary">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="material-symbols-outlined text-lg">star</span>
-                  ))}
-                </div>
+                <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.2em] text-primary">
+                  WALLET CREDITS READY
+                </span>
               </div>
-            ))}
+            </div>
+
+            <div className="relative rounded-[2.5rem] lg:rounded-[3rem] bg-gradient-to-br from-rose-50/70 via-white to-rose-50/40 p-4 sm:p-8 border border-rose-100/60 shadow-xl overflow-hidden">
+              <Image 
+                src="/app-showcase-premium.png" 
+                alt="ZoraMeeto Mobile App" 
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain hover:scale-102 transition-transform duration-700"
+              />
+            </div>
+
+            <div className="absolute -bottom-3 right-4 sm:bottom-4 sm:right-6 flex items-center gap-2 bg-white border border-rose-200/80 px-4 py-2 rounded-full shadow-lg z-20">
+              <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <span className="material-symbols-outlined text-xs font-bold">verified</span>
+              </div>
+              <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.2em] text-primary">
+                VERIFIED
+              </span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="relative z-10 bg-white px-5 py-16 sm:px-6 sm:py-20 lg:py-24">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight">
-            Ready to Find <br />
-            <span className="text-primary italic font-light">Your Person?</span>
+      {/* Blog Section */}
+      <section className="py-24 px-6 bg-surface-soft/30 relative z-10 overflow-hidden">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
+            <span className="text-[9px] font-bold uppercase tracking-[0.3em]">The Journal</span>
+          </div>
+          <h2 className="text-4xl lg:text-6xl font-extrabold tracking-tighter text-text-main leading-tight mt-4">
+            From the <span className="text-primary italic font-light">ZoraMeeto</span> Journal
           </h2>
-          <p className="text-base md:text-lg text-text-muted leading-relaxed font-medium max-w-2xl mx-auto">
-            Join ZoraMeeto today and start your journey towards a meaningful relationship. Download the app and discover a smarter way to date.
+          <p className="mt-6 text-lg text-text-muted leading-relaxed max-w-2xl mx-auto">
+            In a world of fleeting connections, the first conversation is your opening statement. It&apos;s a chance to reveal not just what you do, but who you are. At ZoraMeeto, we believe in conversations that build, not just begin.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <AppStoreBadge large />
-            <GooglePlayBadge large />
+          <div className="mt-10">
+            <Link
+              href="/journal/first-conversation"
+              className="luxury-button inline-flex bg-text-main text-white px-10 py-5 rounded-[1.5rem] font-bold text-xs uppercase tracking-[0.3em] shadow-xl shadow-black/10 hover:scale-105 transition-all duration-700"
+            >
+              Read Full Post
+            </Link>
           </div>
         </div>
       </section>
