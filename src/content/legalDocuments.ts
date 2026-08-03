@@ -116,7 +116,7 @@ export const communityGuidelines: LegalDocument = {
   titleAccent: "Guidelines",
   description:
     "The safety and conduct standards for Zorameeto, a product owned and managed by Bhatt Square Private Limited.",
-  effectiveDate: "5 July 2026",
+  effectiveDate: "3 July 2026",
   version: "1.0",
   completionNotice,
   introduction: [
@@ -301,7 +301,7 @@ export const privacyPolicy: LegalDocument = {
   titleAccent: "Policy",
   description:
     "How Zorameeto, a product owned and managed by Bhatt Square Private Limited, collects, uses, shares, protects and retains personal data.",
-  effectiveDate: "5 July 2026",
+  effectiveDate: "3 July 2026",
   version: "1.0",
   completionNotice,
   introduction: [
@@ -556,7 +556,7 @@ export const termsOfService: LegalDocument = {
   titleAccent: "Service",
   description:
     "Terms for Zorameeto, a product owned and operated by Bhatt Square Private Limited, including accounts, paid features and disputes.",
-  effectiveDate: "5 July 2026",
+  effectiveDate: "3 July 2026",
   version: "1.0",
   completionNotice,
   introduction: [
@@ -770,7 +770,15 @@ export const termsOfService: LegalDocument = {
       ],
     },
     {
-      title: "13. Prohibited Conduct and Content",
+      title: "13. User-Generated Content / Community Standards",
+      body: [
+        "Users must not post, transmit, or share objectionable, abusive, threatening, hateful, sexually explicit, illegal, harassing, or otherwise inappropriate content.",
+        "Users may report objectionable content and block abusive users within Zorameeto.",
+        "Zorameeto reviews reports of objectionable content and aims to take appropriate action within 24 hours, including removal of violating content and suspension or termination of users responsible for serious or repeated violations.",
+      ],
+    },
+    {
+      title: "14. Prohibited Conduct and Content",
       body: [
         "You must comply with the Community Guidelines. Prohibited conduct includes underage use; impersonation; fraud; romance scams; extortion; sextortion; trafficking; prostitution or solicitation of sexual services; sale or purchase of illegal goods; money laundering; gambling; threats; stalking; doxxing; harassment; hate content; non-consensual intimate imagery; child sexual abuse or exploitation material; obscene or unlawful content; copyright infringement; malware; scraping; reverse engineering where prohibited by law; botting; fake engagement; payment manipulation; and attempts to bypass safety, KYC, pricing or platform-fee controls.",
       ],
