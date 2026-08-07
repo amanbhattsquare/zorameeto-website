@@ -770,11 +770,13 @@ export const termsOfService: LegalDocument = {
       ],
     },
     {
-      title: "13. User-Generated Content / Community Standards",
+      title: "13. User-Generated Content & Zero-Tolerance Policy",
       body: [
-        "Users must not post, transmit, or share objectionable, abusive, threatening, hateful, sexually explicit, illegal, harassing, or otherwise inappropriate content.",
-        "Users may report objectionable content and block abusive users within Zorameeto.",
-        "Zorameeto reviews reports of objectionable content and aims to take appropriate action within 24 hours, including removal of violating content and suspension or termination of users responsible for serious or repeated violations.",
+        "Zorameeto maintains a strict zero-tolerance policy toward objectionable content, nudity, child exploitation, harassment, bullying, hate speech, threats, spam, impersonation, fraud, or any abusive behavior.",
+        "By creating an account, you agree not to upload, share, transmit, or distribute any content that violates these standards.",
+        "Users may report objectionable content or abusive users directly within the app at any time.",
+        "Users may also block abusive users. Blocking immediately hides the blocked user's profile, messages, calls, and content from the reporting user's experience and notifies Zorameeto's moderation team for review.",
+        "Zorameeto reviews reported content and abusive accounts within 24 hours. Content that violates these Terms will be removed, and offending accounts may be suspended or permanently terminated without notice.",
       ],
     },
     {
