@@ -3,16 +3,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Features | ZoraMeeto Dating App",
+  title: "Features | ZoraMeeto Social Networking App",
   description:
-    "Explore ZoraMeeto features for verified dating, private profiles, better matches, member safety, and a simple mobile app.",
+    "Explore ZoraMeeto features for verified Social Networking, private profiles, better matches, member safety, and a simple mobile app.",
 };
 
 const coreFeatures = [
   {
     icon: "psychology",
     title: "Smart Matching",
-    desc: "Matches are based on lifestyle, dating goals, interests, and future plans.",
+    desc: "Matches are based on lifestyle, Social Networking goals, interests, and future plans.",
   },
   {
     icon: "verified_user",
@@ -68,7 +68,7 @@ const privacyFeatures = [
   "Private mobile experience",
   "Simple reporting tools",
   "No public social feed",
-  "Made for serious dating",
+  "Made for serious Social Networking",
 ];
 
 function PhoneFrame({
@@ -114,7 +114,7 @@ export default function Features() {
           </div>
           <h1 className="text-4xl font-extrabold leading-tight tracking-tighter text-text-main md:text-6xl">
             Simple Features for <br />
-            <span className="font-light italic text-primary">Better Dating.</span>
+            <span className="font-light italic text-primary">Better Social Networking.</span>
           </h1>
           <p className="mx-auto max-w-xl text-base font-medium leading-relaxed text-text-muted md:text-lg">
             ZoraMeeto gives you verified profiles, better matches, private browsing,
@@ -245,7 +245,7 @@ export default function Features() {
               {
                 no: "01",
                 title: "Create Profile",
-                desc: "Add your basic details, photos, interests, and dating goals.",
+                desc: "Add your basic details, photos, interests, and Social Networking goals.",
                 icon: "app_registration"
               },
               {
@@ -420,7 +420,7 @@ export default function Features() {
             Built For Serious Singles
           </span>
           <h2 className="text-4xl font-extrabold leading-tight md:text-6xl">
-            Dating features that respect your time and privacy.
+            Social Networking features that respect your time and privacy.
           </h2>
           <p className="max-w-2xl text-base font-medium leading-8 text-white/70">
             ZoraMeeto is made for people who want fewer distractions and better

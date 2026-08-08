@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Membership Plans | ZoraMeeto",
-  description: "Choose a ZoraMeeto plan that fits your dating needs.",
+  description: "Choose a ZoraMeeto plan that fits your Social Networking needs.",
 };
 
 export default function Pricing() {
@@ -27,7 +27,7 @@ export default function Pricing() {
       name: "Premium",
       price: "INR 999",
       period: "/ month",
-      features: ["Personal Support", "Dating Advisor", "VIP Events", "Incognito Mode", "Advanced Privacy"],
+      features: ["Personal Support", "Social Networking Advisor", "VIP Events", "Incognito Mode", "Advanced Privacy"],
       button: "Choose Premium",
       popular: false
     }

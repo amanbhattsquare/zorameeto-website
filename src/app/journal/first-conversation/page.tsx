@@ -4,13 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "How to Start a Good First Chat | ZoraMeeto",
   description:
-    "Simple first-chat tips for serious dating on ZoraMeeto.",
+    "Simple first-chat tips for serious Social Networking on ZoraMeeto.",
 };
 
 export default function FirstConversationPage() {
   return (
     <main className="min-h-screen bg-background">
-      <section className="relative overflow-hidden border-b border-border bg-mesh-ultra px-6 pb-20 pt-32">
+      <section className="relative overflow-hidden border-b border-border bg-mesh-ultra px-3 sm:px-5 lg:px-8 pb-20 pt-32">
         <div className="absolute left-1/2 top-16 h-80 w-80 -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]" />
         <div className="relative z-10 mx-auto max-w-4xl space-y-8 text-center">
           <Link
@@ -23,7 +23,7 @@ export default function FirstConversationPage() {
 
           <div className="space-y-5">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-primary">
-              <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Dating Tips</span>
+              <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Social Networking Tips</span>
             </div>
             <h1 className="text-4xl font-extrabold leading-tight tracking-tighter text-text-main md:text-6xl">
               How to Start a Good First Chat:
@@ -40,7 +40,7 @@ export default function FirstConversationPage() {
       <article className="px-6 py-20">
         <div className="mx-auto max-w-3xl space-y-8 text-lg font-medium leading-8 text-text-muted">
           <p>
-            The first message on a dating app sets the tone for your potential connection. It's not about being clever or having a perfect pickup line; it's about showing genuine interest and opening the door for a meaningful exchange. At ZoraMeeto, we believe good conversations are the foundation of lasting relationships.
+            The first message on a Social Networking app sets the tone for your potential connection. It's not about being clever or having a perfect pickup line; it's about showing genuine interest and opening the door for a meaningful exchange. At ZoraMeeto, we believe good conversations are the foundation of lasting relationships.
           </p>
 
           <section className="space-y-3">

@@ -1,6 +1,6 @@
 # ZoraMeeto Website
 
-Official website for ZoraMeeto, a dating platform designed to help verified singles build genuine, respectful, and meaningful connections.
+Official website for ZoraMeeto, a Social Networking platform designed to help verified singles build genuine, respectful, and meaningful connections.
 
 ## Corporate Ownership
 

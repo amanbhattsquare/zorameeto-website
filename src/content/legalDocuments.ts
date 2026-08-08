@@ -106,7 +106,7 @@ function withCompanyDetails(text: string) {
 
 const completionNotice = [
   "This document contains bracketed fields that must be completed with Zorameeto's actual legal entity, registered office, Grievance Officer and contact details before it is published.",
-  "The substantive drafting is tailored to the current Zorameeto product model, including 18+ dating, Cameo, chat, Agora-style voice/video communications, wallet recharges, virtual gifts, paid calls, verification, KYC and recipient payouts.",
+  "The substantive drafting is tailored to the current Zorameeto product model, including 18+ Social Networking, Cameo, chat, Agora-style voice/video communications, wallet recharges, virtual gifts, paid calls, verification, KYC and recipient payouts.",
 ];
 
 export const communityGuidelines: LegalDocument = {
@@ -133,7 +133,7 @@ export const communityGuidelines: LegalDocument = {
     {
       title: "1. Purpose",
       body: [
-        "Zorameeto is an 18+ social discovery and dating community. These Community Guidelines apply to profiles, photos, Cameo videos, captions, chat, voice and video calls, gifts, Roses, reports, public links and all other activity on the Services. They are designed to protect consent, dignity, safety and lawful use. Violations may lead to content removal, feature limits, wallet review, suspension, termination, evidence preservation or reports to competent authorities.",
+        "Zorameeto is an 18+ social discovery and Social Networking community. These Community Guidelines apply to profiles, photos, Cameo videos, captions, chat, voice and video calls, gifts, Roses, reports, public links and all other activity on the Services. They are designed to protect consent, dignity, safety and lawful use. Violations may lead to content removal, feature limits, wallet review, suspension, termination, evidence preservation or reports to competent authorities.",
       ],
     },
     {
@@ -500,7 +500,7 @@ export const privacyPolicy: LegalDocument = {
     {
       title: "12. Your Rights and Duties",
       body: [
-        "Subject to applicable Indian law, you may request information about personal data processing, correction, completion, updating or erasure of eligible data, withdraw consent where processing is based on consent, and use our grievance redressal process. You may nominate another individual to exercise applicable rights in the event of death or incapacity where the law provides. You must not impersonate another person, submit false or frivolous grievances, suppress material information or provide inauthentic information where authenticity is required.",
+        "Subject to applicable Indian law, you may request information about personal data processing, correction, completion, upSocial Networking or erasure of eligible data, withdraw consent where processing is based on consent, and use our grievance redressal process. You may nominate another individual to exercise applicable rights in the event of death or incapacity where the law provides. You must not impersonate another person, submit false or frivolous grievances, suppress material information or provide inauthentic information where authenticity is required.",
       ],
     },
     {
@@ -585,7 +585,7 @@ export const termsOfService: LegalDocument = {
     {
       title: "3. Nature of Zorameeto",
       body: [
-        "Zorameeto is a social discovery and dating platform that may provide profile discovery, matching, Roses, Cameo short videos, chat, voice and video calls, virtual gifts, wallet functionality, verification and related features. Zorameeto does not provide marriage brokerage, escort services, prostitution services, sexual services, employment, financial investment, gambling or guaranteed introductions. We do not guarantee the identity, intentions, truthfulness, compatibility, availability, conduct, response, match, relationship or offline safety of any user.",
+        "Zorameeto is a social discovery and Social Networking platform that may provide profile discovery, matching, Roses, Cameo short videos, chat, voice and video calls, virtual gifts, wallet functionality, verification and related features. Zorameeto does not provide marriage brokerage, escort services, prostitution services, sexual services, employment, financial investment, gambling or guaranteed introductions. We do not guarantee the identity, intentions, truthfulness, compatibility, availability, conduct, response, match, relationship or offline safety of any user.",
       ],
     },
     {
@@ -774,9 +774,11 @@ export const termsOfService: LegalDocument = {
       body: [
         "Zorameeto maintains a strict zero-tolerance policy toward objectionable content, nudity, child exploitation, harassment, bullying, hate speech, threats, spam, impersonation, fraud, or any abusive behavior.",
         "By creating an account, you agree not to upload, share, transmit, or distribute any content that violates these standards.",
+        
         "Users may report objectionable content or abusive users directly within the app at any time.",
         "Users may also block abusive users. Blocking immediately hides the blocked user's profile, messages, calls, and content from the reporting user's experience and notifies Zorameeto's moderation team for review.",
         "Zorameeto reviews reported content and abusive accounts within 24 hours. Content that violates these Terms will be removed, and offending accounts may be suspended or permanently terminated without notice.",
+        "Read our complete, <a href='https://zorameeto.com/support/guidelines.html'>Community & Safety Guidelines </a>  (Zero-Tolerance Policy)",
       ],
     },
     {

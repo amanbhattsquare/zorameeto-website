@@ -12,12 +12,12 @@ export default function AboutUs() {
     {
       icon: "favorite",
       title: "Meaningful Connections",
-      desc: "We believe dating should lead to honest conversations, real chemistry, and relationships built with intention.",
+      desc: "We believe Social Networking should lead to honest conversations, real chemistry, and relationships built with intention.",
     },
     {
       icon: "security",
       title: "Safety First",
-      desc: "Profile checks, privacy controls, and reporting tools help members explore dating with more confidence.",
+      desc: "Profile checks, privacy controls, and reporting tools help members explore Social Networking with more confidence.",
     },
     {
       icon: "diversity_3",
@@ -48,18 +48,16 @@ export default function AboutUs() {
             <span className="text-primary italic font-light">ZoraMeeto.</span>
           </h1>
           <p className="mx-auto max-w-3xl text-base font-medium leading-8 text-text-muted md:text-lg">
-            ZoraMeeto is a trusted dating platform for people who value genuine,
-            respectful, and meaningful connections. ZoraMeeto is a product and
-            brand of Bhatt Square Private Limited. It is owned, developed, and
-            operated by Bhatt Square Private Limited, a company incorporated under
-            the Companies Act, 2013. All intellectual property, services, branding,
-            software, and operations associated with ZoraMeeto are Owned & Operated
-            by Bhatt Square Private Limited, as applicable.
+            ZoraMeeto is a modern Social Networking platform for adults who seek sincere,
+            respectful, and meaningful connections. Built and operated by Bhatt
+            Square Private Limited, the platform combines thoughtful product design,
+            rigorous safety controls, and industry-standard governance to support
+            authentic relationships.
           </p>
         </div>
       </section>
 
-      {/* Real Dating Section */}
+      {/* Real Social Networking Section */}
       <section className="py-16 px-6 bg-white border-b border-border">
         <div className="max-w-7xl mx-auto">
           <div className="spotlight-card rounded-[3rem] overflow-hidden bg-surface-soft/50 border border-border">
@@ -76,24 +74,22 @@ export default function AboutUs() {
               </div>
               <div className="space-y-6 p-6 sm:p-8 lg:space-y-8 lg:p-16">
                 <h2 className="text-3xl md:text-4xl font-extrabold tracking-tighter text-text-main">
-                  Real Dating, <span className="text-primary italic font-light">Real People.</span>
+                  Real Social Networking, <span className="text-primary italic font-light">Real People.</span>
                 </h2>
                 <p className="text-text-muted leading-relaxed text-lg">
-                  ZoraMeeto is here to make dating more honest, intentional, and
-                  comfortable for modern singles. We created it for people who are
-                  tired of random swipes and want a better way to meet someone real.
+                  ZoraMeeto is designed for professionals who expect more than a
+                  swipe-based experience. We deliver a premium Social Networking platform that
+                  supports intelligent matching, privacy-conscious interactions, and
+                  elevated communication.
                 </p>
                 <p className="text-text-muted leading-relaxed">
-                  We focus on verified profiles, clear intentions, and meaningful
-                  conversations. Our matching experience looks beyond photos and
-                  helps members discover people who align with their lifestyle,
-                  interests, values, and relationship goals.
+                  Our platform combines manual profile verification, curated discovery,
+                  and purpose-built safety controls so members can pursue connections
+                  with clarity and confidence.
                 </p>
                 <p className="text-text-muted leading-relaxed">
-                  Every feature we build has one purpose: to help people feel safe
-                  enough to be themselves. From profile checks to privacy controls,
-                  we want every member to connect with confidence and move at their
-                  own pace.
+                  Every feature is crafted to help users move from first contact to
+                  meaningful conversation in a secure, transparent, and respectful way.
                 </p>
               </div>
             </div>
@@ -110,27 +106,25 @@ export default function AboutUs() {
                 A Better Way <span className="text-primary italic font-light">To Meet.</span>
               </h2>
               <p className="text-text-muted leading-relaxed text-lg">
-                We want ZoraMeeto to become one of the most trusted dating
-                platforms for serious and genuine connections. We imagine a future
-                where meeting someone online feels natural, safe, and full of
-                possibility.
+                ZoraMeeto is built for discerning users who want a polished, secure,
+                and thoughtfully designed Social Networking experience. Our platform combines
+                modern technology with responsible safety practices.
               </p>
               <p className="text-text-muted leading-relaxed">
-                We are building more than an app. We are building a community
-                where respect comes first, conversations have value, and technology
-                helps people find relationships that fit their real lives.
+                We are creating a community where respect is expected, authenticity is
+                rewarded, and every interaction is guided by clarity and consent.
               </p>
               <div className="grid grid-cols-1 gap-4 pt-4 min-[380px]:grid-cols-2 sm:gap-6">
                 <div className="bg-white rounded-2xl p-5 sm:p-6 border border-border shadow-sm">
                   <p className="text-3xl font-extrabold text-primary sm:text-4xl">100K+</p>
                   <p className="text-sm text-text-muted mt-2 font-medium">
-                    Downloads & Growing
+                    Verified members and growing
                   </p>
                 </div>
                 <div className="bg-white rounded-2xl p-5 sm:p-6 border border-border shadow-sm">
                   <p className="text-3xl font-extrabold text-primary sm:text-4xl">95%</p>
                   <p className="text-sm text-text-muted mt-2 font-medium">
-                    REAL PROFILES
+                    Verified profiles on the platform
                   </p>
                 </div>
               </div>
@@ -157,7 +151,8 @@ export default function AboutUs() {
               Why Singles Choose <span className="text-primary italic font-light">ZoraMeeto.</span>
             </h2>
             <p className="text-text-muted max-w-2xl mx-auto">
-              What sets us apart from every other dating app in India.
+              A premium platform built for discerning users who want a secure,
+              trusted and professionally managed Social Networking experience.
             </p>
           </div>
 
@@ -293,7 +288,7 @@ export default function AboutUs() {
               What We <span className="text-primary italic font-light">Stand For.</span>
             </h2>
             <p className="text-text-muted max-w-2xl mx-auto">
-              These principles guide everything we do at ZoraMeeto.
+              Core principles that keep our product professional, safe, and user-focused.
             </p>
           </div>
 
@@ -316,6 +311,31 @@ export default function AboutUs() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CEO Section */}
+      <section className="py-12 px-6 bg-white">
+        <div className="mx-auto max-w-7xl">
+          <div className="rounded-3xl border border-border bg-surface-soft p-6 text-sm text-text-muted shadow-sm sm:p-8">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <p className="font-bold text-text-main">CEO</p>
+                <p>Akshat Bhatt</p>
+              </div>
+              <div className="border-t border-border pt-4 sm:border-t-0 sm:border-l sm:pl-6 sm:pt-0">
+                <p>5/881, Viram Khand</p>
+                <p>Gomti Nagar, Lucknow. 226010</p>
+              </div>
+            </div>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-text-muted">
+              Akshat Bhatt leads ZoraMeeto with a focus on scalable product design,
+              regulatory compliance, and user-centric safety. Under his direction,
+              the company is building a trusted, industry-grade Social Networking platform for
+              modern adults who value authenticity, transparency, and meaningful
+              connections.
+            </p>
           </div>
         </div>
       </section>

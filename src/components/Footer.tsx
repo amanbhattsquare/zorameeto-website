@@ -71,7 +71,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-text-muted text-base leading-relaxed max-w-xs font-medium">
-              A safe dating app for serious singles. Meet verified people and build real connections.
+              A safe Social Networking app for serious singles. Meet verified people and build real connections.
             </p>
             <p className="max-w-xs text-xs font-medium leading-relaxed text-text-muted">
               ZoraMeeto is a product of Bhatt Square Private Limited and is owned,
@@ -124,7 +124,7 @@ export default function Footer() {
               Newsletter
             </h5>
             <p className="text-sm text-text-muted font-medium leading-relaxed">
-              Join for dating tips, app updates, and member events.
+              Join for Social Networking tips, app updates, and member events.
             </p>
             <div className="flex flex-col gap-3">
               <input

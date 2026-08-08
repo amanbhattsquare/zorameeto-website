@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Earn & Grow | ZoraMeeto",
-  description: "Only verified users can earn rewards and grow their connections on ZoraMeeto's trusted dating platform.",
+  description: "Only verified users can earn rewards and grow their connections on ZoraMeeto's trusted Social Networking platform.",
 };
 
 export default function EarnAndGrow() {
@@ -83,7 +83,7 @@ export default function EarnAndGrow() {
     {
       name: "Priya S.",
       role: "Event Host",
-      quote: "Hosting speed dating events has been amazing. I get to meet new people while earning extra income.",
+      quote: "Hosting speed Social Networking events has been amazing. I get to meet new people while earning extra income.",
       earnings: "12 events hosted"
     },
     {

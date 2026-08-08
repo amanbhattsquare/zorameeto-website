@@ -24,7 +24,7 @@ export default function HomePageClient() {
             <div className="space-y-5">
               <div className="mx-auto inline-flex max-w-full items-center gap-2 rounded-full border border-white bg-white/80 px-3 py-2 text-center shadow-lg shadow-black/5 backdrop-blur-xl sm:gap-3 sm:px-4 lg:mx-0">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span className="text-[8px] font-bold uppercase tracking-[0.18em] text-text-main sm:text-[9px] sm:tracking-[0.3em]">Smart Dating for Serious Singles</span>
+                <span className="text-[8px] font-bold uppercase tracking-[0.18em] text-text-main sm:text-[9px] sm:tracking-[0.3em]">Smart Social Networking for Serious Singles</span>
               </div>
 
               <div className="space-y-3">

@@ -10,7 +10,7 @@ export default function HowItWorks() {
     {
       no: "01",
       title: "Create Profile",
-      desc: "Add your basic details, photos, interests, and dating goals.",
+      desc: "Add your basic details, photos, interests, and Social Networking goals.",
       icon: "app_registration"
     },
     {

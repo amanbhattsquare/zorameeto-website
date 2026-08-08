@@ -4,9 +4,9 @@ import Link from "next/link";
 
 
 export const metadata: Metadata = {
-  title: "The Zora Journal | Stories & Dating Blogs | ZoraMeeto",
+  title: "The Zora Journal | Stories & Social Networking Blogs | ZoraMeeto",
   description:
-    "Read ZoraMeeto success stories, dating guidance, safety tips, and relationship blogs for serious singles.",
+    "Read ZoraMeeto success stories, Social Networking guidance, safety tips, and relationship blogs for serious singles.",
 };
 
 export default function LoveStories() {
@@ -44,7 +44,7 @@ export default function LoveStories() {
 
   const blogs = [
     {
-      category: "Dating Tips",
+      category: "Social Networking Tips",
       title: "How to Start a Good First Chat",
       desc: "A practical guide to opening conversations with interest, respect, and confidence.",
       href: "/journal/first-conversation",
@@ -61,7 +61,7 @@ export default function LoveStories() {
     },
     {
       category: "Relationships",
-      title: "Dating With Intention Without Rushing",
+      title: "Social Networking With Intention Without Rushing",
       desc: "How to stay open, ask better questions, and build a connection at the right pace.",
       href: "#",
       readTime: "6 min read",
@@ -84,7 +84,7 @@ export default function LoveStories() {
     {
       icon: "psychology",
       title: "Advice With Context",
-      desc: "Blogs focus on practical dating behavior, respectful communication, and safer decision-making.",
+      desc: "Blogs focus on practical Social Networking behavior, respectful communication, and safer decision-making.",
     },
   ];
 
@@ -111,10 +111,10 @@ export default function LoveStories() {
           <div className="space-y-5">
             <h1 className="text-4xl font-extrabold leading-tight tracking-tighter text-text-main md:text-6xl">
               Real Stories,
-              <span className="block text-primary italic font-light">Better Dating Advice.</span>
+              <span className="block text-primary italic font-light">Better Social Networking Advice.</span>
             </h1>
             <p className="mx-auto max-w-2xl text-base font-semibold leading-8 text-text-muted md:text-lg">
-              Read verified success stories, practical dating blogs, and safety-led guidance for people who want serious relationships.
+              Read verified success stories, practical Social Networking blogs, and safety-led guidance for people who want serious relationships.
             </p>
           </div>
 
@@ -122,7 +122,7 @@ export default function LoveStories() {
             {[
               ["3K+", "Verified stories reviewed"],
               ["4.9/5", "Member satisfaction"],
-              ["Weekly", "Fresh dating blogs"],
+              ["Weekly", "Fresh Social Networking blogs"],
             ].map(([value, label]) => (
               <div key={label} className="rounded-3xl border border-border bg-white/80 p-5 shadow-sm backdrop-blur">
                 <p className="text-2xl font-extrabold tracking-tight text-text-main">{value}</p>
@@ -227,12 +227,12 @@ export default function LoveStories() {
         <div className="mx-auto max-w-7xl space-y-12">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div className="max-w-2xl space-y-4">
-              <p className="text-[10px] font-extrabold uppercase tracking-[0.32em] text-primary">Dating Blogs</p>
+              <p className="text-[10px] font-extrabold uppercase tracking-[0.32em] text-primary">Social Networking Blogs</p>
               <h2 className="text-3xl font-extrabold tracking-tighter text-text-main md:text-5xl">
-                Practical advice for safer, smarter dating.
+                Practical advice for safer, smarter Social Networking.
               </h2>
               <p className="text-base font-semibold leading-8 text-text-muted">
-                Helpful reads for better first chats,  profiles, safer decisions, and relationship-ready dating.
+                Helpful reads for better first chats,  profiles, safer decisions, and relationship-ready Social Networking.
               </p>
             </div>
           </div>

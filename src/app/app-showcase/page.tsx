@@ -19,7 +19,7 @@ const screenshots = [
   },
   {
     src: "/zorameeto-ss-3.jpeg",
-    alt: "ZoraMeeto mobile app screen showing a dating profile",
+    alt: "ZoraMeeto mobile app screen showing a Social Networking profile",
   },
   {
     src: "/zorameeto-ss-4.jpeg",
@@ -33,7 +33,7 @@ const screenshots = [
 
 const features = [
   {
-    title: "Made for Serious Dating",
+    title: "Made for Serious Social Networking",
     desc: "Screens help users view profiles, understand matches, and take the next step easily.",
     icon: "target",
   },
@@ -148,7 +148,7 @@ export default function AppShowcase() {
               Ready for Users
             </span>
             <h2 className="text-3xl font-extrabold leading-tight text-text-main md:text-5xl">
-              A clear view of the dating app.
+              A clear view of the Social Networking app.
             </h2>
             <p className="text-base font-medium leading-8 text-text-muted">
               Real screenshots show how the app works on mobile and desktop.
@@ -179,7 +179,7 @@ export default function AppShowcase() {
       <section className="bg-text-main px-6 py-20 text-white lg:py-24">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 text-center">
           <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
-            Start Dating
+            Start Social Networking
           </span>
           <h2 className="text-4xl font-extrabold leading-tight md:text-6xl">
             Bring the right people into one safe app.

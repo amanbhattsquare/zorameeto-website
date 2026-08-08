@@ -16,11 +16,11 @@ const urbanist = Urbanist({
 
 export const metadata: Metadata = {
   title: {
-    default: "ZoraMeeto | Smart Dating for Serious Singles",
+    default: "ZoraMeeto | Smart Social Networking for Serious Singles",
     template: "%s | ZoraMeeto"
   },
-  description: "ZoraMeeto is a safe dating app for serious singles. Meet verified people, chat privately, and build real connections.",
-  keywords: ["dating app", "verified dating", "serious dating", "private dating"],
+  description: "ZoraMeeto is a safe Social Networking app for serious singles. Meet verified people, chat privately, and build real connections.",
+  keywords: ["Social Networking app", "verified Social Networking", "serious Social Networking", "private Social Networking"],
   icons: {
     icon: [{ url: "/favicon-new.png", type: "image/png" }],
     shortcut: "/favicon-new.png",

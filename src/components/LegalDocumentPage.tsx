@@ -13,11 +13,36 @@ function renderParagraphs(items?: string[]) {
 
   return (
     <div className="space-y-4">
-      {items.map((item) => (
-        <p key={item} className="text-sm leading-7 text-text-muted md:text-[15px]">
-          {item}
-        </p>
-      ))}
+      {items.map((item) => {
+        // Check if the paragraph contains an HTML anchor tag and capture URL + inner text
+        const linkMatch = item.match(/<a href='([^']+)'>([^<]+)<\/a>/);
+        if (linkMatch) {
+          const url = linkMatch[1];
+          const linkText = linkMatch[2];
+          const beforeText = item.substring(0, item.indexOf('<a'));
+          const afterText = item.substring(item.indexOf('<\/a>') + 4);
+
+          return (
+            <p key={item} className="text-sm leading-7 text-text-muted md:text-[15px]">
+              {beforeText}
+              <Link
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline hover:text-primary/80 transition-colors"
+              >
+                {linkText}
+              </Link>
+              {afterText}
+            </p>
+          );
+        }
+        return (
+          <p key={item} className="text-sm leading-7 text-text-muted md:text-[15px]">
+            {item}
+          </p>
+        );
+      })}
     </div>
   );
 }
@@ -89,8 +114,8 @@ function RawLegalText({ text }: { text: string }) {
 export default function LegalDocumentPage({ document }: { document: LegalDocument }) {
   return (
     <main className="min-h-screen bg-background">
-      <section className="relative overflow-hidden border-b border-border bg-gradient-mesh px-5 pb-12 pt-32 sm:px-6 lg:px-10">
-        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-end">
+      <section className="relative overflow-hidden border-b border-border bg-gradient-mesh px-3 sm:px-5 lg:px-8 pb-12 pt-32">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-end">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/70 px-4 py-2 text-primary shadow-sm backdrop-blur">
               <span className="material-symbols-outlined text-base" aria-hidden="true">
